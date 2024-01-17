@@ -1,0 +1,1565 @@
+@charset "UTF-8";
+
+/* layout */
+html, body {
+  @include nsM;
+  height: 100%;
+  font-size: 20px;
+  color: #fff;
+
+  .opening {
+    width: 100%;
+    height: 100%;
+    @include imageUrl("web/bg/bg_openingWeb");
+    background-color: #000;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  @include contentMinWidth($webWidthNumber);
+  min-height: 100%;
+  background-color: #000;
+
+  /* page top button */
+  .pageTop {
+    position: fixed;
+    right: 98px;
+    bottom: 1px;
+    display: block;
+    box-sizing: border-box;
+    width: 85px;
+    height: 85px;
+    border: 1px solid #fff;
+    background: #000;
+    z-index: 30;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    span {
+      display: block;
+      text-align: center;
+      height: 15px;
+      line-height: 15px;
+      padding-top: 30px;
+      font-size: 14px;
+      @include gtM;
+      color: #fff;
+      @include imageUrl("web/icon/icon_pageTop");
+      background-position: center top;
+    }
+  }
+
+  /* swiper image */
+  .imgMobile {
+    display: none;
+  }
+
+  /* swiper 드래그 color */
+  .swiper {
+
+    .swiper-wrapper {
+
+      *::selection {
+        background: transparent;
+      }
+    }
+  }
+
+  /* color */
+  .colorOrange {
+    @include colorOrange;
+  }
+  .colorRed {
+    @include colorRed;
+  }
+
+  /* header */
+  #header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    @include contentMinWidth($webWidthNumber);
+    height: 130px;
+    z-index: 20;
+
+    > * {
+      letter-spacing: -0.075em;
+    }
+
+    &.scroll {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .headerIn {
+      position: relative;
+      box-sizing: border-box;
+      @include contentWidth($webWidthNumber);
+      height: 100%;
+      margin: 0 auto;
+
+      .pageBack {
+        display: none;
+      }
+
+      .logoText {
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 52px;
+
+        a {
+          overflow: hidden;
+          display: block;
+          width: 185px;
+          height: 47px;
+          color: transparent;
+          @include imageUrl('web/bg/bg_logoWeb');
+        }
+      }
+
+      .gnb {
+
+        .gnbOpenBtn {
+          display: none;
+
+          span {
+            @include blind;
+          }
+        }
+
+        .gnbCloseBtn {
+          position: absolute;
+          right: 0;
+          top: 51px;
+          display: none;
+          width: 35px;
+          height: 35px;
+          @include imageUrl("web/icon/icon_gnbClose");
+          background-position: center;
+          z-index: 22;
+
+          span {
+            @include blind;
+          }
+        }
+
+        nav {
+          position: absolute;
+          left: auto;
+          right: 0;
+          top: 51px;
+
+          .navIn {
+            overflow: hidden;
+
+            .gnbItem {
+              float: left;
+
+              & + .gnbItem {
+                margin-left: 45px;
+              }
+
+              a, button {
+                display: block;
+                height: 35px;
+                line-height: 35px;
+                font-size: 24px;
+                @include nsB;
+                color: #fff;
+
+                &:hover {
+                  color: #8C8D8D;
+
+                  span {
+                    color: #8C8D8D;
+                  }
+                }
+              }
+
+              &.category {
+
+                > button {
+                  padding-left: 35px;
+                  @include imageUrl("web/icon/icon_category");
+                  background-position: left center;
+
+                  &:hover {
+                    @include imageUrl("web/icon/icon_category_on");
+                    background-position: left center;
+                  }
+                }
+
+                .gnbItemSub {
+                  position: fixed;
+                  left: 0;
+                  right: 0;
+                  top: 0;
+                  display: none;
+                  background-color: rgba(0, 0, 0, 0.8);
+                  z-index: 21;
+
+                  .gnbItemSubIn {
+                    overflow: hidden;
+                    width: 1200px;
+                    padding: 44px 0 70px;
+                    margin: 0 auto;
+
+                    .gnbItemTitle {
+                      line-height: 35px;
+                      margin-bottom: 58px;
+                      font-size: 24px;
+                      @include nsB;
+                    }
+
+                    .gnbItemSubBox {
+                      float: left;
+
+                      & + .gnbItemSubBox {
+                        margin-left: 150px;
+                      }
+
+                      li {
+
+                        & + li {
+                          margin-top: 13px;
+                        }
+
+                        a {
+                          display: inline-block;
+                          vertical-align: top;
+                          @include nsB;
+
+                          span {
+                            display: block;
+                            line-height: 35px;
+                            font-size: 24px;
+
+                            &.live {
+                              position: relative;
+
+                              &::after {
+                                content: "";
+                                position: absolute;
+                                right: -18px;
+                                top: -5px;
+                                display: block;
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 7px;
+                                background-color: $colorOrange;
+                              }
+                            }
+
+                            &.peoplepartyHomepage {
+                              @include colorOrange;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.login {
+                position: relative;
+                margin-left: 57px;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: -27px;
+                  top: 50%;
+                  display: block;
+                  width: 1px;
+                  height: 18px;
+                  margin-top: -9px;
+                  background-color: #fff;
+                }
+
+                > button {
+                  width: 35px;
+                  @include imageUrl("web/icon/icon_login");
+                  background-position: center;
+
+                  &:hover {
+                    @include imageUrl("web/icon/icon_login_on");
+                    background-position: center;
+                  }
+
+                  span {
+                    @include blind;
+                  }
+                }
+
+                .welcome {
+                  width: 35px;
+                  height: 35px;
+                  @include imageUrl("web/icon/icon_login_on");
+                  background-position: center;
+
+                  span {
+                    @include blind;
+                  }
+                }
+
+                .gnbItemSub {
+                  position: fixed;
+                  left: 0;
+                  right: 0;
+                  top: 0;
+                  display: none;
+                  background-color: rgba(0, 0, 0, 0.8);
+                  z-index: 21;
+
+                  .gnbItemSubIn {
+                    width: 1200px;
+                    padding: 44px 0 60px;
+                    margin: 0 auto;
+
+                    .gnbItemTitle {
+                      line-height: 35px;
+                      margin-bottom: 58px;
+                      font-size: 24px;
+                      @include nsB;
+                    }
+
+                    .gnbItemSns {
+                      overflow: hidden;
+                      margin-top: 62px;
+
+                      a {
+                        float: left;
+                        display: block;
+                        width: 62px;
+                        height: 62px;
+
+                        + a {
+                          margin-left: 23px;
+                        }
+
+                        &.kakao {
+                          @include imageUrl("web/sns/sns_kakao");
+                          background-size: 100% 100%;
+                        }
+
+                        &.naver {
+                          @include imageUrl("web/sns/sns_naver");
+                          background-size: 100% 100%;
+                        }
+
+                        &.google {
+                          @include imageUrl("web/sns/sns_google");
+                          background-size: 100% 100%;
+                        }
+
+                        &.facebook {
+                          @include imageUrl("web/sns/sns_facebook");
+                          background-size: 100% 100%;
+                        }
+
+                        &.twitch {
+                          @include imageUrl("web/sns/sns_twitch");
+                          background-size: 100% 100%;
+                        }
+
+                        span {
+                          @include blind;
+                        }
+                      }
+                    }
+
+                    .gnbItemContext {
+                      line-height: 20px;
+                      margin-top: 39px;
+                      font-size: 15px;
+                    }
+                  }
+                }
+              }
+
+              &.search {
+                margin-left: 20px;
+
+                > button  {
+                  width: 35px;
+                  @include imageUrl("web/icon/icon_search");
+                  background-position: center;
+
+                  &:hover {
+                    @include imageUrl("web/icon/icon_search_on");
+                    background-position: center;
+                  }
+
+                  span {
+                    @include blind;
+                  }
+                }
+
+                .gnbItemSub {
+                  position: fixed;
+                  left: 0;
+                  right: 0;
+                  top: 0;
+                  display: none;
+                  background-color: rgba(0, 0, 0, 0.8);
+                  z-index: 21;
+
+                  .gnbItemSubIn {
+                    width: 1200px;
+                    padding: 120px 0 60px;
+                    margin: 0 auto;
+
+                    .searchTitleArea {
+                      display: none;
+                    }
+
+                    .searchInputArea {
+
+                      .searchText {
+                        display: inline-block;
+                        vertical-align: top;
+                        line-height: 54px;
+                        margin-right: 20px;
+                        font-size: 31px;
+                        @include nsB;
+                      }
+
+                      .searchInput {
+                        overflow: hidden;
+                        display: inline-block;
+                        vertical-align: top;
+
+                        input {
+                          float: left;
+                          box-sizing: border-box;
+                          width: 338px;
+                          height: 54px;
+                          padding: 0 10px;
+                          border: 0 none;
+                          border-bottom: 3px solid #fff;
+                          outline: none;
+                          font-size: 30px;
+                          @include nsM;
+                          color: #fff;
+                          background-color: transparent;
+                        }
+
+                        button {
+                          float: left;
+                          width: 54px;
+                          height: 54px;
+                          margin-left: 5px;
+                          @include imageUrl("web/icon/icon_gnbSearch");
+                          background-position: center;
+
+                          span {
+                            @include blind;
+                          }
+                        }
+                      }
+
+                    }
+
+                    .swiperDataArea {
+                      position: relative;
+                      display: inline-block;
+                      vertical-align: top;
+                      padding: 0 40px;
+                      margin-top: 54px;
+
+                      .swiper {
+                        position: static;
+                        width: 1022px;
+                        height: 257px;
+                        margin: 0;
+
+                        .swiper-wrapper {
+
+                          .swiper-slide {
+
+                            a {
+                              display: block;
+                              width: 100%;
+                              height: 100%;
+
+                              img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                              }
+                            }
+                          }
+                        }
+
+                        .swiper-button-prev, .swiper-button-next {
+                          width: 20px;
+                          height: 40px;
+
+                          &::after {
+                            display: none;
+                          }
+
+                        }
+
+                        .swiper-button-prev {
+                          @include imageUrl("web/icon/icon_gnbSearchArrowLeft");
+                          background-position: left center;
+                        }
+
+                        .swiper-button-next {
+                          @include imageUrl("web/icon/icon_gnbSearchArrowRight");
+                          background-position: right center;
+                        }
+                      }
+                    }
+
+                    .searchNodataArea {
+                      line-height: 45px;
+                      margin-top: 30px;
+                      font-size: 31px;
+                      color: $colorOrange;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* container */
+  #container {
+
+    .topVisual {
+
+      .topVisualSwiper {
+        height: 600px;
+
+        .swiper {
+          height: 100%;
+
+          .swiper-button-prev, .swiper-button-next {
+            width: 80px;
+            height: 80px;
+
+            &::after {
+              display: none;
+            }
+          }
+
+          .swiper-button-prev {
+            left: 0;
+            @include imageUrl("web/icon/icon_topVisualArrowLeft");
+            background-position: center;
+          }
+
+          .swiper-button-next {
+            right: 0;
+            @include imageUrl("web/icon/icon_topVisualArrowRight");
+            background-position: center;
+          }
+
+          .imgWeb, .imgMobile {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .content {
+      @include contentWidth($webWidthNumber);
+      margin: 0 auto;
+      padding-bottom: 180px;
+    }
+  }
+
+  /* footer */
+  #footer {
+    height: 360px;
+    margin-top: auto;
+    background-color: #262626;
+
+    .footerIn {
+      overflow: hidden;
+      box-sizing: border-box;
+      width: 1200px;
+      margin: 0 auto;
+      padding-top: 65px;
+
+      * {
+        color: #fff;
+      }
+
+      .footerLeft {
+        float: left;
+
+        .homepageLink {
+
+          a {
+            display: block;
+            line-height: 27px;
+            font-size: 19px;
+            color: $colorOrange;
+          }
+        }
+
+        .tel {
+          margin-top: 10px;
+
+          a {
+            display: block;
+            line-height: 44px;
+            @include gtM;
+            font-size: 40px;
+          }
+        }
+
+        .copyright {
+          line-height: 20px;
+          margin-top: 9px;
+          font-size: 14px;
+        }
+
+        .adminLogin {
+          margin-top: 25px;
+
+          .adminLoginOpen {
+            display: block;
+            line-height: 20px;
+            font-size: 14px;
+            color: #9F9F9F;
+          }
+        }
+      }
+
+      .footerRight {
+        float: right;
+
+        .supportTitle {
+          line-height: 26px;
+          font-size: 18px;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 6px;
+            color: $colorOrange;
+          }
+        }
+
+        .supportNumber {
+          line-height: 44px;
+          margin-top: 13px;
+          font-size: 34px;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 4px;
+            @include gtM;
+            font-size: 40px;
+          }
+        }
+
+        .supportLink {
+          overflow: hidden;
+          line-height: 26px;
+          margin-top: 7px;
+          font-size: 15px;
+
+          * {
+            float: left;
+            display: inline-block;
+            vertical-align: top;
+            height: 26px;
+          }
+
+          span {
+            margin-right: 25px;
+          }
+
+          a {
+            padding: 0 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            @include nsB;
+            background-color: $colorOrange;
+          }
+        }
+
+        .supportContextWeb {
+          line-height: 20px;
+          margin-top: 22px;
+          font-size: 14px;
+          color: #B5B5B5;
+
+          a {
+            color: #B5B5B5;
+          }
+        }
+
+        .supportContextMobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  /* popup */
+  .ahnPopupWrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+
+    .ahnPopupContainer {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      .popupCloseBtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 70px;
+        height: 70px;
+        @include imageUrl("web/icon/icon_popupCloseBtn");
+        background-position: center;
+
+        span {
+          @include blind;
+        }
+      }
+
+      .popupContent {
+        display: block;
+        width: 700px;
+        border: 1px solid #707070;
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .popupFunction {
+        overflow: hidden;
+        margin-top: 10px;
+
+        .popupDayCloseBtn {
+          float: right;
+          display: block;
+          line-height: 26px;
+          font-size: 19px;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  /* radio button */
+  .btnRadio {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+
+    input {
+      @include blind;
+
+      & + .inpTxt {
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        min-width: 110px;
+        height: 43px;
+        padding: 0 10px;
+        line-height: 41px;
+        border: 1px solid #707070;
+        font-size: 20px;
+        @include nsR;
+        color: #fff;
+      }
+
+      &:checked {
+
+        & + .inpTxt {
+          border-color: $colorOrange;
+          background-color: $colorOrange;
+        }
+      }
+    }
+  }
+
+  /* etc */
+  .commentSorting {
+    overflow: hidden;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $colorOrange;
+
+    .btnRadio {
+      float: left;
+
+      & + .btnRadio {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+/* media queries */
+@media (max-width: 780px) {
+  html, body {
+
+    .opening {
+      @include imageUrl("mobile/bg/bg_openingMobile");
+      background-color: #000;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+
+  #wrap {
+    @include contentMinWidth($mobileWidthNumber);
+
+    /* page top button */
+    .pageTop {
+      right        : 24px;
+      width        : 41px;
+      height       : 41px;
+      border-color : #E4E4E4;
+      background   : #000;
+
+      span {
+        height              : 9px;
+        line-height         : 9px;
+        padding-top         : 13px;
+        font-size           : 8px;
+        @include imageUrl("web/icon/icon_pageTop");
+        background-position : center top;
+        background-size     : 11px 6px;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    /* swiper image */
+    .imgWeb {
+      display : none;
+    }
+
+    .imgMobile {
+      display : block;
+    }
+
+    /* header */
+    #header {
+      @include contentMinWidth($mobileWidthNumber);
+      height : 50px;
+
+      &.scroll.gnbOpenWeb, &.scroll.gnbOpenMobile {
+        background-color : rgba(0, 0, 0, 0.8);
+      }
+
+      .headerIn {
+        @include contentWidth($mobileWidthNumber);
+
+        .pageBack {
+          position            : absolute;
+          left                : 0;
+          top                 : 0;
+          display             : block;
+          width               : 50px;
+          height              : 50px;
+          @include imageUrl("mobile/icon/icon_pageBack");
+          background-position : center;
+          background-size     : 12px 21px;
+
+          span {
+            @include blind;
+          }
+        }
+
+        .logoText {
+          display: block;
+          text-align: center;
+          padding: 0;
+
+          a {
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            height: auto;
+            line-height: 50px;
+            font-size: 18px;
+            @include nsB;
+            color: #fff;
+            background: none;
+          }
+        }
+
+        .gnb {
+
+          .gnbOpenBtn {
+            position            : absolute;
+            right               : 0;
+            top                 : 0;
+            display             : block;
+            width               : 60px;
+            height              : 50px;
+            @include imageUrl("mobile/icon/icon_gnbOpen");
+            background-position : center;
+            background-size     : 27px 20px;
+          }
+
+          .gnbCloseBtn {
+            position            : fixed;
+            right               : 35px;
+            top                 : 23px;
+            display             : none;
+            width               : 35px;
+            height              : 32px;
+            @include imageUrl("mobile/icon/icon_gnbClose");
+            background-position : center;
+            background-size     : 35px 32px;
+          }
+
+          nav {
+            position         : fixed;
+            left             : 100%;
+            right            : auto;
+            top              : 0;
+            bottom           : 0;
+            width            : 100%;
+            padding-top      : 66px;
+            background-color : #000;
+
+            .navIn {
+              overflow                   : auto;
+              display                    : flex;
+              flex-direction             : column;
+              height                     : 100%;
+              -webkit-overflow-scrolling : touch;
+
+              .gnbItem {
+                float   : none;
+                display : none;
+
+                & + .gnbItem {
+                  margin-left : 0;
+                }
+
+                &:nth-child(5) {
+                  order : -4;
+                }
+
+                &:nth-child(6) {
+                  order : -4;
+                }
+
+                a, button {
+                  display     : block;
+                  height      : 35px;
+                  line-height : 35px;
+                  font-size   : 24px;
+                  @include nsB;
+                  color       : #fff;
+
+                  &:hover {
+                    color: #fff;
+
+                    span {
+                      color: #fff;
+                    }
+                  }
+                }
+
+                &.category {
+                  display : block;
+
+                  > button {
+                    display : none;
+                  }
+
+                  .gnbItemSub {
+                    position         : static;
+                    left             : auto;
+                    right            : auto;
+                    top              : auto;
+                    display          : block;
+                    padding          : 0 66px 66px 30px;
+                    background-color : transparent;
+                    z-index          : auto;
+
+                    .gnbItemSubIn {
+                      overflow   : visible;
+                      width      : auto;
+                      padding    : 0;
+                      margin     : 0;
+                      border-top : 1px solid #707070;
+
+                      .gnbItemTitle {
+                        display : none;
+                      }
+
+                      .gnbItemSubBox {
+                        float         : none;
+                        padding       : 20px 0 16px;
+                        border-bottom : 1px solid #707070;
+
+                        & + .gnbItemSubBox {
+                          margin-left : 0;
+                        }
+
+                        li {
+
+                          & + li {
+                            margin-top : 18px;
+                          }
+
+                          a {
+                            display : block;
+
+                            span {
+                              display        : inline-block;
+                              vertical-align : top;
+                              line-height    : 28px;
+                              font-size      : 19px;
+
+                              &.live {
+                                position : relative;
+
+                                &::after {
+                                  right         : -12px;
+                                  top           : -2px;
+                                  width         : 8px;
+                                  height        : 8px;
+                                  border-radius : 4px;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &.login {
+                  display : block;
+                  padding : 0 66px 5px 30px;
+
+                  &::after {
+                    display : none;
+                  }
+
+                  > button {
+                    display             : block;
+                    text-align          : left;
+                    width               : 100%;
+                    height              : auto;
+                    padding-left        : 25px;
+                    @include imageUrl("mobile/icon/icon_login");
+                    background-position : left center;
+                    background-size     : 18px 16px;
+
+                    &:hover {
+                      @include imageUrl("mobile/icon/icon_login");
+                      background-position : left center;
+                      background-size     : 18px 16px;
+                    }
+
+                    span {
+                      @include unBlind;
+                      display     : block;
+                      height      : 30px;
+                      line-height : 30px;
+                      font-size   : 15px;
+                      @include nsB;
+                    }
+                  }
+
+                  .welcome {
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    height: auto;
+                    padding-left: 25px;
+                    @include imageUrl('mobile/icon/icon_login_on');
+                    background-position: left center;
+                    background-size: 18px 16px;
+
+                      .welcomeText {
+                        @include unBlind;
+                        display     : block;
+                        height      : 30px;
+                        line-height : 30px;
+                        font-size   : 15px;
+                        @include nsB;
+                      }
+                    }
+
+                    .gnbItemSub {
+                      position         : static;
+                      left             : auto;
+                      right            : auto;
+                      top              : auto;
+                      box-sizing       : border-box;
+                      width            : 100vw;
+                      margin-left      : -30px !important;
+                      padding          : 0 0 15px 30px;
+                      background-color : transparent;
+                      z-index          : auto;
+
+                      .gnbItemSubIn {
+                        width   : auto;
+                        padding : 0;
+                        margin  : 0;
+
+                        .gnbItemTitle {
+                          display : none;
+                        }
+
+                        .gnbItemSns {
+                          overflow   : hidden;
+                          margin-top : 15px;
+
+                          a {
+                            width  : 50px;
+                            height : 50px;
+
+                            + a {
+                              margin-left : 12px;
+                            }
+
+                            &.kakao {
+                              @include imageUrl("mobile/sns/sns_kakao");
+                              background-size : 50px 50px;
+                            }
+
+                            &.naver {
+                              @include imageUrl("mobile/sns/sns_naver");
+                              background-size : 50px 50px;
+                            }
+
+                            &.google {
+                              @include imageUrl("mobile/sns/sns_google");
+                              background-size : 50px 50px;
+                            }
+
+                            &.facebook {
+                              @include imageUrl("mobile/sns/sns_facebook");
+                              background-size : 50px 50px;
+                            }
+
+                            &.twitch {
+                              @include imageUrl("mobile/sns/sns_twitch");
+                              background-size : 50px 50px;
+                            }
+                          }
+                        }
+
+                        .gnbItemContext {
+                          line-height : 20px;
+                          margin-top  : 25px;
+                          font-size   : 15px;
+                        }
+                      }
+                    }
+                  }
+
+                  &.search {
+                    display     : block;
+                    padding     : 0 30px 20px 30px;
+                    margin-left : 0;
+
+                    > button {
+                      display             : block;
+                      text-align          : left;
+                      width               : 100%;
+                      height              : auto;
+                      padding-left        : 25px;
+                      @include imageUrl("mobile/icon/icon_search");
+                      background-position : left center;
+                      background-size     : 15px 16px;
+
+                      &:hover {
+                        @include imageUrl("mobile/icon/icon_search");
+                        background-position : left center;
+                        background-size     : 15px 16px;
+                      }
+
+                      span {
+                        @include unBlind;
+                        display     : block;
+                        height      : 30px;
+                        line-height : 30px;
+                        font-size   : 15px;
+                        @include nsB;
+                      }
+                    }
+
+                    .gnbItemSub {
+                      position         : static;
+                      left             : auto;
+                      right            : auto;
+                      top              : auto;
+                      background-color : transparent;
+                      z-index          : auto;
+
+                      .gnbItemSubIn {
+                        width   : auto;
+                        padding : 10px 0 10px;
+                        margin  : 0;
+
+                        .searchTitleArea {
+                          display : none;
+                        }
+
+                        .searchInputArea {
+
+                          .searchText {
+                            display : none;
+                          }
+
+                          .searchInput {
+                            overflow       : visible;
+                            display        : flex;
+                            vertical-align : baseline;
+
+                            input {
+                              flex: 1;
+                              width         : auto;
+                              height        : 30px;
+                              padding       : 0 5px;
+                              border-bottom : 2px solid #fff;
+                              font-size     : 15px;
+                            }
+
+                            button {
+                              float               : left;
+                              width               : 30px;
+                              height              : 30px;
+                              margin-left         : 5px;
+                              @include imageUrl("mobile/icon/icon_gnbSearch");
+                              background-position : center;
+                              background-size     : 23px 24px;
+
+                              span {
+                                @include blind;
+                              }
+                            }
+                          }
+
+                        }
+
+                        .swiperDataArea {
+                          position       : relative;
+                          display        : inline-block;
+                          vertical-align : top;
+                          box-sizing     : border-box;
+                          width          : 100vw;
+                          padding        : 0 30px 0 30px;
+                          margin         : 28px 0 0 -30px;
+
+                          .swiper {
+                            position : static;
+                            width    : 100%;
+                            height   : 100%;
+                            margin   : 0;
+
+                            .swiper-wrapper {
+
+                              .swiper-slide {
+
+                                a {
+                                  display : block;
+                                  width   : 100%;
+                                  height  : 100%;
+
+                                  img {
+                                    display : block;
+                                    width   : 100%;
+                                    height  : 100%;
+                                  }
+                                }
+                              }
+                            }
+
+                            .swiper-button-prev, .swiper-button-next {
+                              width  : 30px;
+                              height : 40px;
+
+                              &::after {
+                                display : none;
+                              }
+
+                            }
+
+                            .swiper-button-prev {
+                              left                : 0;
+                              @include imageUrl("mobile/icon/icon_gnbSearchArrowLeft");
+                              background-position : center center;
+                              background-size     : 7px 12px;
+                            }
+
+                            .swiper-button-next {
+                              right               : 0;
+                              @include imageUrl("mobile/icon/icon_gnbSearchArrowRight");
+                              background-position : center center;
+                              background-size     : 7px 12px;
+                            }
+                          }
+                        }
+
+                        .searchNodataArea {
+                          line-height : 21px;
+                          margin-top  : 24px;
+                          font-size   : 15px;
+
+                          span {
+                            display : block;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+    /* container */
+    #container {
+
+      .topVisual {
+
+        .topVisualSwiper {
+          height : 95.4166vw;
+
+          .swiper {
+
+          .swiper-button-prev, .swiper-button-next {
+            display: none;
+          }
+
+            .imgWeb, .imgMobile {
+              background-size : 100% 100% !important;
+            }
+          }
+        }
+      }
+
+      .content {
+        @include contentWidth($mobileWidthNumber);
+        padding-bottom: 98px;
+      }
+    }
+
+    /* footer */
+    #footer {
+      height: 376px;
+
+      .footerIn {
+        width: auto;
+        margin: 0;
+        padding: 32px 15px 0 24px;
+
+        .footerLeft {
+          float: none;
+
+          .homepageLink {
+
+            a {
+              display: block;
+              line-height: 17px;
+              font-size: 12px;
+              @include nsB;
+              color: $colorOrange;
+            }
+          }
+
+          .tel {
+            margin-top: 5px;
+
+            a {
+              line-height: 26px;
+              font-size: 24px;
+            }
+          }
+
+          .copyright {
+            line-height: 14px;
+            margin-top: 5px;
+            font-size: 10px;
+          }
+
+          .adminLogin {
+            display: none;
+          }
+        }
+
+        .footerRight {
+          float: none;
+          margin-top: 28px;
+
+          .supportTitle {
+            line-height: 17px;
+            font-size: 12px;
+
+            span {
+              margin-right: 3px;
+            }
+          }
+
+          .supportNumber {
+            line-height: 26px;
+            margin-top: 6px;
+            font-size: 20px;
+
+            span {
+              margin-left: 2px;
+              font-size: 24px;
+            }
+          }
+
+          .supportLink {
+            line-height: normal;
+            margin-top: 9px;
+            font-size: 10px;
+
+            * {
+              float: none;
+              display: block;
+              height: auto;
+            }
+
+            span {
+              line-height: 14px;
+            }
+
+            a {
+              display: inline-block;
+              vertical-align: top;
+              line-height: 29px;
+              margin-top: 14px;
+              padding: 0 14px;
+              border-radius: 2px;
+              font-size: 16px;
+            }
+          }
+
+          .supportContextWeb {
+            display: none;
+          }
+
+          .supportContextMobile {
+            display: block;
+            line-height: 12px;
+            margin-top: 10px;
+            font-size: 10px;
+            color: #B5B5B5;
+
+            a {
+              color: #B5B5B5;
+            }
+          }
+        }
+      }
+    }
+
+    /* popup */
+    .ahnPopupWrap {
+
+      .ahnPopupContainer {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        transform: translate(0, -50%);
+
+        .popupCloseBtn {
+          width: 35px;
+          height: 35px;
+          background-position: center;
+          background-size: 15px 15px;
+        }
+
+        .popupContent {
+          box-sizing: border-box;
+          width: 100%;
+        }
+
+        .popupFunction {
+          margin-top: 12px;
+
+          .popupDayCloseBtn {
+            line-height: 20px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    /* radio button */
+    .btnRadio {
+
+      input {
+
+        & + .inpTxt {
+          min-width: 60px;
+          height: 30px;
+          padding: 0 5px;
+          line-height: 28px;
+          font-size: 13px;
+          @include nsM;
+          color: #fff;
+        }
+
+        &:checked {
+
+          & + .inpTxt {
+            border-color: $colorOrange;
+            background-color: $colorOrange;
+          }
+        }
+      }
+    }
+
+    /* etc */
+    .commentSorting {
+      margin-top: 23px;
+      padding-bottom: 15px;
+      border-bottom-width: 1px;
+
+      .btnRadio {
+
+        & + .btnRadio {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}
