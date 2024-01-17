@@ -1,0 +1,74 @@
+/* LayOut */
+.wrap {margin: auto; padding: 0 20px; width: 500px; font-family: "Dotum";} /* 컨텐츠 넓이 : 460px; 패딩 : 양쪽 20px; 총 넓이 500px */
+
+
+/* Header */
+header {padding: 48px 0 14px;}
+header h1 {text-align: center; line-height: 0;}
+
+/* Footer */
+footer {padding: 20px 0 40px;}
+footer p {color: #555; font-size: 12px; text-align: center;}
+
+/* Container */
+#container {}
+#container>div>label {display: block; border: 1px solid #ccc;}
+#container>div>label i {float: left; display: block; width: 46px; height: 46px; border-right: 1px solid #ccc; background-color: #fafafa;}
+#container>div>label i:after {content: ""; display: block; width: 20px; background-image: url(../img/bg_01.svg);}
+#container>div>label input {float: left; padding: 0 14px; height: 46px; font-size: 14px; font-weight: bold;}
+
+.init {}
+.init+.init {margin-top: 14px;}
+.init label input {width: 412px;}
+.init label:not(:only-of-type) input {width: 366px;}
+
+#field_id {}
+#field_id label i:after {margin: 15px 13px; height: 16px; background-position: -1px -1px;}
+
+#field_pw {position: relative;}
+#field_pw label {margin-top: 14px;}
+#field_pw label+label {position: absolute; top: 1px; right: 1px; margin-top: 0; width: 46px; height: 46px; border: 0;}
+#field_pw label+label input {display: none;}
+#field_pw label+label em {display: block; margin: 13px; width: 20px; height: 20px; background: url(../img/bg_01.svg) -106px -1px no-repeat;}
+#field_pw label+label input:checked+em {background-position: -127px -1px;}
+#field_pw label i:after {margin: 13px; height: 20px; background-position: -22px -1px;}
+#field_pw label em {float: left; display: block; width: 46px; height: 46px;}
+#field_pw label em:after {content:""; display: block; margin: 13px; height: 20px; background: url(../img/bg_01.svg) -106px -1px no-repeat;}
+
+#field_pw2 {}
+#field_pw2 label i:after {margin: 13px; height: 20px; background-position: -43px -1px;}
+
+#field_nm {}
+#field_nm label i:after {margin: 13px; height: 20px; background-position: -1px -22px;}
+
+#field_phone {}
+#field_phone label i:after {margin: 13px; height: 20px; background-position: -21px -22px;}
+
+#field_chk {margin-top: 12px;}
+#field_chk input#auto {display: none;}
+#field_chk .fll {float: left;}
+#field_chk .fll label {position: relative;}
+#field_chk .fll label i {overflow: hidden; display: inline-block; position: relative; width: 23px; height: 23px; border: 1px solid #ccc; vertical-align: middle; box-shadow: inset 0 3px 0 rgba(0,0,0,0.05);}
+#field_chk .fll label i:before {content: ""; display: block; position: absolute; top: 15px; left: 3px; width: 16px; height: 12px; background-image: url(../img/bg_01.svg); background-position: -85px -22px; opacity: 0; transition: 0.25s ease;}
+#field_chk input:checked~.fll label i:before {top: 5px; opacity: 1;}
+#field_chk .fll label span {color: #555; font-size: 14px; vertical-align: middle;}
+#field_chk .flr {float: right; position: relative; padding: 2px 12px 3px 0;}
+#field_chk .flr:after {content: ""; display: block; position: absolute; top: 5px; right: 0; width: 8px; height: 14px; background: url(../img/bg_01.svg) -102px -22px no-repeat;}
+#field_chk .flr a {color: #0073e9; font-size: 14px;}
+#field_chk .fln {display: none; clear: both;}
+#field_chk input:checked~.fln {display: block;}
+#field_chk .fln span {display: inline-block; position: relative; padding: 0 6px; margin-top: 8px; height: 30px; color: #555; font-size: 12px; line-height: 30px; letter-spacing: -1px; white-space: nowrap; background-color: #f4f4f4;}
+#field_chk .fln span:before {content: ""; display: block; position: absolute; bottom: 100%; left: 5px; width: 0; height: 0; border: 7px solid transparent; border-bottom-color: #f4f4f4; border-top: 0;}
+
+#field_submit {margin: 14px 0 18px;}
+#field_submit input[type=submit] {width: 100%; height: 52px; color: #fff; font-size: 17px; text-align: center; font-weight: bold; border-radius: 2px; box-shadow: inset 0 -2px 0 rgba(0,0,0,0.38); background-color: #0074e9;}
+
+#field_link {margin-top: 18px; padding-top: 18px; border-top: 1px solid #ddd;}
+#field_link a {display: block; height: 52px; color: #0074e9; font-size: 17px; line-height: 52px; text-align: center; font-weight: bold; border-radius: 2px; border: 1px solid #ccc; box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);}
+
+#field_agree {}
+#field_agree p {color: #555; font-size: 12px;}
+#field_agree p a {text-decoration: underline;}
+#field_agree p b {font-weight: bold;}
+
+/* Media Query */
