@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+html {scroll-behavior: smooth;}
+html, body, header, section, article, aside, footer, nav, hgroup, h1, h2, h3, h4, h5, h6, div, p, ul, li, figure, fieldset {
+    padding: 0;
+    margin: 0;
+}
+html, body { height:100%}
+[hidden], area, base, basefont, command, datalist, head, input[type=hidden], link, menu[type=context], meta, noembed, noframes,
+param, script, source, style, track, title { /* case-insensitive */
+    display: none;
+}
+
+address, article, aside, blockquote, body, center, dd, dir, div, dl, dt, figure, figcaption, footer, form, h1, h2, h3, h4, h5, h6, header,
+hgroup, hr, html, legend, listing, menu, nav, ol, p, plaintext, pre, section, summary, ul, xmp {
+    display: block;
+}
+
+table { display: table; border-collapse: collapse; }
+caption {display: none; }
+colgroup { display: table-column-group; }
+col { display: table-column; }
+thead { display: table-header-group; }
+tbody { display: table-row-group; }
+tfoot { display: table-footer-group; }
+tr { display: table-row; }
+td, th { display: table-cell;font-family:'Noto Sans KR', AppleSDGothicNeo-Regular, sans-serif;}
+
+li { display: list-item; }
+
+ruby { display: ruby; }
+rt { display: ruby-text;}
+
+fieldset, img, img a { border: 0 none; }
+ul, li { list-style: none; margin:0; padding:0;}
+dl, dd, dt {list-style: none; margin:0;padding:0 }
+em, address, i { font-style: normal; }
+a {color:#666; text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: underline; }
+
+b, strong {font-weight:600;}
+h1, h2, h3, h4, h5	{margin:0; padding:0;}
+button	{border:none;cursor:pointer;font-family:'Noto Sans KR', AppleSDGothicNeo-Regular, sans-serif;padding:0;vertical-align:middle}
+pre {font-family:"맑은 고딕","dotum","돋움",sans-serif;white-space: pre-wrap;}
+textarea {font-family:'Noto Sans KR', AppleSDGothicNeo-Regular, sans-serif;}
+
+input {-webkit-appearance: none;-webkit-border-radius: 0;}
+
+form {height:inherit;display:inline;}
