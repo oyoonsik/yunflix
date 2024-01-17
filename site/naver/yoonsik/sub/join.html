@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>NAVER</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/member.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+<body>
+	<div class="wrap" id="member">
+		<div class="inner">
+			<header>
+				<h1 class="bg_01">
+					<a href="#">naver</a>
+				</h1>
+			</header>
+			<div id="container">
+				<form>
+					<fieldset>
+						<div class="grp" id="grp_01">
+							<div class="row bg_03" id="row_id">
+								<input type="text" placeholder="아이디">
+							</div>
+							<div class="row bg_03" id="row_pw">
+								<input type="password" placeholder="비밀번호">
+							</div>
+							<div class="row bg_03" id="row_pw2">
+								<input type="password" placeholder="비밀번호 재확인">
+							</div>
+						</div>
+						<div class="grp" id="grp_02">
+							<div class="row" id="row_nm">
+								<input type="text" placeholder="이름">
+							</div>
+							<div class="row" id="row_sex">
+								<input type="radio" name="sex" id="sex_male">
+								<label for="sex_male">
+									<span>남자</span>
+								</label>
+								<input type="radio" name="sex" id="sex_female">
+								<label for="sex_female">
+									<span>여자</span>
+								</label>
+							</div>
+							<div class="row" id="row_birth">
+								<span>생일</span>
+								<input type="text" placeholder="년(4자)">
+								<select>
+									<option>월</option>
+									<!-- option*12>{$} -->
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>9</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+								</select>
+								<input type="text" placeholder="일">
+							</div>
+							<div class="row" id="row_email">
+								<input type="text" placeholder="본인확인 이메일(선택)">
+							</div>
+						</div>
+						<div class="grp" id="grp_03">
+							<div class="row" id="row_phone">
+								<span>+82</span>
+								<input type="text" placeholder="휴대전화번호">
+								<input type="button" value="인증">
+							</div>
+							<div class="row" id="row_confirm">
+								<input type="text" placeholder="인증번호">
+								<input type="button" value="확인">
+							</div>
+						</div>
+						<div id="submit">
+							<input type="submit" value="가입하기" class="bg_02">
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<footer>
+				<p>
+					<span><a href="#">이용약관</a></span><!-- 
+				 --><span><a href="#">개인정보처리방침</a></span><!-- 
+				 --><span><a href="#">책임의 한계과 법적고지</a></span><!-- 
+				 --><span><a href="#">회원정보 고객센터</a></span>
+				</p>
+				<div>
+					<h2 class="bg_01">
+						<a href="#">naver</a>
+					</h2>
+					<span>
+						Copyright © <a href="#">NAVER Corp.</a> All Rights Reserved.
+					</span>
+				</div>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
