@@ -14,8 +14,8 @@
                                 <div class="gnbItemTitle">전체카테고리</div>
                                 <ul class="gnbItemSubBox">
                                     <li><a href="/schMain/sub01.html" style="text-decoration: none;"><span>오윤식은?</span></a></li>
-                                    <li><a href="/videoMain/selectVideoList?videoCd=policy" style="text-decoration: none;"><span>안철수의 약속</span></a></li>
-                                    <li><a href="/videoMain/selectVideoList?videoCd=sch" style="text-decoration: none;"><span>안철수의 오늘</span></a></li>
+                                    <li><a href="/videoMain/selectVideoList?videoCd=policy" style="text-decoration: none;"><span>?</span></a></li>
+                                    <li><a href="/videoMain/selectVideoList?videoCd=sch" style="text-decoration: none;"><span>?</span></a></li>
                                 </ul>
                                 <ul class="gnbItemSubBox">
                                     <li><a href="/videoMain/selectVideoVideoList?videoCd=video" style="text-decoration: none;"><span>영상</span></a></li>
@@ -23,12 +23,12 @@
                                     <li><a href="/videoMain/selectVideoList?videoCd=commu" style="text-decoration: none;"><span>커뮤니티</span></a></li>
                                 </ul>
                                 <ul class="gnbItemSubBox">
-                                    <li><a href="https://www.marketahn.co.kr/" target="_blank" style="text-decoration: none;"><span>철수마켓</span></a></li>
-                                    <li><a href="https://www.preparedfuture.kr" target="_blank" style="text-decoration: none;"><span>폴리버스 입장</span></a></li>
+                                    <li><a href="https://www.marketahn.co.kr/" target="_blank" style="text-decoration: none;"><span>ㅁㄴㄹㅇ</span></a></li>
+                                    <li><a href="https://www.preparedfuture.kr" target="_blank" style="text-decoration: none;"><span> 입장</span></a></li>
                                 </ul>
                                 <ul class="gnbItemSubBox">
-                                    <li><a href="https://docs.google.com/forms/d/1JIu5fu9InbFuDbn0Y1X4VsV0Z3qNxmr8qLBsTR0E1Mg/edit" target="_blank" style="text-decoration: none;"><span>캠프 자원봉사 신청</span></a></li>
-                                    <li><a href="https://peopleparty.kr" target="_blank" style="text-decoration: none;"><span class="peoplepartyHomepage">국민의당 홈페이지</span></a></li>
+                                    <li><a href="https://docs.google.com/forms/d/1JIu5fu9InbFuDbn0Y1X4VsV0Z3qNxmr8qLBsTR0E1Mg/edit" target="_blank" style="text-decoration: none;"><span>테스트</span></a></li>
+                                    <li><a href="https://peopleparty.kr" target="_blank" style="text-decoration: none;"><span class="peoplepartyHomepage">홈페이지</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -118,5 +118,5 @@
             <button type="button" class="gnbCloseBtn"><span>메뉴 닫기</span></button>
         </div>
     </div>
-</hader>
+</hader>    
 ?>
