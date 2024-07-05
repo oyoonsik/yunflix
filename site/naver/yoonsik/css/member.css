@@ -1,0 +1,117 @@
+
+/* LayOut */
+.wrap {display: inline-block; min-width: 100%; font-family: '돋움',Dotum,Helvetica,sans-serif; background-color: #f5f6f7;}
+header {}
+footer {}
+#container {}
+
+.inner {width: 768px;}
+
+/* Header */
+header {position: relative; padding: 62px 0 70px;}
+header h1 {margin: auto; width: 240px; height: 44px;}
+header h1 a {display: block; height: 100%; text-indent: -9999px;}
+header select {position: absolute; top: 14px; right: 0; width: 95px; height: 30px; font-size: 12px; border: 1px solid #dadada;}
+
+/* Footer */
+footer {padding: 30px 0 15px; font-size: 11px; text-align: center;}
+footer p {}
+footer p span {position: relative;}
+footer p span+span {margin-left: 17px;}
+footer p span+span:before {content: ""; position: absolute; top: 0; left: -9px; display: block; width: 1px; height: 11px; background-color: #bbb;}
+footer p span a {color: #666;}
+footer p span:nth-child(2) a {color: #333; font-weight: bold;}
+footer p span a:hover {color: #438a01; text-decoration: underline;}
+footer div {margin-top: 10px; color: #666; font-family: "Verdana"; font-size: 9px;}
+footer div h2 {display: inline-block; width: 63px; height: 11px; background-position: -242px -1px; vertical-align: middle;}
+footer div h2 a {display: block; height: 100%; text-indent: -9999px;}
+footer div span { vertical-align: middle;}
+footer div span a {font-weight: bold;}
+footer div span a:hover {color: #438a01; text-decoration: underline;}
+
+/* Container */
+#container {margin: auto; width: 460px;}
+#container .login_area {}
+#container .login_area fieldset {}
+#container .login_area fieldset input {display: block; padding: 0 15px; width: 100%;}
+#container .login_area fieldset input[type=text] {height: 51px; border: 1px solid #dadada;}
+#container .login_area fieldset input[type=password] {margin-top: 14px; height: 51px; border: 1px solid #dadada;}
+#container .login_area fieldset input[type=submit] {margin-top: 30px; height: 61px; color: #fff; font-size: 20px; background-color: #1fbc02;}
+#container .login_area fieldset input:focus {border-color: #08a600;}
+#container .login_area fieldset .login_check {margin-top: 14px; color: #666; font-size: 12px;}
+#container .login_area fieldset .login_check .fll {float: left;}
+#container .login_area fieldset .login_check .fll label {}
+#container .login_area fieldset .login_check .fll label input {display: none;}
+#container .login_area fieldset .login_check .fll label .chk_bx {display: inline-block; width: 26px; height: 26px; vertical-align: middle; background-position: -1px -115px;}
+#container .login_area fieldset .login_check .fll label input:checked+.chk_bx {background-position: -1px -145px;}
+#container .login_area fieldset .login_check .fll label span {vertical-align: middle;}
+#container .login_area fieldset .login_check .flr {float: right; margin-top: 5px;}
+#container .login_area fieldset .login_check .flr a {vertical-align: middle;}
+#container .login_area fieldset .login_check .flr a:hover {text-decoration: underline;}
+#container .login_area fieldset .login_check .flr label {vertical-align: middle;}
+#container .login_area fieldset .login_check .flr label input {display: none;}
+#container .login_area fieldset .login_check .flr label span {display: inline-block; width: 26px; text-align: center; font-weight: bold;}
+#container .login_area fieldset .login_check .flr label span:first-of-type {color: #333;}
+#container .login_area fieldset .login_check .flr label span:last-of-type {display: none; color: #1fbc02;}
+#container .login_area fieldset .login_check .flr label input:checked~span:first-of-type {display: none;}
+#container .login_area fieldset .login_check .flr label input:checked~span:last-of-type {display: inline-block;}
+#container .login_area fieldset .login_check .flr label:last-of-type {position: relative; display: inline-block; width: 14px; height: 14px; background-position: -242px -16px;}
+#container .login_area fieldset .login_check .flr label:last-of-type p {display: none; position: absolute; top: 30px; right: 0; padding: 8px 9px; width: 297px; color: #666; font-size: 11px; letter-spacing: -1px; line-height: 1.5; border: 1px solid #888; background-color: #fff; z-index: 1;}
+#container .login_area fieldset .login_check .flr label:last-of-type input:checked+p {display: block;}
+#container .login_area fieldset .login_check .flr label:last-of-type p:before {content: ""; display: block; position: absolute; top: -9px; right: 4px; width: 11px; height: 10px; background: url("../img/irbg_01.png") -60px -48px no-repeat;}
+
+#container .login_area fieldset .login_check .flr>span {position: relative; margin-left: 18px;}
+#container .login_area fieldset .login_check .flr>span:before {content: ""; display: block; position: absolute; top: 0; left: -9px; width: 1px; height: 12px; background-color: #ddd;}
+#container .login_area fieldset .login_check .flr>span a {text-decoration: underline;}
+#container .find_info {margin-top: 30px; padding-top: 20px; text-align: center; border-top: 1px solid #ddd;}
+#container .find_info span {position: relative; color: #888; font-size: 12px;}
+#container .find_info span+span {margin-left: 17px;}
+#container .find_info span+span:before {content: ""; display: block; position: absolute; top: 0; left: -9px; width: 1px; height: 12px; background-color: #888;}
+#container .find_info span a {}
+
+#container form fieldset .grp {border: 1px solid #dadada;}
+#container form fieldset .grp+.grp {margin-top: 10px;}
+#container form fieldset .grp .row {padding: 8px 15px; height: 49px; font-size: 15px; background-color: #fff;}
+#container form fieldset .grp #row_id {background-position: 98% -45px;}
+#container form fieldset .grp #row_pw {background-position: 98% -466px;}
+#container form fieldset .grp #row_pw2 {background-position: 98% -515px;}
+#container form fieldset .grp .row+.row {height: 50px; border-top: 1px solid #f0f0f0;}
+#container form fieldset .grp .row input {width: 100%; height: 33px;}
+#container form fieldset .grp .row input:not(:only-child) {width: 322px;}
+#container form fieldset .grp .row.bg_03 input {width: 339px;}
+
+#row_id {}
+
+#row_pw {}
+
+#row_pw2 {}
+
+#row_nm {}
+
+#row_sex input[type=radio] {display: none;}
+#row_sex label {display: block; float: left; position: relative; width: 50%; height: 100%; color: #888; font-size: 12px; text-align: center; line-height: 33px; border: 1px solid #dadada;}
+#row_sex input:checked+label {color: #08a600; border-color: #08a600;}
+#row_sex label:last-of-type {border-left: 0;}
+#row_sex label:last-of-type:before {content: ""; display: block; position: absolute; top: -1px; left: -1px; width: 1px; height: 33px;}
+#row_sex input:checked+label:last-of-type:before {background-color: #08a600;}
+
+#row_birth {position: relative; padding-left: 68px !important;}
+#row_birth span {position: absolute; top: 0; left: 0; width: 54px; height: 49px; color: #888; font-size: 13px; line-height: 49px; text-align: center; border-right: 1px solid #f0f0f0; background-color: #f7f7f7;}
+#row_birth input {width: 112px !important;}
+#row_birth select {margin: 0 14px; width: 112px;}
+
+#row_email {}
+
+#row_phone {}
+#row_phone span {display: block; float: left; margin-right: 10px; width: 114px; height: 33px; font-weight: bold; line-height: 33px; border-right: 1px solid #f0f0f0;}
+#row_phone input[type=text] {width: 193px !important;}
+#row_phone input[type=button] {float: right; width: 101px !important; height: 33px; font-size: 12px; border: 1px solid #dadada; background-color: #fff;}
+
+#row_confirm {}
+#row_confirm input[type=text] {}
+#row_confirm input[type=button] {float: right; width: 101px !important; height: 33px; font-size: 12px; border: 1px solid #dadada; background-color: #fff;}
+
+#container form fieldset #submit {margin-top: 53px;}
+#container form fieldset #submit input {width: 460px; height: 61px; text-indent: -9999px; background-color: #1fbc02; background-position: 50% 0;}
+
+/* Media Query */

@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* font-family */
+@mixin nsR {
+  font-family: "NotoSansCJKkrRegular", sans-serif;
+}
+
+@mixin nsM {
+  font-family: "NotoSansCJKkrMedium", sans-serif;
+}
+
+@mixin nsB {
+  font-family: "NotoSansCJKkrBold", sans-serif;
+}
+
+@mixin nsBk {
+  font-family: "NotoSansCJKkrBlack", sans-serif;
+}
+
+@mixin gtM {
+  font-family: "GothamMedium", sans-serif;
+}
+
+@mixin gtB {
+  font-family: "GothamBold", sans-serif;
+}
+
+@mixin gtBk {
+  font-family: "GothamBlack", sans-serif;
+}
+
+@mixin gtBook {
+  font-family: "GothamBook", sans-serif;
+}
+
+/* blind */
+@mixin blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin unBlind {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: none;
+  overflow: visible;
+}
+
+/* content width, min-width */
+$webWidthNumber: 1200px;
+$mobileWidthNumber: auto;
+
+@mixin contentWidth($number) {
+  width: $number;
+}
+
+@mixin contentMinWidth($number) {
+  min-width: $number;
+}
+
+/* color */
+$colorOrange: #EA5504;
+$colorRed: #E62214;
+
+@mixin colorOrange {
+  color: $colorOrange;
+}
+@mixin colorRed {
+  color: $colorRed;
+}
+
+@mixin imageUrl($imgUrl, $type: png) {
+  background: url("../images/" + $imgUrl +"." + $type) no-repeat;
+}
+@mixin imageUrlAdmin($imgUrl, $type: png) {
+  background: url("../admin/images/" + $imgUrl +"." + $type) no-repeat;
+}
+//@include imageUrl(common/logo_scroll,png) 사용법;
+
+// Margin , Padding
+@for $i from 0 through 60 {
+  .mgTop#{$i*5} {
+    margin-top: 5px * $i !important;
+  }
+  .mgBottom#{$i*5} {
+    margin-bottom: 5px * $i !important;
+  }
+  .mgLeft#{$i*5} {
+    margin-left: 5px * $i !important;
+  }
+  .mgRight#{$i*5} {
+    margin-right: 5px * $i !important;
+  }
+  .padTop#{$i*5} {
+    padding-top: 5px * $i !important;
+  }
+  .padBottom#{$i*5} {
+    padding-bottom: 5px * $i !important;
+  }
+  .padLeft#{$i*5} {
+    padding-left: 5px * $i !important;
+  }
+  .padRight#{$i*5} {
+    padding-right: 5px * $i !important;
+  }
+}

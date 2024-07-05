@@ -1,0 +1,39 @@
+
+/* Global */
+a:hover span {text-decoration: underline;}
+input[type=checkbox] {display: none;}
+input[type=radio] {display: none;}
+
+
+/* LayOut */
+body{height: 100%; background: #000;}
+#wrap {min-width: 480px; max-width: 100%; }
+.inner{background-color: #000;  }
+footer {width: 100%; background-color: #000;}
+#container {}
+
+/* Header */
+header{}
+header .logo{}
+header .logo a{}
+header .logo a img{margin: auto; padding-top: 100px;}
+
+/* Footer */
+footer{}
+footer .inner{width: 100%; padding-top: 50px;}
+footer .inner
+footer .inner
+/* Container */
+#container {position: relative;}
+.video {position: absolute; top: 200px; left: 0px; min-width: 100%; min-height: 600px; width: auto; z-index: 1;overflow:hidden;}
+.icon{position: absolute;top: 820px;left: 0%; opacity: 0.5; }
+.icon_1{float: left;margin-right: 20px;}
+.icon_2{float: left;margin-right: 20px;}
+.icon_3{float: left;margin-right: 20px;}
+/* Animation */
+
+/* Media Query */
+@media screen and (max-width: 480px){
+	.inner{max-width: 480px;}
+
+	}

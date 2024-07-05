@@ -1,0 +1,33 @@
+body {background-color:#000;font-family: "Noto Sans KR", sans-serif;}
+.content_oh{width: 1200px; margin:0 auto;}
+h2{color:#fff;padding: 71px 20px 0;font-weight: 500;font-size: 30px; margin-bottom: 20px;}
+#main-section{position: relative;width: 100%;height: 100%;margin: 0 auto;background-size: cover;}
+video{width: 100%;}
+/* 섹션3 */
+.section8-wrap{padding-bottom: 150px;}
+.section8-content-wrap{width:1200px;margin:0 auto;}
+.section8-content-wrap>li{float:left;height:auto; /*임시 좌측박스 높이로 js에서 설정*/}
+.section8-content-wrap>li:nth-child(1){width:50%;background:#000;}
+.section8-content-wrap>li:nth-child(2){width:50%;height:auto;background:url(images/web/bg/home-classic-personal-img-03.png) no-repeat center center;}
+.section8-content-wrap>li:nth-child(3){width:35%;height:auto;background:#000;}
+.section8-content-wrap>li>p{color:#8d8d8d;}
+.fontone {color:#a7a7a7;font-size:17px;padding-bottom: 5px; padding-top: 5px; font-weight: bold; }
+.section8-content-wrap>li:nth-child(1)>p{line-height:15px;}
+/*우측박스*/
+.section8-content-right-wrap{position:relative; top:30%;margin-top:-109px;padding:0 12%;transition:all 0.3s;}
+.section8-content-right-wrap>li{padding-bottom:30px;}
+.section8-content-right-wrap>li:last-child{padding-bottom:0;}
+.section8-content-right-wrap>li>p{padding-top:15px;font-size:13px;color:#626262;}
+
+.section8-content-right-bar-wrap1,
+.section8-content-right-bar-wrap2,
+.section8-content-right-bar-wrap3,
+.section8-content-right-bar-wrap4{width:100%; height:4px;background:#444;}
+
+.section8-content-right-bar-wrap1>p{width:0%;height:4px;background:#2283d4;}
+.section8-content-right-bar-wrap2>p{width:0%;height:4px;background:#2283d4;}
+.section8-content-right-bar-wrap3>p{width:0%;height:4px;background:#2283d4;}
+.section8-content-right-bar-wrap4>p{width:0%;height:4px;background:#2283d4;}
+
+.bottom_oh{display: flex;width: 100%;height: 100px; color: #000;}
+

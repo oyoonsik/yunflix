@@ -1,0 +1,23 @@
+/* CSS Reset */
+* {margin: 0; padding: 0; color: inherit; font-family: inherit; font-size: 1em; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; border: 0 solid transparent; outline: 0; box-sizing: border-box; background-repeat: no-repeat;}
+ul,ol {list-style: none;}
+table {table-layout: fixed; border-collapse: collapse;}
+input[type="button"],input[type="submit"],button,a,label {cursor: pointer;}
+
+/* Common */
+.clearfix:after {content: ""; display: block; clear: both;}
+.inner {position: relative; height: 100%;}
+.inner:after {content: ""; display: block; clear: both;}
+.ellipsis {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* Global */
+.fll {float: left;}
+.flr {float: right;}
+::placeholder {opacity: 0.6;}
+
+.bg_hd {background-image: url(../img/bg_hd.png);}
+.bg_ft {background-image: url(../img/bg_ft.png);}
+.bg_01 {background-image: url(../img/bg_01.png);}
+.bg_02 {background-image: url(../img/bg_02.png);}
+.bg_03 {background-image: url(../img/bg_03.png);}
+.bg_04 {background-image: url(../img/bg_04.png);}

@@ -1,0 +1,3320 @@
+@charset "UTF-8";
+
+.w140 {width: 140px !important;}
+.w180 {width: 180px !important;}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  margin: -1px;
+  overflow: hidden
+}
+h2.title {
+  padding: 71px 0 0;
+  @include nsM;
+  font-size: 30px;
+  margin-bottom: 50px;
+  strong {
+    @include nsB;
+    font-size: 45px;
+    letter-spacing: -0.075em;
+  }
+  span {
+    margin-left: 22px;
+    color: #b3b3b3;
+    letter-spacing: -0.075em;
+  }
+  &-margin {
+    margin-bottom: 78px;
+  }
+}
+
+.listTypeWeb {
+  display: block;
+}
+.listTypeMobile {
+  display: none;
+}
+
+/* 안철수는 */
+
+.ahnIs {
+  &__visual {
+    img {
+      display: block;
+      width: 100%;
+    }
+    .mobile {
+      display: none;
+      width: 100%;
+    }
+  }
+  &__profile {
+    display: flex;
+    padding: 0 0 0 80px;
+    .photo {
+      margin-right: 73px;
+      .mobile {
+        display: none;
+      }
+    }
+    &__text {
+      em {
+        display: block;
+        color: #EA5517;
+        font-size: 36px;
+        @include nsM;
+        margin-bottom: 18px;
+      }
+      .txt {
+        display: block;
+        font-size: 36px;
+        color: #fff;
+        @include nsM;
+        line-height: 40px;
+      }
+      .fontGotham {
+        @include gtM;
+        font-size: 36px;
+      }
+      .personalHistory {
+        margin-top: 60px;
+        li {
+          color: #B4B4B4;
+          @include nsM;
+          font-size: 24px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
+  &__video {
+    position: relative;
+    margin-top: 105px;
+    padding-top: 56.25%;
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    * {
+      width: 100%;
+    }
+  }
+}
+
+/* 안철수의 약속 */
+.listWrap {
+  &__list {
+    padding: 50px 0 0;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        position: relative;
+        width: 540px;
+        height: 520px;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:nth-child(odd) {
+          margin-top: -52px;
+        }
+        .btnLike {
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          width: 54px;
+          height: 50px;
+          @include imageUrl("web/sub/like_37x_35_off");
+          background-position: center;
+          background-size: 37px 35px;
+          padding: 10px;
+          z-index: 2;
+          &.on {
+            @include imageUrl("web/sub/like_37x_35_on");
+            background-position: center;
+            background-size: 37px 35px;
+          }
+        }
+        a {
+          display: block;
+          position: relative;
+          z-index : 0;
+          img {
+            position: relative;
+            width: 540px;
+            height: 317px;
+            &.mobile {
+              display: none;
+            }
+          }
+        }
+        .txt {
+          display: -webkit-box;
+          height: 65px;
+          margin-top: 22px;
+          font-size: 28px;
+          line-height: 32px;
+          padding: 0 5px;
+          color: #fff;
+          white-space: normal;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          letter-spacing: -0.025em;
+        }
+        .sns {
+          position: relative;
+          display: block;
+          margin: 13px 0 0;
+          padding: 12px 5px 0 41px;
+          font-size: 22px;
+          @include nsR;
+          color: #fff;
+          + .txt {
+            margin-top: 10px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 8px;
+            width: 31px;
+            height: 31px;
+          }
+          &-naver:after {
+            @include imageUrl("web/icon/icon_naver");
+            background-size: contain;
+          }
+          &-facebook:after {
+            @include imageUrl("web/icon/icon_facebook");
+            background-size: contain;
+          }
+          &-instagram:after {
+            @include imageUrl("web/icon/icon_instagram");
+            background-size: contain;
+          }
+          &-ahn:after {
+            @include imageUrl("web/icon/icon_ahn");
+            background-size: contain;
+          }
+          &-media:after {
+            @include imageUrl("web/icon/icon_media");
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  .btnMore {
+    margin-top: 60px;
+    text-align: center;
+    button {
+      position: relative;
+      padding-bottom: 7px;
+      span {
+        color: #fff;
+        font-size: 31px;
+        @include nsB;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+      }
+    }
+  }
+}
+
+/* 안철수의 약속-상세 */
+.promiseAhn-detail {
+  h2.title {
+    strong {
+      font-size: 27px;
+    }
+    span {
+      font-size: 18px;
+    }
+  }
+}
+.detailWrap {
+  h3.title {
+    display: block;
+    font-size: 50px;
+    @include nsM;
+    padding-bottom: 28px;
+    letter-spacing: -0.09em;
+    .category {
+      color: #EA5517;
+    }
+  }
+  .justifyWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 0;
+    color: #b3b3b3;
+    &__left {
+      display: flex;
+
+      > *  {
+        display: block;
+        height: 27px;
+        line-height: 27px;
+        font-size: 19px;
+      }
+
+      .write {
+        margin-right: 20px;
+      }
+      .name {
+        margin-right: 63px;
+      }
+      .writeTitle {
+        margin-right: 20px;
+      }
+      .date {
+        @include gtBook;
+      }
+      .btnLink {
+        font-size: 22px;
+        margin-left: 11px;
+        margin-right: 9px;
+        color: #fff;
+      }
+    }
+    &__right {
+      display: flex;
+      position: relative;
+      padding-right: 5px;
+
+      .btnSharing, .btnLike {
+        display: block;
+        height: 27px;
+        font-size: 18px;
+      }
+
+      .btnSharing {
+        position: relative;
+        padding: 0 0 0 30px;
+
+        span {
+          display: block;
+          height: 27px;
+          line-height: 27px;
+          @include nsM;
+          color: #b3b3b3;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 3px;
+          width: 21px;
+          height: 20px;
+          @include imageUrl("web/sub/icon_sharing");
+          background-size: contain;
+        }
+        &.on {
+          span {
+            color: #fff;
+          }
+          &:after {
+            @include imageUrl("web/sub/icon_sharing_on");
+            background-size: contain;
+          }
+        }
+      }
+      .btnLike {
+        position: relative;
+        height: 27px;
+        margin-left: 31px;
+        padding: 0 23px 0 0;
+        vertical-align: top;
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 16px;
+          height: 15px;
+          margin-top: -7px;
+          @include imageUrl("web/sub/like_16x15_off");
+          background-size: contain;
+        }
+        .num {
+          position: relative;
+          display: block;
+          height: 27px;
+          line-height: 27px;
+          color: #B3B3B3;
+          @include gtBook;
+        }
+        &.on {
+          span {
+            color: #fff;
+          }
+          &:after {
+            @include imageUrl("web/sub/like_16x15_on");
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    margin-bottom: 6px;
+    padding: 0 0 60px 0;
+    border-top: 2px solid #EA5510;
+    border-bottom: 1px solid #EA5510;
+    &.lineNone {
+      border-top: 0;
+    }
+  }
+  .visualImage {
+    margin: 55px 0 0;
+    img {
+      max-width: 100%;
+    }
+  }
+  .video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 55px;
+    iframe,object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .text {
+    display: block;
+    margin: 60px 0 0;
+    font-size: 16px;
+    @include nsR;
+    color: #E4E4E4;
+    line-height: 26px;
+  }
+  .imageText {
+    padding-top: 60px;
+
+    > * {
+      margin-top: 0 !important;
+    }
+
+  }
+}
+.paginationWrap {
+  margin-top: 110px;
+  h3.title {
+    font-size: 30px;
+    @include nsB;
+    color: #fff;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      position: relative;
+      width: 384px;
+      .text {
+        display: -webkit-box;
+        font-size: 24px;
+        margin-top: 17px;
+        white-space: normal;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include nsM;
+        line-height: 30px;
+        letter-spacing: -0.025em;
+        color: #fff;
+      }
+      > .btnLike {
+        position: absolute;
+        right: 17px;
+        top: 18px;
+        width: 27px;
+        height: 26px;
+        @include imageUrl("web/sub/like_27x26_off");
+        &.on {
+          @include imageUrl("web/sub/like_27x26_on");
+        }
+      }
+      a {
+        img {
+          display: block;
+          width: 100%;
+          height: 226px;
+        }
+      }
+    }
+  }
+  &__list-video {
+    ul {
+      li {
+        width: 270px;
+        a {
+          display: block;
+          width: 100%;
+          color: #fff;
+          img {
+            display: block;
+            width: 100%;
+            height: 367px;
+          }
+          .txt {
+            display: -webkit-box;
+            font-size: 24px;
+            margin-top: 17px;
+            white-space: normal;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 30px;
+            letter-spacing: -0.025em;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 95px 0 0;
+  a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #707070;
+    color: #666666;
+    font-size: 17px;
+    @include gtM;
+    box-sizing: border-box;
+    margin: 0 6px;
+    &.current {
+      border-color: #EA5517;
+      color: #fff;
+    }
+    &.previous,&.next {
+      position: relative;
+      width: auto;
+      border: 0;
+      font-size: 23px;
+      @include nsM;
+      color: #fff;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        width: 15px;
+        height: 15px;
+        display: block;
+        border: 1px solid #fff;
+        border-top: none;
+        border-right: none;
+        transform: rotate(45deg);
+      }
+    }
+    &.previous:after {
+      left: -18px;
+    }
+    &.next:after {
+      right: -18px;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+/* tab */
+.tabWrap {
+  position: relative;
+  margin-bottom: 50px;
+  ul {
+    margin: 1px 0 0 1px;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    li {
+      float: left;
+      text-align: center;
+      min-width: 120px;
+      height: 54px;
+      margin: -1px 0 0 -1px;
+      border: 1px solid #585858;
+      box-sizing: border-box;
+
+      a {
+        display: block;
+        text-align: center;
+        padding: 0 15px;
+        line-height: 52px;
+        font-size: 19px;
+        @include nsB;
+        color: #fff;
+        letter-spacing: -0.075em;
+      }
+      &.on {
+        background-color: #EA5517;
+      }
+    }
+  }
+}
+
+/* 안철수의 오늘 */
+
+/* 커뮤니티 */
+.community {
+  .rightArea {
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: -1px;
+
+    > * {
+      float: left;
+      display: block;
+
+      & + *  {
+        margin-left: 8px;
+      }
+    }
+
+    .btnWriting {
+      width: 191px;
+      height: 54px;
+      border: 1px solid #fff;
+      box-sizing: border-box;
+      @include imageUrl("web/sub/btnWriting");
+      background-position: center;
+      background-size: 87px 29px;
+      &:hover {
+        background-color: #EA5517;
+      }
+    }
+
+    .typeBtn {
+      box-sizing: border-box;
+      width: 54px;
+      height: 54px;
+      border: 1px solid #fff;
+
+      span {
+        @include blind;
+      }
+    }
+
+    .listType01 {
+      @include imageUrl("web/icon/icon_listType01");
+      background-position: center;
+
+      &.on {
+        border-color: $colorOrange;
+        @include imageUrl("web/icon/icon_listType01_on");
+        background-position: center;
+      }
+    }
+
+    .listType02 {
+      @include imageUrl("web/icon/icon_listType02");
+      background-position: center;
+
+      &.on {
+        border-color: $colorOrange;
+        @include imageUrl("web/icon/icon_listType02_on");
+        background-position: center;
+      }
+    }
+  }
+  &__list {
+    ul {
+      display: flex;
+      flex-flow: wrap;
+      li {
+        position: relative;
+        width: 384px;
+        margin: 0 0 50px 24px;
+
+        &:nth-child(3n+1) {
+          margin-left: 0;
+        }
+        > .btnLike {
+          position: absolute;
+          right: 3px;
+          top: 7px;
+          width: 54px;
+          height: 50px;
+          @include imageUrl("web/sub/like_27x26_off");
+          background-position: center;
+          background-size: 27px 27px;
+          padding: 10px;
+          z-index: 2;
+          &.on {
+            @include imageUrl("web/sub/like_27x26_on");
+            background-position: center;
+            background-size: 27px 27px;
+          }
+        }
+        a {
+          position: relative;
+          display: block;
+          &.imgLink {
+            height: 226px;
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: 226px;
+          }
+        }
+        .justifyWrap {
+          display: flex;
+          justify-content: space-between;
+          color: #b3b3b3;
+          margin-top: 13px;
+          @include gtBook;
+          font-size: 19px;
+
+          &__left {
+            display: flex;
+
+            > * {
+              display: block;
+              height: 26px;
+              line-height: 26px;
+            }
+
+            .name {
+              margin-right: 12px;
+            }
+            .date {
+              letter-spacing: -0.037em;
+            }
+          }
+          &__right {
+            display: flex;
+            font-size: 19px;
+            @include gtBook;
+            .btnLike {
+              position: relative;
+              margin-left: 10px;
+              padding: 0 23px 0 0;
+              vertical-align: top;
+              height: 26px;
+              &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 6px;
+                width: 16px;
+                height: 15px;
+                @include imageUrl("web/sub/like_16x15_off");
+                background-size: contain;
+              }
+              span {
+                display: block;
+                height: 26px;
+                line-height: 26px;
+                @include gtBook;
+                font-size: 19px;
+                color: #B3B3B3;
+              }
+              &.on {
+                span {
+                  color: #fff;
+                }
+                &:after {
+                  @include imageUrl("web/sub/like_16x15_on");
+                  background-size: contain;
+                }
+              }
+            }
+          }
+        }
+        .txt {
+          display: -webkit-box;
+          font-size: 28px;
+          margin-top: 15px;
+          white-space: normal;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          line-height: 32px;
+          letter-spacing: -0.025em;
+          color: #fff;
+          .category {
+            color: #EA5517;
+          }
+        }
+        .text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 280px;
+          color: #fff;
+          font-size: 44px;
+          line-height: 48px;
+          @include nsB;
+        }
+      }
+    }
+
+    &.on {
+
+      ul {
+        padding: 20px 0 10px;
+        border-top: 2px solid $colorOrange;
+        border-bottom: 1px solid $colorOrange;
+
+        li {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 100%;
+          margin: 0;
+          padding: 20px 0 24px;
+
+          > .btnLike, > .btnLike + a {
+            display: none;
+          }
+
+          & + * {
+            border-top: 1px solid #707070;
+          }
+
+          .justifyWrap {
+            margin-top: 20px;
+          }
+
+          .txt {
+            margin: 0;
+            -webkit-line-clamp: 1;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      padding-top: 45px;
+    }
+  }
+
+  .community__list {
+    ul {
+      li {
+        a {
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.communityDetail, .videoDtail {
+  .btnWrap {
+    margin-bottom: 130px;
+  }
+  .paginationWrap {
+    &__list {
+      ul > li > {
+        position: relative;
+        .btnLike {
+          position: absolute;
+          right: 3px;
+          top: 7px;
+          width: 54px;
+          height: 50px;
+          @include imageUrl("web/sub/like_27x26_off");
+          background-position: center;
+          background-size: 27px 27px;
+          padding: 10px;
+          z-index: 2;
+          &.on {
+            @include imageUrl("web/sub/like_27x26_on");
+            background-position: center;
+            background-size: 27px 27px;
+          }
+        }
+        .imgLink {
+          position: relative;
+          display: block;
+          height: 226px;
+
+          .text {
+            margin: 0;
+          }
+        }
+      }
+      .justifyWrap {
+        display: flex;
+        justify-content: space-between;
+        color: #b3b3b3;
+        margin-top: 20px;
+        padding-top: 0;
+        &__left {
+          font-size: 18px;
+          .name {
+            margin-right: 12px;
+          }
+          .date {
+            @include gtM;
+            letter-spacing: -0.037em;
+          }
+        }
+        &__right {
+          font-size: 18px;
+          @include gtM;
+
+        }
+      }
+
+    }
+
+    .txt {
+      display: -webkit-box;
+      font-size: 24px;
+      margin-top: 15px;
+      white-space: normal;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 30px;
+      letter-spacing: -0.025em;
+      color: #fff;
+      .category {
+        color: #EA5517;
+      }
+    }
+    .text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      width: 280px;
+      font-size: 40px;
+      line-height: 48px;
+      @include nsB;
+    }
+  }
+}
+.commentWriter {
+  h3.title {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    @include nsB;
+    margin-bottom: 25px;
+    padding: 26px 0 0;
+    letter-spacing: -0.075em;
+    &:after {
+      content: "";
+      position: absolute;
+      right: -45px;
+      top: 0;
+      width: 45px;
+      height: 34px;
+      @include imageUrl("web/sub/icon_comment");
+      background-size: contain;
+      @include nsR;
+    }
+  }
+  &__textarea {
+    height: 300px;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    textarea {
+      width: 100%;
+      height: 240px;
+      border: 0;
+      padding: 38px 33px;
+      background: #262626;
+      box-sizing: border-box;
+      vertical-align: top;
+      font-size: 16px;
+      @include nsR;
+      line-height: 26px;
+      color: #E4E4E4;
+      outline: none;
+      resize: none;
+    }
+  }
+  .commentAttach {
+    position: relative;
+    height: 58px;
+    background: #262626;
+    border-top: 1px solid #707070;
+    box-sizing: border-box;
+    .commentNum {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 0 0 34px;
+      font-size: 15px;
+      color: #AAAAAA;
+
+      > span {
+        @include gtBook;
+      }
+
+      .btnPhoto {
+        width: 24px;
+        height: 24px;
+        margin-left: 15px;
+        @include imageUrl("web/sub/bg_photo");
+        background-size: contain;
+        @include nsR;
+      }
+    }
+    .btnRegister {
+      position: absolute;
+      right: -1px;
+      top: -1px;
+      width: 165px;
+      height: 59px;
+      text-align: center;
+      background-color: #000;
+      border: 1px solid #3d3d3d;
+      .icon {
+        position: relative;
+        padding-left: 30px;
+        font-size: 20px;
+        color: #fff;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 3px;
+          @include imageUrl("web/sub/icon_register");
+          width: 23px;
+          height: 23px;
+        }
+      }
+    }
+    .btnRegister {
+      background: none;
+      text-align: center;
+      background: #000000;
+      border: 1px solid #707070;
+      transition: 0.3s;
+      span {
+        font-size: 20px;
+        color: #b3b3b3;
+        @include nsR;
+      }
+      &:hover {
+        background: #EA5517;
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.commentList {
+  .commentItem {
+    position: relative;
+    margin-top: 30px;
+    border-bottom: 1px solid #707070;
+    padding: 30px 0;
+    &-reply {
+      //display: none;
+      margin: 0;
+      padding: 39px 0 30px 95px;
+      background-color: #222222;
+      &.commentItem-writer {
+        padding: 39px 0 30px 78px;
+
+        &:after {
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 34px;
+        top: 25px;
+        //top: 43px;
+        @include imageUrl("web/sub/bg_line");
+        width: 22px;
+        height: 22px;
+      }
+      .commentBox .btnCommentLayer {
+        right: 50px;
+      }
+      .commentBox {
+        .layerButton {
+          right: 47px;
+        }
+      }
+    }
+    .commentWriter {
+      &__textarea {
+        height: 226px;
+        textarea {
+          height: 166px;
+          padding: 21px 16px;
+        }
+      }
+    }
+    &-writer {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  .commentBox {
+    position : relative;
+    &__nick {
+      display: block;
+      font-size : 20px;
+      @include nsB;
+      margin-bottom: 26px;
+      .nick {
+        .date {
+          margin-left: 17px;
+          font-size: 16px;
+          color: #B3B3B3;
+          @include gtBook;
+        }
+      }
+    }
+    .btnCommentLayer {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      width: 14px;
+      height: 13px;
+      @include imageUrl("web/sub/bg_del");
+    }
+    .layerButton {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 27px;
+      width: 43px;
+      height: 53px;
+      border: 1px solid #707070;
+      box-sizing: border-box;
+      li {
+        a {
+          display: block;
+          color: #b3b3b3;
+          font-size: 13px;
+          height: 26px;
+          line-height: 26px;
+          text-align: center;
+          &:hover {
+            background-color: #EA5517;
+            color: #fff;
+          }
+        }
+        + li {
+          border-top: 1px solid #b3b3b3;
+        }
+      }
+    }
+    &__text {
+      padding: 0 0 45px;
+      &__view {
+        font-size: 16px;
+        @include nsR;
+        line-height: 26px;
+        color: #E4E4E4;
+      }
+    }
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      color: #b3b3b3;
+      span {
+        font-size: 16px;
+        @include gtBook;
+      }
+      &__left {
+        button {
+          width: 129px;
+          height: 43px;
+          margin-left: 3px;
+          border: 1px solid #707070;
+          background-color: #000;
+          box-sizing: border-box;
+          span {
+            color: #fff;
+            font-size: 20px;
+            @include nsR;
+          }
+        }
+      }
+      &__right {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        .btnLike {
+          position: relative;
+          padding: 0 28px 0 0;
+          margin-left: 7px;
+          vertical-align: top;
+          line-height: 21px;
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 22px;
+            height: 21px;
+            @include imageUrl("web/sub/like_22x21_off");
+            background-size: contain;
+          }
+          span {
+            color: #B3B3B3;
+          }
+          &.on {
+            &:after {
+              @include imageUrl("web/sub/like_22x21_on");
+              background-size: contain;
+            }
+            span {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.layerSharing {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 594px;
+  height: 306px;
+  padding: 55px 0 0 64px;
+  border: 1px solid #E66B1B;
+  background-color: #2B2B2B;
+  box-sizing: border-box;
+  z-index: 1;
+  h4.title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  .sharingSns {
+    margin-bottom: 28px;
+    display: flex;
+    a {
+      display : block;
+      width   : 62px;
+      height  : 62px;
+
+      + a {
+        margin-left : 17px;
+      }
+
+      &.kakao {
+        @include imageUrl("mobile/sns/sns_kakao");
+        background-size : 100% 100%;
+      }
+
+      &.naver {
+        @include imageUrl("mobile/sns/sns_naver");
+        background-size : 100% 100%;
+      }
+
+      &.google {
+        @include imageUrl("mobile/sns/sns_google");
+        background-size : 100% 100%;
+      }
+
+      &.facebook {
+        @include imageUrl("mobile/sns/sns_facebook");
+        background-size : 100% 100%;
+      }
+
+      &.twitch {
+        @include imageUrl("mobile/sns/sns_twitch");
+        background-size : 100% 100%;
+      }
+    }
+  }
+  .urlCopy {
+    display: flex;
+    width: 390px;
+    height: 49px;
+    border: 1px solid #3D3D3D;
+    box-sizing: border-box;
+    input {
+      flex: 1;
+      height: 100%;
+      padding: 0 5px;
+      box-sizing: border-box;
+      outline: none;
+    }
+    button {
+      width: 100px;
+      height: 100%;
+      background-color: #000;
+      color: #e6e6e6;
+      font-size: 16px;
+      @include nsR;
+      box-sizing: border-box;
+    }
+  }
+  .btnClose {
+    position: absolute;
+    right: 55px;
+    top: 50px;
+    width: 30px;
+    height: 28px;
+    @include imageUrl("web/sub/bg_close");
+    background-size: contain;
+  }
+}
+
+.btnWrap {
+  padding-top: 50px;
+  &-right {
+    text-align: right;
+  }
+  button,a {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 21px;
+    span {
+      display: block;
+      width: 54px;
+      height: 24px;
+      line-height: 24px;
+      padding: 41px 0 0;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      @include nsM;
+      letter-spacing: -0.05em;
+    }
+
+    &.btnList {
+      span {
+        @include imageUrl("web/sub/icon_list");
+        background-position: 12px top;
+      }
+    }
+    &.btnModify {
+      span {
+        @include imageUrl("web/sub/icon_modify");
+        background-position: center top;
+      }
+    }
+    &.btnDel {
+      span {
+        @include imageUrl("web/sub/icon_del");
+        background-position: center 1px;
+      }
+    }
+    &.btnPublish {
+      span {
+        @include imageUrl("web/sub/icon_publish");
+        background-position: center top;
+      }
+    }
+  }
+}
+
+/* 커뮤니티 쓰기 - 수정 */
+.communityModify {
+  padding: 67px 0 0;
+  .tableArea02 {
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-top: 1px solid $colorOrange;
+
+      tbody {
+        tr {
+          > * {
+            box-sizing: border-box;
+            vertical-align: top;
+            text-align: left;
+            height: 66px;
+            line-height: 42px;
+            padding: 12px 18px;
+            border-bottom: 1px solid #777;
+            font-size: 16px;
+            color: #B3B3B3;
+          }
+
+          th {
+            width: 110px;
+            @include nsM;
+            color: #fff;
+          }
+
+          td {
+            padding-left: 0;
+          }
+
+          .thtd100 {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+
+        .lineOrange {
+          border-color: $colorOrange;
+
+          > th, td {
+            border-color: $colorOrange;
+          }
+        }
+
+        .categorySelect {
+          width: 180px;
+        }
+      }
+    }
+    .thText {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 53px;
+      padding-left: 18px;
+      font-size: 18px;
+      @include nsM;
+      color: #fff;
+    }
+
+    .ahnSelect + .fileSearch {
+      margin-left: 13px;
+    }
+    .thSelectBox {
+      display: flex;
+      width: 620px;
+
+      .ahnSelect {
+        margin-right: 25px;
+
+        select {
+          padding-right: 40px;
+        }
+      }
+
+      .thText {
+        padding: 0;
+        margin-right: 25px;
+      }
+
+      .headingText {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 42px;
+        margin-right: 16px;
+        font-size: 16px;
+        @include nsM;
+        @include colorOrange;
+      }
+
+      .ahnInputText {
+        flex: 1;
+      }
+    }
+    /* selectbox */
+    .ahnSelect {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      height: 42px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        display: block;
+        width: 22px;
+        height: 13px;
+        margin-top: -6px;
+        @include imageUrlAdmin("icon/icon_select");
+        z-index: 10;
+      }
+
+      select {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 0 50px 0 17px;
+        border: 1px solid #707070;
+        outline: 0 none;
+        color: #fff;
+        font-size: 16px;
+        @include nsM;
+        background-color: #262626;
+
+        border-radius:0; /* 아이폰 사파리 보더 없애기 */
+        -webkit-appearance:none; /* 화살표 없애기 for chrome*/
+        -moz-appearance:none; /* 화살표 없애기 for firefox*/
+        appearance:none /* 화살표 없애기 공통*/
+      }
+    }
+
+    /* input text */
+    .ahnInputText {
+      display: inline-block;
+      vertical-align: top;
+      height: 42px;
+
+      &.form100 {
+        display: block;
+      }
+
+      &.formWidth01 {
+        width: 427px;
+      }
+
+      &.formWidth02 {
+        width: 560px;
+      }
+
+      input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 0 17px;
+        border: 1px solid #707070;
+        outline: 0 none;
+        font-size: 16px;
+        @include nsR;
+        color: #fff;
+        background-color: #262626;
+      }
+    }
+
+    .ahnInputTextSmall {
+      display: inline-block;
+      vertical-align: top;
+      width: 54px;
+      height: 34px;
+
+      input {
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #707070;
+        font-size: 18px;
+        @include gtM;
+        color: #fff;
+        background-color: #3E3E3E;
+      }
+    }
+
+    /* input file */
+    .fileModify {
+      display: inline-block;
+      vertical-align: top;
+      width: 100px;
+      height: 44px;
+
+      label {
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #606060;
+        cursor: pointer;
+        background-color: #141414;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          height: 42px;
+          line-height: 42px;
+          font-size: 18px;
+          font-family: "NotoSansCJKkrMedium", sans-serif;
+          color: #fff;
+        }
+      }
+
+      input[type="file"] {
+        @include blind;
+      }
+    }
+
+    .fileSearch {
+      display: inline-flex;
+      vertical-align: top;
+      width: 693px;
+      height: 53px;
+
+      .uploadName {
+        flex: 1;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 0 29px;
+        border: 1px solid #7F8080;
+        outline: 0 none;
+        font-size: 18px;
+        @include nsM;
+        color: #fff;
+        background-color: #000;
+      }
+
+      label {
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        box-sizing: border-box;
+        width: 120px;
+        height: 53px;
+        margin-left: 13px;
+        border: 1px solid #EA5504;
+        cursor: pointer;
+        background-color: #141414;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          height: 51px;
+          line-height: 51px;
+          font-size: 18px;
+          font-family: "NotoSansCJKkrMedium", sans-serif;
+          color: #fff;
+        }
+      }
+
+      input[type="file"] {
+        @include blind;
+      }
+    }
+
+    .formType01 {
+      display: inline-flex;
+      vertical-align: top;
+      width: 620px;
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      > * {
+        float: left;
+
+        & + * {
+          margin-left: 7px;
+        }
+      }
+
+      .ahnInputText, .ahnSelect {
+        flex: 1;
+      }
+    }
+
+    .formType02 {
+      display: inline-flex;
+      vertical-align: top;
+
+      &::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      > * {
+        float: left;
+
+        & + * {
+          margin-left: 13px;
+        }
+      }
+
+      .ahnInputText, .ahnSelect {
+        width: 560px;
+      }
+    }
+
+    /* button */
+    .ahnBtnS {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      box-sizing: border-box;
+      width: 100px;
+      height: 44px;
+      border: 1px solid #606060;
+      background-color: #141414;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        height: 42px;
+        line-height: 42px;
+        font-size: 18px;
+        @include nsM;
+        color: #fff;
+      }
+    }
+
+    .ahnBtnM {
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      box-sizing: border-box;
+      width: 93px;
+      height: 42px;
+      border: 1px solid $colorOrange;
+      background-color: #262626;
+
+      &:hover {
+        background-color: $colorOrange;
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+        height: 51px;
+        line-height: 40px;
+        font-size: 15px;
+        @include nsM;
+        color: #fff;
+      }
+
+      &.solid {
+        background-color: #EA5504;
+      }
+    }
+
+    /* textarea */
+    .ahnTextarea {
+      box-sizing: border-box;
+      height: 400px;
+      padding: 23px 34px;
+      border: 1px solid #707070;
+      background-color: #262626;
+
+      textarea {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0 none;
+        outline: 0 none;
+        padding: 0;
+        font-size: 16px;
+        color: #fff;
+        resize: none;
+        @include nsR;
+        background-color: transparent;
+      }
+    }
+  }
+  .justifyWrap {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      .btnList {
+        margin: 0;
+      }
+    }
+  }
+}
+
+/* 영상 */
+#wrap #container .content.typeWidth100 {
+  overflow: hidden;
+  @include contentWidth($mobileWidthNumber);
+  margin: 0;
+
+  h2.title {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.listWrap__list-video {
+  padding-top: 0;
+  overflow: hidden;
+  ul {
+    justify-content: left;
+    margin-left: -27px;
+    li {
+      width: 383px;
+      height: 755px;
+      margin-left: 26px;
+      a {
+        img {
+          width: 100%;
+          height: 518px;
+        }
+      }
+      &:nth-child(odd) {
+        margin-top: 0;
+      }
+      &:nth-child(2) {
+        margin-top: 90px;
+      }
+      &:nth-child(3n+4),&:nth-child(3n+6) {
+        margin-top: -90px
+      }
+      .txt {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+.videoDetail {
+  .detailWrap {
+    .commentWriter {
+      margin-top: 90px;
+    }
+  }
+
+  .commentList {
+    .commentWriter {
+      margin: 0;
+    }
+  }
+}
+
+/* 라이브 */
+#wrap #container .liveDetail {
+  &.content{
+    position: relative;
+    width: auto;
+    margin: 0;
+    &:after {
+      content           : "";
+      position          : absolute;
+      left              : 0;
+      right             : 0;
+      top               : 143px;
+      height            : 891px;
+      @include imageUrl("web/sub/bg_live");
+      background-position : center top;
+
+    }
+
+    h2.title, .detailWrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  .detailWrap {
+    position: relative;
+    z-index: 1;
+  }
+  .liveWrap {
+    position   : relative;
+    margin-top : 25px;
+    padding    : 55px 0 0;
+    /*text-align : center;*/
+
+    .titleLive {
+      text-align    : center;
+      margin-bottom : 50px;
+      .mobile {
+        display: none;
+      }
+    }
+
+    .liveArea {
+      width          : 1025px;
+      margin         : 0 auto 84px;
+      position       : relative;
+      padding-bottom : 47.25%;
+      height         : 0;
+      overflow       : hidden;
+
+      iframe {
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        width    : 100%;
+        height   : 100%;
+      }
+    }
+  }
+  .commentWriter {
+    margin-top: 90px;
+  }
+  .commentList {
+    .commentWriter {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .listTypeWeb {
+    display: none;
+  }
+  .listTypeMobile {
+    display: block;
+  }
+
+  h2.title {
+    padding-top: calc(70px / 2);
+    padding-left: calc(47px / 2);
+    font-size: calc(30px / 2);
+    margin-bottom: calc(70px / 2);
+    strong {
+      font-size: calc(45px / 2);
+    }
+    span {
+      margin-left: calc(17px / 2);
+    }
+  }
+  /* 안철수는 */
+  .ahnIs {
+    &__visual {
+      img {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
+    }
+    &__profile {
+      display: block;
+      padding-left: calc(47px / 2);
+      .photo {
+        img {
+          display: none;
+        }
+        .mobile {
+          display: block;
+          width: calc(307px / 2);
+          height: calc(380px / 2);
+        }
+      }
+      &__text {
+        padding-top: calc(35px / 2);
+        em {
+          font-size: calc(45px / 2);
+          margin-bottom: 3px;
+        }
+        .txt {
+          font-size: calc(45px / 2);
+          line-height: calc(50px / 2);
+          &.mgTop40 {
+            margin-top: 20px !important;
+          }
+        }
+        .fontGotham {
+          font-size: calc(45px / 2);
+        }
+        .personalHistory {
+          margin-top: calc(35px / 2);
+          li {
+            font-size: calc(30px / 2);
+            line-height: calc(45px / 2);
+          }
+        }
+      }
+    }
+    &__video {
+      margin-top: calc(70px / 2);
+    }
+  }
+
+  /* 안철수의 약속 */
+  .listWrap__list {
+    padding-top: 0;
+    padding-left: calc(48px / 2);
+    padding-right: calc(48px / 2);
+    ul {
+      display: block;
+      li {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+        &:nth-child(odd),
+        &:nth-child(even) {
+          margin-top: 30px;
+        }
+        a {
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .txt {
+            height: 48px;
+            font-size: calc(40px / 2);
+            opacity: 1;
+            margin-top: 13px;
+            line-height: calc(48px / 2);
+          }
+        }
+        .btnLike {
+          width: 31px;
+          height: 29px;
+          top: 2.7%;
+          right: 2.5%;
+          background-position: center;
+          background-size: 15.5px 14.5px;
+          &.on {
+            width: 31px;
+            height: 29px;
+            background-position: center;
+            background-size: 15.5px 14.5px;
+          }
+        }
+        .sns {
+          display: flex;
+          align-items: center;
+          height: 18px;
+          margin-top: 10px;
+          padding: 0 0 0 23px;
+          font-size: calc(24px / 2);
+          + .txt {
+            margin-top: 11px;
+            font-size: calc(40px / 2);
+            line-height: calc(48px / 2);
+          }
+          &:after {
+            top: 0;
+            left: 0;
+            width: calc(36px / 2);
+            height: calc(36px / 2);
+          }
+          &-naver:after {
+            @include imageUrl("mobile/icon/icon_naver");
+            background-size: contain;
+          }
+          &-facebook:after {
+            @include imageUrl("mobile/icon/icon_facebook");
+            background-size: contain;
+          }
+          &-instagram:after {
+            @include imageUrl("mobile/icon/icon_instagram");
+            background-size: contain;
+          }
+          &-ahn:after {
+            @include imageUrl("mobile/icon/icon_ahn");
+            background-size: contain;
+          }
+          &-media:after {
+            @include imageUrl("mobile/icon/icon_media");
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+  .listWrap .btnMore {
+    margin-top: 70px;
+    button {
+      span {
+        font-size: calc(35px / 2);
+      }
+      &:after {
+        height: 2px;
+      }
+    }
+  }
+  /* 안철수의 약속-상세 */
+  .promiseAhn-detail {
+    padding: 70px 24px 0;
+    &.topVisual {
+      display: none;
+    }
+    h2.title {
+      display: none;
+    }
+  }
+  .detailWrap {
+    h3.title {
+      font-size: calc(42px / 2);
+      padding-bottom: calc(10px / 2);
+      line-height: 48px;
+    }
+    .justifyWrap {
+      position: relative;
+      padding-top: 7px;
+      padding-bottom: 3px;
+
+      * {
+        letter-spacing: -0.02em;
+      }
+
+      &__left {
+
+        > * {
+          height: 19px;
+          line-height: 19px;
+          font-size: 14px;
+        }
+
+        .write,
+        .writeTitle {
+          display: none;
+        }
+        .name {
+          margin-right: 7px;
+        }
+        .date {
+        }
+        .btnLink {
+          display: block;
+          font-size: calc(28px / 2);
+          color: #fff;
+          margin: 0 15px 0 0;
+        }
+      }
+      &__right {
+        position: static;
+        display: flex;
+        align-items: center;
+        padding-right: 0;
+
+        > * {
+          line-height: 19px;
+          font-size: 14px;
+        }
+
+        .num {
+          //font-size: calc(23px / 2);
+        }
+        .btnSharing {
+          padding-left: 22px;
+          height: 19px;
+
+          &::after {
+            top: 1px;
+            width: 17px;
+            height: 17px;
+            @include imageUrl("mobile/sub/icon_sharing");
+            background-size : 17px 17px;
+          }
+
+          &.on {
+            &::after {
+              @include imageUrl("mobile/sub/icon_sharing");
+              background-size : 17px 17px;
+            }
+          }
+
+          span {
+            display: none;
+            line-height: 19px;
+            font-size: 14px;
+            @include gtBook;
+          }
+        }
+        .btnLike {
+          height: 19px;
+          margin-left: 7px;
+          padding-right: 20px;
+          .num {
+            display: block;
+            height: 19px;
+            line-height: 19px;
+            font-size: calc(28px / 2);
+          }
+          &:after {
+            top: 50%;
+            margin-top: -7px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      margin-bottom: 7px;
+      padding-bottom: 35px;
+      font-size: calc(23px / 2);
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666;
+      .visualImage {
+        margin-top: 30px;
+        img {
+          width: 100%;
+        }
+      }
+      .text {
+        margin-top: 35px;
+        font-size: calc(30px / 2);
+        line-height: 25px;
+      }
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+      .imageText {
+        padding-top: 30px;
+      }
+    }
+  }
+  .layerSharing {
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 6vw;
+    h4.title {
+      font-size: 4.5vw;
+      margin-bottom: 4vw;
+    }
+    .sharingSns {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4vw;
+      a {
+        width: 13vw;
+        height: 13vw;
+
+        & + a {
+          margin: 0;
+        }
+      }
+    }
+    .btnClose {
+      box-sizing: content-box;
+      top: 3vw;
+      right: 3vw;
+      width: 5vw;
+      height: 5vw;
+      padding: 2vw;
+      @include imageUrl('mobile/sub/bg_close');
+      background-size: 5vw 5vw;
+      background-position: center;
+    }
+    .urlCopy {
+      width: auto;
+      height: 10vw;
+      input {
+        width: auto;
+      }
+      button {
+        flex-shrink: 0;
+        width: 20vw;
+        font-size: 3.7vw;
+      }
+    }
+  }
+  .paginationWrap {
+    position: relative;
+    overflow: hidden;
+    margin-top: calc(105px / 2);
+
+    &__list {
+      overflow-x: auto;
+      overflow-y: hidden;
+      ul {
+        display: block;
+        justify-content: normal;
+        white-space: nowrap;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          width: calc(396px / 2);
+          a {
+            img {
+              height: 116px;
+            }
+          }
+          .text {
+            margin-top: calc(25px / 2);
+            font-size: calc(30px / 2);
+            white-space: normal;
+            line-height: calc(41px / 2);
+          }
+          + li {
+            margin-left: 7px;
+          }
+          .btnLike {
+            background-position: center;
+            background-size: 20px 20px;
+            right: 3px;
+            top: 4px;
+            &.on {
+              background-position: center;
+              background-size: 20px 20px;
+            }
+          }
+        }
+      }
+      &-video {
+        ul {
+          li {
+            width: 150px;
+
+            a {
+              img {
+                height: 203px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pagination {
+    padding: 35px 0 0;
+    a {
+      width: calc(55px / 2);
+      height: calc(55px / 2);
+      font-size: calc(27px / 2);
+      line-height: calc(55px / 2);
+      margin: 0 5px;
+      &.previous,&.next {
+        font-size: calc(36px / 2);
+        &:after {
+          width: calc(19px / 2);
+          height: calc(19px / 2);
+
+        }
+      }
+    }
+  }
+
+  /* tab */
+  .tabWrap {
+    margin-bottom: 35px;
+    padding: 0 24px;
+    ul {
+
+      li {
+        min-width: 80px;
+        height: 38px;
+        a {
+          padding: 0 7px;
+          line-height: 36px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  /* 안철수의 오늘 */
+
+  /* 커뮤니티 */
+  .community {
+
+    .rightArea {
+      position: static;
+      display: flex;
+      margin-top: 22px;
+
+      > * {
+        float: none;
+
+        & + *  {
+          margin-left: 7px;
+        }
+      }
+
+      .btnWriting {
+        flex: 1;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 41px;
+        border: 1px solid #fff;
+        background: none;
+        box-sizing: border-box;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: calc(15px / 2);
+          width: calc(143px / 2);
+          height: calc(52px / 2);
+          margin-left: calc(-143px / 4);
+          @include imageUrl("mobile/sub/text_writing");
+          background-size: contain;
+        }
+      }
+
+      .typeBtn {
+        width: 41px;
+        height: 41px;
+
+        span {
+          @include blind;
+        }
+      }
+
+      .listType01 {
+        @include imageUrl("mobile/icon/icon_listType01");
+        background-position: center;
+        background-size: 19px 19px;
+
+        &.on {
+          @include imageUrl("mobile/icon/icon_listType01_on");
+          background-position: center;
+          background-size: 19px 19px;
+        }
+      }
+
+      .listType02 {
+        @include imageUrl("mobile/icon/icon_listType02");
+        background-position: center;
+        background-size: 21px 18px;
+
+        &.on {
+          @include imageUrl("mobile/icon/icon_listType02_on");
+          background-position: center;
+          background-size: 21px 18px;
+        }
+      }
+
+    }
+
+    &__list {
+      ul {
+        padding-left: calc(48px / 2);
+        padding-right: calc(48px / 2);
+        li {
+          width: 100%;
+          margin: 0;
+          a {
+            img {
+              height: 51.1111vw;
+            }
+          }
+
+          & + li {
+            margin-top: 25px;
+          }
+          a {
+            &.imgLink {
+              height: auto;
+            }
+          }
+          > .btnLike {
+            right: 0;
+            top: 0;
+            background-size: 20px 20px;
+            &.on {
+              background-size: 20px 20px;
+            }
+          }
+          .justifyWrap {
+            margin-top: 5px;
+            * {
+              font-size: calc(28px / 2);
+            }
+            &__left {
+              .name {
+                margin-right: 10px;
+              }
+            }
+            &__right {
+              .btnLike {
+                span {
+                  font-size: calc(28px / 2);
+                }
+              }
+            }
+          }
+          .txt {
+            display: -webkit-box;
+            font-size: calc(40px / 2);
+            margin-top: 10px;
+            line-height: calc(48px / 2);
+          }
+          .text {
+            width: 66vw;
+            font-size: 9.3vw;
+            line-height: 11.7vw;
+          }
+        }
+      }
+
+      &.on {
+        padding: 0 24px;
+
+        ul {
+          padding: 0;
+
+          li {
+            padding: 16px 0;
+
+            .justifyWrap {
+              margin-top: 8px;
+            }
+
+            .txt {
+              -webkit-line-clamp: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .communityDetail, .videoDetail {
+    padding: 85px 24px 0;
+    &.topVisual {
+      display: none;
+    }
+    h2.title {
+      display: none;
+    }
+    .detailWrap {
+      h3.title {
+        font-size: calc(42px / 2);
+        line-height: calc(48px / 2);
+        padding-bottom: 15px;
+      }
+      &__content {
+        padding-bottom: 35px;
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+      }
+      .justifyWrap {
+        padding-top: 10px;
+        padding-bottom: 0;
+        &__left {
+          .write,.writeTitle {
+            display: none;
+          }
+          .name {
+          }
+        }
+
+        &__right {
+          .btnSharing {
+            span {
+
+            }
+
+            &:after {
+
+            }
+          }
+        }
+      }
+      .txt {
+        font-size: 15px;
+        line-height: calc(41px / 2);
+      }
+    }
+    .btnWrap {
+      margin-bottom: 0;
+    }
+
+    .detailWrap {
+      .commentWriter {
+        margin-top: 0;
+        h3.title {
+          margin-top: 50px;
+          margin-bottom: 0;
+          padding-top: 12px;
+          padding-bottom: 11px;
+          font-size: calc(33px / 2);
+          &:after {
+            right: -18px;
+            width: calc(42px / 2);
+            height: calc(31px / 2);
+            @include imageUrl("mobile/sub/icon_comment");
+            background-size: contain;
+          }
+        }
+        &__textarea {
+          height: calc(276px / 2);
+          textarea {
+            height: 98px;
+            padding: 10px 7px;
+            font-size: calc(27px / 2);
+            resize: none;
+            line-height: 24px;
+          }
+        }
+        .commentAttach {
+          height: calc(76px / 2);
+          .commentNum {
+            padding-left: 15px;
+            span {
+              font-size: 12px;
+              @include gtBook;
+            }
+            .btnPhoto {
+              display: none;
+            }
+          }
+          .btnRegister {
+            background: #000;
+            height: calc(78px / 2);
+            width: calc(182px / 2);
+            .icon {
+              padding: 0;
+              font-size: calc(27px / 2);
+              &:after {
+                display: none;
+              }
+            }
+            span {
+              font-size: calc(27px / 2);
+            }
+          }
+        }
+      }
+
+      .commentList {
+        .commentItem {
+          margin: 0;
+          padding: 30px 0 12px;
+          overflow: hidden;
+          .btnReply-m {
+            background-color: #EA551C;
+            border-color: #EA551C;
+          }
+          .commentBox {
+            .btnCommentLayer {
+              right : 0;
+            }
+
+            .layerButton {
+              right : 0;
+              top: 28px;
+              width: 80px;
+              height: 91px;
+              li {
+                a {
+                  height           : 44px;
+                  line-height: 44px;
+                  background-color : #000;
+                }
+              }
+            }
+
+            &__nick {
+              margin-bottom: 15px;
+              .nick {
+                font-size : calc(30px / 2);
+                .date {
+                  font-size : calc(28px / 2);
+                  margin-left: 5px;
+                  color: #E4E4E4;
+                }
+              }
+            }
+            &__text {
+              padding-bottom: 20px;
+              &__view {
+                font-size : calc(30px / 2);
+                line-height: calc(45px / 2);
+              }
+            }
+            &__info {
+              span {
+                font-size: 14px;
+                @include gtBook;
+              }
+              &__left {
+                button {
+                  width: calc(120px / 2);
+                  height: calc(60px / 2);
+                  font-size: calc(26px / 2);
+                  margin-left: 0;
+                }
+              }
+              &__right {
+                padding-right: 0;
+                .btnLike {
+                  padding: 0 24px 0 0;
+                  line-height: 20px;
+                  &:after {
+                    top: 2px;
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+          &-reply {
+            padding-left: calc(100px / 2);
+            padding-right: 15px;
+            &:after {
+              top: 30px;
+              left: 25px;
+              @include imageUrl("mobile/sub/bg_line");
+              background-size: contain;
+              width: 17px;
+              height: 17px;
+            }
+
+            &.commentItem-writer {
+              padding-right: 0;
+            }
+            .commentWriter {
+              &__textarea {
+                height: calc(276px / 2);
+                textarea {
+                  height: 98px;
+                }
+                .commentAttach {
+                  .btnRegister {
+
+                    span {
+                      font-size: calc(27px / 2);
+                    }
+                  }
+                }
+              }
+            }
+
+            .commentBox {
+              &__info {
+                position: relative;
+                padding: 10px 0 0;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: -100px;
+                  top: 0;
+                  width: 200%;
+                  height: 1px;
+                  background: #707070;
+                }
+                &__left {
+                  .btnReply {
+                    margin-left: -25px;
+                  }
+                }
+              }
+            }
+          }
+          .commentWriter {
+            h3.title {
+              margin-top: 50px;
+              margin-bottom: 0;
+              padding-top: 12px;
+              padding-bottom: 11px;
+              font-size: calc(33px / 2);
+              &:after {
+                right: -18px;
+                width: calc(42px / 2);
+                height: calc(31px / 2);
+                @include imageUrl("mobile/sub/icon_comment");
+                background-size: contain;
+              }
+            }
+            &__textarea {
+              height: calc(276px / 2);
+              textarea {
+                height: 98px;
+                padding: 10px 7px;
+                font-size: calc(27px / 2);
+                resize: none;
+              }
+            }
+            .commentAttach {
+              height: calc(76px / 2);
+              .commentNum {
+                padding-left: 15px;
+                span {
+                  font-size: calc(23px / 2);
+                }
+                .btnPhoto {
+                  display: none;
+                }
+              }
+              .btnRegister {
+                background: #000;
+                height: calc(78px / 2);
+                color: #fff;
+                .icon {
+                  padding: 0;
+                  font-size: calc(27px / 2);
+                  &:after {
+                    display: none;
+                  }
+                }
+                span {
+                  color: #fff;
+                  font-size: calc(27px / 2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .paginationWrap {
+      &__list {
+        > ul > li {
+          > .btnLike {
+            width: 40px;
+            height: 40px;
+            right: 0;
+            top: 0;
+            background-size: 20px 20px;
+            &.on {
+              background-size: 20px 20px;
+            }
+          }
+
+          .imgLink {
+            height: 100%;
+
+            .text {
+              width: 140px;
+              line-height: 27px;
+              font-size: 22px;
+            }
+          }
+          .justifyWrap {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* 커뮤니티 쓰기 - 수정 */
+  .communityModify {
+    h2.title {
+      display: none;
+    }
+    .tableArea02 {
+      padding: 0 24px;
+      table {
+        border-top: 0 none;
+
+        tbody {
+          tr {
+            > * {
+              height: 53px;
+              padding: 8px 0;
+              line-height: 37px;
+            }
+            th {
+              width: 57px;
+              font-size: 15px;
+            }
+            td {
+              width: 100%;
+            }
+            &.lineOrange {
+              > * {
+                border: 0 none;
+              }
+            }
+          }
+
+          .ahnInputText {
+            height: 37px;
+          }
+
+          .categorySelect {
+            width: 100%;
+          }
+        }
+      }
+      .thText {
+        font-size: 14px;
+        padding-left: 10px;
+        line-height: 48px;
+      }
+      .thSelectBox {
+        width: 100%;
+
+        .headingText {
+          height: 37px;
+          line-height: 37px;
+          font-size: 15px;
+          margin-right: 5px;
+        }
+
+        .ahnInputText {
+        }
+      }
+      .ahnSelect {
+        width: 100%;
+        height: calc(74px / 2);
+
+        &::after {
+          width: 19px;
+          height: 11px;
+          margin-top: -5px;
+          @include imageUrl("mobile/icon/icon_select");
+          background-size: 19px 11px;
+
+        }
+        select {
+          font-size: 14px;
+          background: #262626;
+        }
+      }
+      .ahnInputText {
+        width: 100%;
+        height: calc(74px / 2);
+        input {
+          font-size: 14px;
+          background: #262626;
+        }
+      }
+      .ahnBtnM {
+        width: 60px;
+        height: 37px;
+        &:hover {
+          background-color: #262626;
+        }
+        span {
+          height: 100%;
+          line-height: 35px;
+          font-size: calc(28px / 2);
+        }
+      }
+      .ahnTextarea {
+        height: 200px;
+        padding: 15px;
+        background: #262626;
+      }
+      .formType01 {
+        width: 100%;
+      }
+    }
+    .btnWrap-right {
+      padding-right: 24px;
+    }
+  }
+
+  .btnWrap {
+    padding-top: 20px;
+
+    a,button {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 18px;
+
+      span {
+        width: 36px;
+        height: 22px;
+        font-size: 10px;
+        padding: 30px 0 0;
+      }
+
+      &.btnList {
+        span {
+          @include imageUrl("mobile/sub/icon_list");
+          background-size: 26px 22px;
+          background-position: center top;
+        }
+      }
+      &.btnModify {
+        span {
+          @include imageUrl("mobile/sub/icon_modify");
+          background-position: center top;
+          background-size: 21px;
+        }
+      }
+      &.btnDel {
+        span {
+          @include imageUrl("mobile/sub/icon_del");
+          background-position: center top;
+          background-size: calc(27px / 2) calc(40px / 2);
+        }
+      }
+      &.btnPublish {
+        span {
+          @include imageUrl("mobile/sub/icon_publish");
+          background-position: center top;
+          background-size: calc(34px / 2) calc(39px / 2);
+        }
+      }
+    }
+  }
+
+  /* 영상 */
+  #wrap #container .content.typeWidth100 {
+
+    h2.title {
+      padding: 35px 0 0 3.2051vw;
+
+      strong {
+        font-size: 5.7692vw;
+      }
+
+      span {
+        font-size: 3.8461vw;
+      }
+    }
+  }
+
+  .listWrap__list-video {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      li {
+        width: 50%;
+        box-sizing: border-box;
+        &:nth-child(odd),&:nth-child(even) {
+          margin: 0;
+          margin-bottom: 35px;
+        }
+        &:nth-child(odd) {
+          padding-right: 6px;
+        }
+        &:nth-child(even) {
+          padding-left: 6px;
+        }
+        a {
+          .txt {
+            height: 35px;
+            font-size: 15px;
+            margin-top: 10px;
+            line-height: calc(35px / 2);
+          }
+        }
+      }
+    }
+  }
+
+  /* 라이브 */
+  #wrap #container .liveDetail {
+    padding:0 24px;
+
+    &.content {
+      &:after {
+        display: none;
+      }
+
+      h2.title, .detailWrap {
+        width: auto;
+        margin: 0;
+      }
+    }
+    .topVisualSwiper,h2.title {
+      display: none;
+    }
+    .liveWrap {
+      .titleLive {
+        margin-bottom: 20px;
+        text-align: center;
+        img {
+          display: none;
+        }
+        img.mobile {
+          display: inline-block;
+          width: 188px;
+        }
+      }
+
+      .liveArea {
+        width: 100%;
+        height: 8.05vw;
+        margin-bottom: 0;
+        iframe {
+        }
+      }
+      .text {
+        text-align: left;
+      }
+    }
+
+    .detailWrap {
+      width: auto;
+      margin: 0;
+      .commentWriter {
+        margin-top: 0;
+        h3.title {
+          margin-top: 50px;
+          margin-bottom: 0;
+          padding-top: 12px;
+          padding-bottom: 11px;
+          font-size: calc(33px / 2);
+          line-height: 24px;
+          &:after {
+            right: -18px;
+            width: calc(42px / 2);
+            height: calc(31px / 2);
+            @include imageUrl("mobile/sub/icon_comment");
+            background-size: contain;
+          }
+        }
+        &__textarea {
+          height: calc(276px / 2);
+          textarea {
+            height: 98px;
+            padding: 10px 7px;
+            font-size: calc(27px / 2);
+            resize: none;
+          }
+        }
+        .commentAttach {
+          height: calc(76px / 2);
+          .commentNum {
+            padding-left: 15px;
+            span {
+              font-size: 12px;
+              @include gtBook;
+            }
+            .btnPhoto {
+              display: none;
+            }
+          }
+          .btnRegister {
+            background: #000;
+            height: calc(78px / 2);
+            width: calc(182px / 2);
+            .icon {
+              padding: 0;
+              font-size: calc(27px / 2);
+              &:after {
+                display: none;
+              }
+            }
+            span {
+              font-size: calc(27px / 2);
+            }
+          }
+        }
+      }
+
+      .commentList {
+        .commentItem {
+          margin: 0;
+          padding: 30px 0 12px;
+          overflow: hidden;
+          .btnReply-m {
+            background-color: #EA551C;
+            border-color: #EA551C;
+          }
+          .commentBox {
+            .btnCommentLayer {
+              right : 0;
+            }
+
+            .layerButton {
+              right : 0;
+              top: 28px;
+              width: 80px;
+              height: 91px;
+              li {
+                a {
+                  height           : 44px;
+                  line-height: 44px;
+                  background-color : #000;
+                }
+              }
+            }
+
+            &__nick {
+              margin-bottom: 15px;
+              .nick {
+                font-size : calc(30px / 2);
+                .date {
+                  font-size : calc(28px / 2);
+                  margin-left: 5px;
+                  color: #E4E4E4;
+                }
+              }
+            }
+            &__text {
+              padding-bottom: 20px;
+              &__view {
+                font-size : calc(30px / 2);
+                line-height: calc(45px / 2);
+              }
+            }
+            &__info {
+              span {
+                font-size: 14px;
+                @include gtBook;
+              }
+              &__left {
+                button {
+                  width: calc(120px / 2);
+                  height: calc(60px / 2);
+                  font-size: calc(26px / 2);
+                  margin-left: 0;
+                }
+              }
+              &__right {
+                padding-right: 0;
+                .btnLike {
+                  padding: 0 24px 0 0;
+                  line-height: 20px;
+                  &:after {
+                    top: 2px;
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+          &-reply {
+            padding-left: calc(100px / 2);
+            padding-right: 15px;
+            &:after {
+              top: 30px;
+              left: 25px;
+              @include imageUrl("mobile/sub/bg_line");
+              background-size: contain;
+              width: 17px;
+              height: 17px;
+            }
+            .commentWriter {
+              &__textarea {
+                height: calc(276px / 2);
+                textarea {
+                  height: 98px;
+                }
+                .commentAttach {
+                  .btnRegister {
+
+                    span {
+                      font-size: calc(27px / 2);
+                    }
+                  }
+                }
+              }
+            }
+
+            .commentBox {
+              &__info {
+                position: relative;
+                padding: 10px 0 0;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: -100px;
+                  top: 0;
+                  width: 200%;
+                  height: 1px;
+                  background: #707070;
+                }
+                &__left {
+                  .btnReply {
+                    margin-left: -25px;
+                  }
+                }
+              }
+            }
+          }
+          .commentWriter {
+            h3.title {
+              margin-top: 50px;
+              margin-bottom: 0;
+              padding-top: 12px;
+              padding-bottom: 11px;
+              font-size: calc(33px / 2);
+              &:after {
+                right: -18px;
+                width: calc(42px / 2);
+                height: calc(31px / 2);
+                @include imageUrl("mobile/sub/icon_comment");
+                background-size: contain;
+              }
+            }
+            &__textarea {
+              height: calc(276px / 2);
+              textarea {
+                height: 98px;
+                padding: 10px 7px;
+                font-size: calc(27px / 2);
+                resize: none;
+              }
+            }
+            .commentAttach {
+              height: calc(76px / 2);
+              .commentNum {
+                padding-left: 15px;
+                span {
+                  font-size: calc(23px / 2);
+                }
+                .btnPhoto {
+                  display: none;
+                }
+              }
+              .btnRegister {
+                background: #000;
+                height: calc(78px / 2);
+                color: #fff;
+                .icon {
+                  padding: 0;
+                  font-size: calc(27px / 2);
+                  &:after {
+                    display: none;
+                  }
+                }
+                span {
+                  color: #fff;
+                  font-size: calc(27px / 2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .paginationWrap {
+      &__list {
+        > ul > li {
+          > .btnLike {
+            width: 40px;
+            height: 40px;
+            right: 0;
+            top: 0;
+            background-size: 20px 20px;
+            &.on {
+              background-size: 20px 20px;
+            }
+          }
+
+          .imgLink {
+            height: 100%;
+
+            .text {
+              width: 40vw;
+              line-height: 6.8vw;
+              font-size: 5.7vw;
+            }
+          }
+          .justifyWrap {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

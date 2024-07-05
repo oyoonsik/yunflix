@@ -1,0 +1,20 @@
+
+/* CSS Reset */
+* {margin: 0; padding: 0; color: inherit; font-family: inherit; font-size: 1em; font-style: normal; font-weight: normal; text-decoration: none; vertical-align: middle; border: 0 solid transparent; outline: 0; box-sizing: border-box; background-repeat: no-repeat;}
+b,strong {font-weight: bold;}
+ul,ol {list-style: none;}
+table {table-layout: fixed; border-collapse: collapse;}
+input[type=button],input[type=submit],button,a,label {cursor: pointer;}
+:only-child {display: block;}
+
+/* Common */
+.inner {margin: auto; position: relative; max-width: 1200px; height: 100%;}
+.inner:after {content: ""; display: block; clear: both;}
+.clearfix:after {content: ""; display: block; clear: both;}
+.ellipsis {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* Global */
+.fll {float: left;}
+.flr {float: right;}
+::placeholder {opacity: 0.6;}
+
