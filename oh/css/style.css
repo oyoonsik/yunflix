@@ -3859,10 +3859,15 @@ html .opening, body .opening {
     margin-left: 0;
   }
 
+
+.photoNumberArea{
+  margin-top: -15vw;
+}
+
   /* swiper title */
   .mainTitleArea {
     overflow: hidden;
-    margin-top: 4vw;
+    margin-top: 15vw;
     padding: 0 3.2051vw 1vw 3.2051vw;
   }
   .mainTitleArea .title {
@@ -7074,7 +7079,7 @@ h2.title-margin {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 130px 20px;
+  padding: 80px 20px;
   box-sizing: border-box;
 }
 .portfolio_list > li {
@@ -7127,4 +7132,7 @@ h2.title-margin {
 	}
 	@media screen and (max-width:768px) { 
 		.portfolio_list > li{width:50%;}
+    tbody tr td{font-size: 0.7em !important;}
+    .photoNumberArea {margin-bottom: 50px;}
+    .portfolio_list {padding: 60px 20px !important;}
 	}
