@@ -36,7 +36,7 @@ Yunflix는 Netflix에서 영감을 받아 제작한 반응형 포트폴리오 �
 
 ## 📷 미리보기
 
-![Yunflix Screenshot](./assets/images/preview.png)
+![Yunflix Screenshot](./upload/photo/preview.png)
 
 _PC 화면 예시 – 실제 사이트는 반응형입니다._
 
