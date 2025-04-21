@@ -1334,9 +1334,13 @@ function getCookie(cookieName) {
 </script>
 
 <script>
-	$('.gnbItemSub a').on('click', function () {
-    $('body').removeClass('fixed'); // 예: 메뉴 열릴 때 body에 fixed 줬다면 제거
-    $('.mobileMenu').hide(); // 메뉴 닫기
+document.querySelectorAll('.gnbItemSub a').forEach(link => {
+  link.addEventListener('click', function () {
+    document.body.style.overflow = 'auto'; // 스크롤 다시 가능하게
+    document.body.style.position = 'relative'; // 원상 복구
+    // 메뉴 닫기 (필요하다면)
+    document.querySelector('.mobileMenu').classList.remove('open'); 
+  });
 });
 </script>
 
