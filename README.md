@@ -30,13 +30,6 @@ Netflix의 UI/UX를 참고해 제작하였으며, 프론트엔드 실무 역량�
 | PHP (조금)     | include 등 공통 모듈 처리 |
 | GitHub Pages | 배포 및 호스팅           |
 
-## 🖥️ 주요 페이지
-
-- `/index.html` – 메인 홈화면
-- `/site/about.html` – 자기소개
-- `/site/portfolio.html` – 프로젝트 소개
-- `/site/contact.html` – 연락처 및 문의
-
 ## 🔗 데모 사이트
 
 👉 [https://oyoonsik.github.io/yunflix/](https://oyoonsik.github.io/yunflix/)
