@@ -7058,23 +7058,50 @@ h2.title-margin {
 /*# sourceMappingURL=style.css.map */
 
 
-/* 포폴 리스트 */
+/* 포트폴리오 정보 영역 */
+.portfolio_info {
+  padding: 8px 0 15px 0;
+  text-align: left;
+}
+
+/* 포트폴리오 제목 */
+.portfolio_title {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* 간격 조정 */
+.portfolio_spacing {
+  height: 20px;
+}
+
+
+.portfolio_image>img {
+  object-fit: cover; width: 100%; height: 100%;
+}
+
+/* 포트폴리오 리스트 기본 스타일 */
 .portfolio_list {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   width: 100%;
-  padding: 80px 20px;
+  padding: 100px 20px;
   box-sizing: border-box;
 }
+
+/* 리스트 아이템 */
 .portfolio_list > li {
-  width: 16.66%;
+  flex: 1 1 calc(16.66% - 10px); /* 6개씩 배치되도록 계산 */
+  max-width: calc(16.66% - 10px);
   box-sizing: border-box;
-  padding: 5px;
   display: flex;
   justify-content: center;
 }
-.portfolio_list .portfolio_image {
+
+/* 이미지 래퍼 */
+.portfolio_image {
   overflow: hidden;
   position: relative;
   border: 1px solid #457d96;
@@ -7082,6 +7109,66 @@ h2.title-margin {
   width: 100%;
   aspect-ratio: 1 / 1.5;
 }
+
+/* 이미지 */
+.portfolio_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 툴팁 */
+.hd_tooltip_con {
+  position: absolute;
+  top: 30px;
+  width: 300px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  display: none; /* 기본적으로 숨김 */
+}
+
+.portfolio_image:hover .hd_tooltip_con {
+  display: block; /* 호버 시 표시 */
+}
+
+/* 반응형 처리 */
+@media screen and (max-width: 1650px) {
+  .portfolio_list > li {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .portfolio_list > li {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .portfolio_list > li {
+    flex: 1 1 calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio_list > li {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+  tbody tr td {
+    font-size: 0.7em !important;
+  }
+  .photoNumberArea {
+    margin-bottom: 50px;
+  }
+  .portfolio_list {
+    padding: 60px 20px !important;
+  }
+}
+
 
 /*-- ë§ˆìš°ìŠ¤ over --*/
 .ani-zoom{transition:all .4s;}
@@ -7095,29 +7182,3 @@ h2.title-margin {
 .ani-down:hover{transform:translateY(0.5em);position:relative}
 .ani-left:hover{transform:translateX(-0.5em);position:relative}
 .ani-right:hover{transform:translateX(0.5em);position:relative}
-
-
-.portfolio_list{margin:0 auto;display:flex;flex-wrap:wrap;width:100%;padding:130px 20px;box-sizing:border-box;}
-.portfolio_list > li{width:16.66%;box-sizing:border-box;padding:5px;display:flex;justify-content:center}
-
-.portfolio_list .portfolio_image{overflow:hidden;position:relative;border:1px solid #457d96;cursor:pointer;width:100%;aspect-ratio: 1/1.5;}
-.portfolio_list .portfolio_image img{width:100%}
-.portfolio_list .hd_tooltip_con{position:absolute;top:30px;width:300px;z-index:10}
-
-.portfolio_list .portfolio_more_item{display:none}
-
-	@media screen and (max-width:1650px) { 
-		.portfolio_list > li{width:25%;}
-	}
-	@media screen and (max-width:1300px) { 
-		.portfolio_list > li{width:25%;}
-	}
-	@media screen and (max-width:1000px) { 
-		.portfolio_list > li{width:33.333%;}
-	}
-	@media screen and (max-width:768px) { 
-		.portfolio_list > li{width:50%;}
-    tbody tr td{font-size: 0.7em !important;}
-    .photoNumberArea {margin-bottom: 50px;}
-    .portfolio_list {padding: 60px 20px !important;}
-	}
