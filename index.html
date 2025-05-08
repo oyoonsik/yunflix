@@ -11,12 +11,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<meta name="description" content="오윤식 포트폴리오를 시청할 준비가 되셨나요? 지금 바로 시작하세요.">
-    <script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+
+	<meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="oh/images/web/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
+
     <script type="text/javascript" src="js/jquery-ui.1.9.2.min.js"></script>
-    <script type="text/javascript" src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/jquery.dotdotdot.js"></script>
     <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/image-popup.js"></script>
+    <script type="text/javascript" src="js/swiper-init.js"></script>
+    <script type="text/javascript" src="js/popup-cookie.js"></script>
+    <script type="text/javascript" src="js/window-open.js"></script>
+    <script type="text/javascript" src="js/mobile-gnb.js"></script>
 	
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+
+	<script type="text/javascript" src="oh/js/common.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="oh/images/web/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="oh/images/web/favicon/apple-icon-60x60.png">
@@ -31,157 +48,127 @@
     <link rel="icon" type="image/png" sizes="32x32" href="oh/images/web/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="oh/images/web/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="oh/images/web/favicon/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="oh/images/web/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-	<script>
-
-		function OnloadImg(url){
-		
-			var img=new Image();
-		
-			img.onload = function() {
-				var img_width=img.width;
-				var win_width=img.width+25;
-				var height=img.height+30;
-				var OpenWindow=window.open('','_blank', 'width='+img_width+', height='+height+', menubars=no, scrollbars=auto');
-				OpenWindow.document.write("<style>body{margin:0px;}</style><img src='"+url+"' width='"+win_width+"'>");
-		
-				// Close the window when clicked
-				OpenWindow.document.addEventListener('click', function() {
-					OpenWindow.close();
-				});
-			};
-		
-			img.src=url;
-		
-		}
-		
-		</script>
-		
-		
-
 </head>
+
 <body id="admin" data-new-gr-c-s-check-loaded="14.1050.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1050.0">
+
 <div id="wrap" class="mainLayout web">
 
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="oh/css/style.css">
-<link rel="stylesheet" type="text/css" href="oh/css/swiper-bundle.min.css">
-<script type="text/javascript" src="oh/js/common.js"></script>
-
-<script type="text/javascript" src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-
-<header id="header" class="scroll" style="margin-left: 0px;">
-        <div class="headerIn">
-            <a href="javascript:history.back();" class="pageBack"><span>이전 페이지</span></a>
-            <h1 class="logoText"><a href="#" style="text-decoration: none;"></a></h1>
-            <div class="gnb">
-                <button type="button" class="gnbOpenBtn"><span>메뉴 열기</span></button>
-                <nav>
-                    <div class="navIn">
-                        <div class="gnbItem category">
-                            <button type="button">전체카테고리</button>
-                            <div class="gnbItemSub" style="margin-left: 0px;">
-                                <div class="gnbItemSubIn">
-                                    <div class="gnbItemTitle">전체카테고리</div>
-                                    <ul class="gnbItemSubBox">
-                                        <li><a href="#banner" style="text-decoration: none;"><span>랜딩&상세페이지</span></a></li>
-                                    </ul>
-									<ul class="gnbItemSubBox">
-                                        <li><a href="#site" style="text-decoration: none;"><span>사이트 개발</span></a></li>
-                                    </ul>
-                                    <ul class="gnbItemSubBox">
-                                        <li><a href="#artwork" style="text-decoration: none;"><span>아트워크</span></a></li>
-                                    </ul>
-                                    <ul class="gnbItemSubBox">
-                                        <li><a href="#detailsPage" style="text-decoration: none;"><span>TOP10 컨텐츠</span></a></li>
-                                    </ul>
-                                </div>
+<!-- 헤더 섹션 -->
+<header id="header" class="scroll">
+    <div class="headerIn">
+        <!-- 이전 페이지 버튼 -->
+        <a href="javascript:history.back();" class="pageBack">
+            <span>이전 페이지</span>
+        </a>
+        
+        <!-- 로고 텍스트 -->
+        <h1 class="logoText">
+            <a href="#" style="text-decoration: none;"></a>
+        </h1>
+        
+        <!-- 메인 내비게이션 -->
+        <div class="gnb">
+            <!-- 모바일 메뉴 열기 버튼 -->
+            <button type="button" class="gnbOpenBtn">
+                <span>메뉴 열기</span>
+            </button>
+            
+            <nav>
+                <div class="navIn">
+                    <!-- 전체 카테고리 메뉴 -->
+                    <div class="gnbItem category">
+                        <button type="button">전체카테고리</button>
+                        <div class="gnbItemSub">
+                            <div class="gnbItemSubIn">
+                                <div class="gnbItemTitle">전체카테고리</div>
+                                <ul class="gnbItemSubBox">
+                                    <li><a href="#banner" style="text-decoration: none;"><span>랜딩&상세페이지</span></a></li>
+                                </ul>
+                                <ul class="gnbItemSubBox">
+                                    <li><a href="#site" style="text-decoration: none;"><span>사이트 개발</span></a></li>
+                                </ul>
+                                <ul class="gnbItemSubBox">
+                                    <li><a href="#artwork" style="text-decoration: none;"><span>아트워크</span></a></li>
+                                </ul>
+                                <ul class="gnbItemSubBox">
+                                    <li><a href="#detailsPage" style="text-decoration: none;"><span>TOP10 컨텐츠</span></a></li>
+                                </ul>
                             </div>
                         </div>
-						<div class="gnbItem">
-                            <a href="#banner" style="text-decoration: none;">랜딩.상세페이지</a>
-                        </div>
-                        <div class="gnbItem">
-                            <a href="#site" style="text-decoration: none;">사이트 개발</a>
-                        </div>
-                        <div class="gnbItem">
-                            <a href="#artwork" style="text-decoration: none;">아트워크</a>
-                        </div>
-                        <div class="gnbItem">
-                            <a href="#detailsPage" style="text-decoration: none;">TOP10 컨텐츠</a>
-                        </div>
-                        <div class="gnbItem login">
-                            <!-- login 이전 -->
-                            <button type="button">
-                                <span class="loginText">로그인</span>
-                            </button>
-                            <div class="gnbItemSub" style="margin-left: 0px;">
-                                <div class="gnbItemSubIn">
-                                    <div class="gnbItemTitle">
-                                    	로그인
-                                    </div>
-
-                                    <div class="gnbItemContext">
-                                        불법/악성 콘텐츠를 방지하기 위해 실명을 확인합니다.<br>
-                                        SNS로 로그인하여 간편하게 이용하실 수 있습니다.<br>
-                                        원하시는 SNS를 선택하시고 로그인 해주세요.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gnbItem search">
-                            <button type="button"><span>검색하기</span></button>
-                            <div class="gnbItemSub" style="margin-left: 0px;">
-                                <div class="gnbItemSubIn">
-                                    <div class="searchTitleArea">검색하가</div>
-                                    <div class="searchInputArea">
-                                        <span class="searchText">검색어를 입력하세요</span>
-                                        <span class="searchInput">
-                                            <input type="text" id="srchText">
-                                            <button type="button" onclick="fnSrchData();"><span>검색</span></button>
-                                        </span>
-                                    </div>
-                                    <div class="swiperDataArea" id="srchData" style="display: none;">
-                                    	<div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-	                                        <div class="swiper-wrapper" id="srchResult" aria-live="polite" style="transition-duration: 0ms;">
-	                                        </div>
-	                                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="srchResult" aria-disabled="false"></div>
-                                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="srchResult" aria-disabled="false"></div>
-                                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                                        <script>
-                                            var swiper = new Swiper(".swiperDataArea .swiper", {
-                                                breakpoints: {
-                                                    781: {
-                                                        slidesPerView: 5,
-                                                        spaceBetween: 18
-                                                    },
-                                                    1: {
-                                                        slidesPerView: 3,
-                                                        spaceBetween: 10
-                                                    }
-                                                },
-                                                navigation: {
-                                                    nextEl: ".swiper-button-next",
-                                                    prevEl: ".swiper-button-prev",
-                                                },
-                                            });
-                                        </script>
-                                    </div>
-                                    <div class="searchNodataArea" id="srchNoData" style="display: none;">
-                                        <span>입력하신 검색어 “<strong id="srchNoText"></strong>” (와)과</span>
-                                        <span>일치하는 결과가 없습니다.</span>
-                                    </div>
+                    </div>
+                    
+                    <!-- 메인 메뉴 항목들 -->
+                    <div class="gnbItem">
+                        <a href="#banner" style="text-decoration: none;">랜딩.상세페이지</a>
+                    </div>
+                    <div class="gnbItem">
+                        <a href="#site" style="text-decoration: none;">사이트 개발</a>
+                    </div>
+                    <div class="gnbItem">
+                        <a href="#artwork" style="text-decoration: none;">아트워크</a>
+                    </div>
+                    <div class="gnbItem">
+                        <a href="#detailsPage" style="text-decoration: none;">TOP10 컨텐츠</a>
+                    </div>
+                    
+                    <!-- 로그인 메뉴 -->
+                    <div class="gnbItem login">
+                        <button type="button">
+                            <span class="loginText">로그인</span>
+                        </button>
+                        <div class="gnbItemSub">
+                            <div class="gnbItemSubIn">
+                                <div class="gnbItemTitle">로그인</div>
+                                <div class="gnbItemContext">
+                                    불법/악성 콘텐츠를 방지하기 위해 실명을 확인합니다.<br>
+                                    SNS로 로그인하여 간편하게 이용하실 수 있습니다.<br>
+                                    원하시는 SNS를 선택하시고 로그인 해주세요.
                                 </div>
                             </div>
                         </div>
                     </div>
-                </nav>
-                <button type="button" class="gnbCloseBtn"><span>메뉴 닫기</span></button>
-            </div>
+                    
+                    <!-- 검색 메뉴 -->
+                    <div class="gnbItem search">
+                        <button type="button"><span>검색하기</span></button>
+                        <div class="gnbItemSub">
+                            <div class="gnbItemSubIn">
+                                <div class="searchTitleArea">검색하기</div>
+                                <div class="searchInputArea">
+                                    <span class="searchText">검색어를 입력하세요</span>
+                                    <span class="searchInput">
+                                        <input type="text" id="srchText">
+                                        <button type="button" onclick="fnSrchData();"><span>검색</span></button>
+                                    </span>
+                                </div>
+                                
+                                <!-- 검색 결과 영역 -->
+                                <div class="swiperDataArea" id="srchData" style="display: none;">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper" id="srchResult"></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 검색 결과 없음 메시지 -->
+                                <div class="searchNodataArea" id="srchNoData" style="display: none;">
+                                    <span>입력하신 검색어 "<strong id="srchNoText"></strong>" (와)과</span>
+                                    <span>일치하는 결과가 없습니다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- 모바일 메뉴 닫기 버튼 -->
+            <button type="button" class="gnbCloseBtn">
+                <span>메뉴 닫기</span>
+            </button>
         </div>
+    </div>
 </header>
 
     <div id="container">
@@ -1278,136 +1265,6 @@
 
 <button type="button" class="pageTop"><span>TOP</span></button></div>
 
-
-<script type="text/javascript">
-$(document).ready(function() {
-	if ("Y" == "Y" && getCookie("popupDayClose") != "done") {
-		$("#ahnPopupWrap").show();
-	}
-});
-
-$(document).on("click", "#popupDayCloseBtn", function() {
-	setCookie("popupDayClose", "done", 1);
-});
-
-function setCookie(cookieName, cookieValue, expiredays) {
-    var cookieText = escape(cookieName) + '=' + escape(cookieValue);
-    var todayDate = new Date();
-
-    todayDate = new Date(parseInt(todayDate.getTime() / 86400000) * 86400000 + 54000000);
-
-    if (todayDate > new Date()) {
-    	expiredays = expiredays - 1;
-    }
-
-    todayDate.setDate(todayDate.getDate() + expiredays);
-    cookieText += "; expires=" + todayDate.toGMTString();
-
-    document.cookie = cookieText;
-}
-
-function getCookie(cookieName) {
-    var cookieValue = null;
-
-    if (document.cookie) {
-        var array = document.cookie.split((escape(cookieName) + '='));
-
-        if (array.length >= 2) {
-            var arraySub = array[1].split(';');
-            cookieValue = unescape(arraySub[0]);
-        }
-    }
-
-    return cookieValue;
-}
-</script>
-<script LANGUAGE="Javascript">
-	function openwindow(opage, x, y) { 
-	farwindow = window.open('','Links','width='+x+', height='+y+', toolbar=0, scrollbars=0, resizable=no'); 
-	if (farwindow != null) { 
-	if (farwindow.opener == null) { 
-	farwindow.opener = self; 
-	} 
-	farwindow.location.href = opage; 
-	} 
-	} 
-</script>
-<script>
-	// GNB 모바일 메뉴 기능 통합
-const GNB = {
-    // 메뉴 열기
-    gnbMobileOpen: function () {
-        $(document).on("click", "#wrap.mobile .gnb .gnbOpenBtn", function () {
-            let slideSpeed = 300;
-
-            $("body").css({ "overflow": "hidden", "touch-action": "none" });
-            $("#header").addClass("gnbOpenMobile");
-            $(".pageTop").css({ "z-index": "-1" });
-            $(".gnb nav").stop().animate({
-                left: "0%"
-            }, slideSpeed, function () {
-                $(".gnb .gnbCloseBtn").show();
-            });
-        });
-    },
-
-    // 메뉴 닫기 (공통 함수화)
-    closeMenu: function (callback) {
-        let slideSpeed = 300;
-
-        $("body").removeAttr("style");
-        $("#header").removeClass("gnbOpenMobile");
-        $(".gnb .gnbCloseBtn").hide();
-        $(".gnb nav").stop().animate({
-            left: "100%"
-        }, slideSpeed, function () {
-            $(".gnb nav").removeAttr("style");
-            $(".gnb .gnbItemSub").removeAttr("style");
-            $(".pageTop").css({ "z-index": "20" });
-
-            // 닫은 후 콜백 실행 (스크롤 등)
-            if (typeof callback === 'function') callback();
-        });
-    },
-
-    // 메뉴 닫기 버튼 클릭
-    gnbMobileClose: function () {
-        $(document).on("click", "#wrap.mobile .gnb .gnbCloseBtn", function () {
-            GNB.closeMenu();
-        });
-    },
-
-    // 메뉴 안 링크 클릭 시: 메뉴 닫고 → 해당 위치로 스크롤
-    gnbMenuLinkScroll: function () {
-        $(document).on("click", ".gnbItemSub a", function (e) {
-            e.preventDefault();
-
-            const targetId = $(this).attr("href").replace("#", "");
-            const target = $("#" + targetId);
-
-            if (target.length) {
-                GNB.closeMenu(function () {
-                    // 메뉴 닫힌 후 스크롤 이동
-                    $("html, body").animate({
-                        scrollTop: target.offset().top
-                    }, 500);
-                });
-            }
-        });
-    },
-
-    // 초기화
-    init: function () {
-        this.gnbMobileOpen();
-        this.gnbMobileClose();
-        this.gnbMenuLinkScroll();
-    }
-};
-
-// 실행
-$(function () {
-    GNB.init();
-});
-</script>
-
-<span style="border-radius: 10px !important; text-indent: 12px !important; width: auto !important; height: 20px !important; padding: 0px 8px !important; text-align: center !important; vertical-align: middle !important; font: bold 11px / 20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNFNjAwMjMiPjwvY2lyY2xlPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNkMwIDguNTYxNSAxLjYwNTUgMTAuNzQ4NSAzLjg2NSAxMS42MDlDMy44MSAxMS4xNDA1IDMuNzUxNSAxMC4zNjggMy44Nzc1IDkuODI2QzMuOTg2IDkuMzYgNC41NzggNi44NTcgNC41NzggNi44NTdDNC41NzggNi44NTcgNC4zOTk1IDYuNDk5NSA0LjM5OTUgNS45N0M0LjM5OTUgNS4xNCA0Ljg4MDUgNC41MiA1LjQ4IDQuNTJDNS45OSA0LjUyIDYuMjM2IDQuOTAyNSA2LjIzNiA1LjM2MUM2LjIzNiA1Ljg3MzUgNS45MDk1IDYuNjM5NSA1Ljc0MSA3LjM1QzUuNjAwNSA3Ljk0NDUgNi4wMzk1IDguNDI5NSA2LjYyNTUgOC40Mjk1QzcuNjg3IDguNDI5NSA4LjUwMzUgNy4zMSA4LjUwMzUgNS42OTRDOC41MDM1IDQuMjYzNSA3LjQ3NTUgMy4yNjQgNi4wMDggMy4yNjRDNC4zMDkgMy4yNjQgMy4zMTE1IDQuNTM4NSAzLjMxMTUgNS44NTZDMy4zMTE1IDYuMzY5NSAzLjUwOSA2LjkxOTUgMy43NTYgNy4yMTlDMy44MDQ1IDcuMjc4NSAzLjgxMiA3LjMzIDMuNzk3NSA3LjM5MDVDMy43NTIgNy41Nzk1IDMuNjUxIDcuOTg1IDMuNjMxNSA4LjA2OEMzLjYwNSA4LjE3NyAzLjU0NSA4LjIwMDUgMy40MzE1IDguMTQ3NUMyLjY4NTUgNy44MDA1IDIuMjE5NSA2LjcxIDIuMjE5NSA1LjgzNEMyLjIxOTUgMy45NDk1IDMuNTg4IDIuMjE5NSA2LjE2NTUgMi4yMTk1QzguMjM3NSAyLjIxOTUgOS44NDggMy42OTYgOS44NDggNS42NjlDOS44NDggNy43Mjc1IDguNTUwNSA5LjM4NDUgNi43NDg1IDkuMzg0NUM2LjE0MyA5LjM4NDUgNS41NzQ1IDkuMDY5NSA1LjM3OTUgOC42OThDNS4zNzk1IDguNjk4IDUuMDggOS44MzkgNS4wMDc1IDEwLjExOEM0Ljg2NjUgMTAuNjYgNC40NzU1IDExLjM0NiA0LjIzMyAxMS43MzU1QzQuNzkyIDExLjkwNzUgNS4zODUgMTIgNiAxMkM5LjMxMzUgMTIgMTIgOS4zMTM1IDEyIDZDMTIgMi42ODY1IDkuMzEzNSAwIDYgMEMyLjY4NjUgMCAwIDIuNjg2NSAwIDZaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 4px 50% / 12px 12px no-repeat rgb(230, 0, 35) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: none !important; -webkit-font-smoothing: antialiased !important; top: 1672px; left: 605px;">저장</span><span style="border-radius: 12px; width: 24px !important; height: 24px !important; background: url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTEiIGN5PSIxMSIgcj0iMTEiIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuOCI+PC9jaXJjbGU+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTUuMDgzNCA0LjU4MzMzSDEzLjMzMzRWNS43NDk5OUgxNS4wODM0QzE1LjcyNjggNS43NDk5OSAxNi4yNSA2LjI3MzI0IDE2LjI1IDYuOTE2NjZWOC42NjY2NkgxNy40MTY3VjYuOTE2NjZDMTcuNDE2NyA1LjYyOTgzIDE2LjM3MDIgNC41ODMzMyAxNS4wODM0IDQuNTgzMzNaTTE2LjI1IDE1LjA4MzNDMTYuMjUgMTUuNzI2NyAxNS43MjY4IDE2LjI1IDE1LjA4MzQgMTYuMjVIMTMuMzMzNFYxNy40MTY3SDE1LjA4MzRDMTYuMzcwMiAxNy40MTY3IDE3LjQxNjcgMTYuMzcwMiAxNy40MTY3IDE1LjA4MzNWMTMuMzMzM0gxNi4yNVYxNS4wODMzWk01Ljc1MDA0IDE1LjA4MzNWMTMuMzMzM0g0LjU4MzM3VjE1LjA4MzNDNC41ODMzNyAxNi4zNzAyIDUuNjI5ODcgMTcuNDE2NyA2LjkxNjcxIDE3LjQxNjdIOC42NjY3MVYxNi4yNUg2LjkxNjcxQzYuMjczMjkgMTYuMjUgNS43NTAwNCAxNS43MjY3IDUuNzUwMDQgMTUuMDgzM1pNNS43NTAwNCA2LjkxNjY2QzUuNzUwMDQgNi4yNzMyNCA2LjI3MzI5IDUuNzQ5OTkgNi45MTY3MSA1Ljc0OTk5SDguNjY2NzFWNC41ODMzM0g2LjkxNjcxQzUuNjI5ODcgNC41ODMzMyA0LjU4MzM3IDUuNjI5ODMgNC41ODMzNyA2LjkxNjY2VjguNjY2NjZINS43NTAwNFY2LjkxNjY2Wk05LjI1MDA0IDEwLjcwODNDOS4yNTAwNCA5LjkwNDQ5IDkuOTA0NTQgOS4yNDk5OSAxMC43MDg0IDkuMjQ5OTlDMTEuNTEyMiA5LjI0OTk5IDEyLjE2NjcgOS45MDQ0OSAxMi4xNjY3IDEwLjcwODNDMTIuMTY2NyAxMS41MTIyIDExLjUxMjIgMTIuMTY2NyAxMC43MDg0IDEyLjE2NjdDOS45MDQ1NCAxMi4xNjY3IDkuMjUwMDQgMTEuNTEyMiA5LjI1MDA0IDEwLjcwODNaTTEzLjYyNSAxNC41QzEzLjg0OSAxNC41IDE0LjA3MyAxNC40MTQ4IDE0LjI0NCAxNC4yNDM5QzE0LjU4NTIgMTMuOTAyMSAxNC41ODUyIDEzLjM0NzkgMTQuMjQ0IDEzLjAwNjFMMTMuMDcwMyAxMS44MzNDMTMuMjM0MiAxMS40OTA2IDEzLjMzMzQgMTEuMTEyNiAxMy4zMzM0IDEwLjcwODNDMTMuMzMzNCA5LjI2MTA4IDEyLjE1NTYgOC4wODMzMyAxMC43MDg0IDguMDgzMzNDOS4yNjExMiA4LjA4MzMzIDguMDgzMzcgOS4yNjEwOCA4LjA4MzM3IDEwLjcwODNDOC4wODMzNyAxMi4xNTU2IDkuMjYxMTIgMTMuMzMzMyAxMC43MDg0IDEzLjMzMzNDMTEuMTEyNiAxMy4zMzMzIDExLjQ5MDYgMTMuMjM0MiAxMS44MzMgMTMuMDcwMkwxMy4wMDYxIDE0LjI0MzlDMTMuMTc3IDE0LjQxNDggMTMuNDAxIDE0LjUgMTMuNjI1IDE0LjVaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 50% 50% / 24px 24px no-repeat rgba(0, 0, 0, 0.4) !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: none !important; top: 1672px; left: 1028px;"></span></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true">
+</grammarly-desktop-integration>
+</html>
