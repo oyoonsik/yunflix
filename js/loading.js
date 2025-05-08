@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2.8초 후 index.html로 이동
     setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'yunflix.html';
     }, 2800); // 2800ms == 2.8초
 
     // 새로고침 시 애니메이션 다시 시작
