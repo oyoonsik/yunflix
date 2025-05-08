@@ -2120,7 +2120,7 @@ html .opening, body .opening {
   box-sizing: border-box;
   width: 100%;
   min-width: 1200px;
-  height: 130px;
+  height: 100px;
   z-index: 20;
 }
 #wrap #header > * {
@@ -2142,7 +2142,7 @@ html .opening, body .opening {
 #wrap #header .headerIn .logoText {
   display: inline-block;
   vertical-align: top;
-  padding-top: 52px;
+  padding-top: 25px;
 }
 #wrap #header .headerIn .logoText a {
   overflow: hidden;
@@ -2150,7 +2150,7 @@ html .opening, body .opening {
   width: 185px;
   height: 47px;
   color: transparent;
-  background: url("../images/web/bg/bg_logoWeb.png") no-repeat;
+  background: url("../oh/images/web/bg/bg_logoWeb.png") no-repeat;
 }
 #wrap #header .headerIn .gnb .gnbOpenBtn {
   display: none;
@@ -2169,7 +2169,7 @@ html .opening, body .opening {
   display: none;
   width: 35px;
   height: 35px;
-  background: url("../images/web/icon/icon_gnbClose.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_gnbClose.png") no-repeat;
   background-position: center;
   z-index: 22;
 }
@@ -2184,7 +2184,7 @@ html .opening, body .opening {
   position: absolute;
   left: auto;
   right: 0;
-  top: 51px;
+  top: 30px;
 }
 #wrap #header .headerIn .gnb nav .navIn {
   overflow: hidden;
@@ -2211,11 +2211,11 @@ html .opening, body .opening {
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button {
   padding-left: 35px;
-  background: url("../images/web/icon/icon_category.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_category.png") no-repeat;
   background-position: left center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button:hover {
-  background: url("../images/web/icon/icon_category_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_category_on.png") no-repeat;
   background-position: left center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub {
@@ -2292,11 +2292,11 @@ html .opening, body .opening {
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button {
   width: 35px;
-  background: url("../images/web/icon/icon_login.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_login.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
-  background: url("../images/web/icon/icon_login_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_login_on.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span {
@@ -2309,7 +2309,7 @@ html .opening, body .opening {
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome {
   width: 35px;
   height: 35px;
-  background: url("../images/web/icon/icon_login_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_login_on.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome span {
@@ -2353,23 +2353,23 @@ html .opening, body .opening {
   margin-left: 23px;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
-  background: url("../images/web/sns/sns_kakao.png") no-repeat;
+  background: url("../oh/images/web/sns/sns_kakao.png") no-repeat;
   background-size: 100% 100%;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
-  background: url("../images/web/sns/sns_naver.png") no-repeat;
+  background: url("../oh/images/web/sns/sns_naver.png") no-repeat;
   background-size: 100% 100%;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
-  background: url("../images/web/sns/sns_google.png") no-repeat;
+  background: url("../oh/images/web/sns/sns_google.png") no-repeat;
   background-size: 100% 100%;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
-  background: url("../images/web/sns/sns_facebook.png") no-repeat;
+  background: url("../oh/images/web/sns/sns_facebook.png") no-repeat;
   background-size: 100% 100%;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
-  background: url("../images/web/sns/sns_twitch.png") no-repeat;
+  background: url("../oh/images/web/sns/sns_twitch.png") no-repeat;
   background-size: 100% 100%;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a span {
@@ -2389,11 +2389,11 @@ html .opening, body .opening {
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
   width: 35px;
-  background: url("../images/web/icon/icon_search.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_search.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
-  background: url("../images/web/icon/icon_search_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_search_on.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
@@ -2452,7 +2452,7 @@ html .opening, body .opening {
   width: 54px;
   height: 54px;
   margin-left: 5px;
-  background: url("../images/web/icon/icon_gnbSearch.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_gnbSearch.png") no-repeat;
   background-position: center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
@@ -2493,11 +2493,11 @@ html .opening, body .opening {
   display: none;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
-  background: url("../images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
   background-position: left center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-  background: url("../images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
   background-position: right center;
 }
 #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
@@ -2521,12 +2521,12 @@ html .opening, body .opening {
 }
 #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-prev {
   left: 0;
-  background: url("../images/web/icon/icon_topVisualArrowLeft.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_topVisualArrowLeft.png") no-repeat;
   background-position: center;
 }
 #wrap #container .topVisual .topVisualSwiper .swiper .swiper-button-next {
   right: 0;
-  background: url("../images/web/icon/icon_topVisualArrowRight.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_topVisualArrowRight.png") no-repeat;
   background-position: center;
 }
 #wrap #container .topVisual .topVisualSwiper .swiper .imgWeb, #wrap #container .topVisual .topVisualSwiper .swiper .imgMobile {
@@ -2666,7 +2666,7 @@ html .opening, body .opening {
   display: block;
   width: 70px;
   height: 70px;
-  background: url("../images/web/icon/icon_popupCloseBtn.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_popupCloseBtn.png") no-repeat;
   background-position: center;
 }
 #wrap .ahnPopupWrap .ahnPopupContainer .popupCloseBtn span {
@@ -2742,7 +2742,7 @@ html .opening, body .opening {
 /* media queries */
 @media (max-width: 780px) {
   html .opening, body .opening {
-    background: url("../images/mobile/bg/bg_openingMobile.png") no-repeat;
+    background: url("../oh/images/mobile/bg/bg_openingMobile.png") no-repeat;
     background-color: #000;
     background-position: center center;
     background-size: contain;
@@ -2771,7 +2771,7 @@ html .opening, body .opening {
     line-height: 9px;
     padding-top: 13px;
     font-size: 8px;
-    background: url("../images/web/icon/icon_pageTop.png") no-repeat;
+    background: url("../oh/images/web/icon/icon_pageTop.png") no-repeat;
     background-position: center top;
     background-size: 11px 6px;
   }
@@ -2801,7 +2801,7 @@ html .opening, body .opening {
     display: block;
     width: 50px;
     height: 50px;
-    background: url("../images/mobile/icon/icon_pageBack.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_pageBack.png") no-repeat;
     background-position: center;
     background-size: 12px 21px;
   }
@@ -2835,7 +2835,7 @@ html .opening, body .opening {
     display: block;
     width: 60px;
     height: 50px;
-    background: url("../images/mobile/icon/icon_gnbOpen.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_gnbOpen.png") no-repeat;
     background-position: center;
     background-size: 27px 20px;
   }
@@ -2846,7 +2846,7 @@ html .opening, body .opening {
     display: none;
     width: 35px;
     height: 32px;
-    background: url("../images/mobile/icon/icon_gnbClose.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_gnbClose.png") no-repeat;
     background-position: center;
     background-size: 35px 32px;
   }
@@ -2963,12 +2963,12 @@ html .opening, body .opening {
     width: 100%;
     height: auto;
     padding-left: 25px;
-    background: url("../images/mobile/icon/icon_login.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_login.png") no-repeat;
     background-position: left center;
     background-size: 18px 16px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
-    background: url("../images/mobile/icon/icon_login.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_login.png") no-repeat;
     background-position: left center;
     background-size: 18px 16px;
   }
@@ -2990,7 +2990,7 @@ html .opening, body .opening {
     width: 100%;
     height: auto;
     padding-left: 25px;
-    background: url("../images/mobile/icon/icon_login_on.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_login_on.png") no-repeat;
     background-position: left center;
     background-size: 18px 16px;
   }
@@ -3038,23 +3038,23 @@ html .opening, body .opening {
     margin-left: 12px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
-    background: url("../images/mobile/sns/sns_kakao.png") no-repeat;
+    background: url("../oh/images/mobile/sns/sns_kakao.png") no-repeat;
     background-size: 50px 50px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
-    background: url("../images/mobile/sns/sns_naver.png") no-repeat;
+    background: url("../oh/images/mobile/sns/sns_naver.png") no-repeat;
     background-size: 50px 50px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
-    background: url("../images/mobile/sns/sns_google.png") no-repeat;
+    background: url("../oh/images/mobile/sns/sns_google.png") no-repeat;
     background-size: 50px 50px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
-    background: url("../images/mobile/sns/sns_facebook.png") no-repeat;
+    background: url("../oh/images/mobile/sns/sns_facebook.png") no-repeat;
     background-size: 50px 50px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
-    background: url("../images/mobile/sns/sns_twitch.png") no-repeat;
+    background: url("../oh/images/mobile/sns/sns_twitch.png") no-repeat;
     background-size: 50px 50px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
@@ -3073,12 +3073,12 @@ html .opening, body .opening {
     width: 100%;
     height: auto;
     padding-left: 25px;
-    background: url("../images/mobile/icon/icon_search.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_search.png") no-repeat;
     background-position: left center;
     background-size: 15px 16px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
-    background: url("../images/mobile/icon/icon_search.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_search.png") no-repeat;
     background-position: left center;
     background-size: 15px 16px;
   }
@@ -3131,7 +3131,7 @@ html .opening, body .opening {
     width: 30px;
     height: 30px;
     margin-left: 5px;
-    background: url("images/mobile/icon/icon_gnbSearch.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_gnbSearch.png") no-repeat;
     background-position: center;
     background-size: 23px 24px;
   }
@@ -3176,13 +3176,13 @@ html .opening, body .opening {
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
     left: 0;
-    background: url("../images/mobile/icon/icon_gnbSearchArrowLeft.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_gnbSearchArrowLeft.png") no-repeat;
     background-position: center center;
     background-size: 7px 12px;
   }
   #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
     right: 0;
-    background: url("../images/mobile/icon/icon_gnbSearchArrowRight.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_gnbSearchArrowRight.png") no-repeat;
     background-position: center center;
     background-size: 7px 12px;
   }
@@ -3380,7 +3380,7 @@ html .opening, body .opening {
   text-align: center;
   box-sizing: border-box;
   padding: 296px 0 33px;
-  background: url("../images/web/bg/bg_topVisualVideo.png") no-repeat;
+  background: url("../oh/images/web/bg/bg_topVisualVideo.png") no-repeat;
   background-position: center center;
   background-size: auto 100%;
 }
@@ -3501,12 +3501,12 @@ html .opening, body .opening {
   font-size: 30px;
   color: #BCBCBC;
   font-family: "NotoSansCJKkrMedium", sans-serif;
-  background: url("../images/web/icon/icon_moreLink.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_moreLink.png") no-repeat;
   background-position: right center;
 }
 .mainTitleArea .moreLink:hover {
   color: #fff;
-  background: url("../images/web/icon/icon_moreLink_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_moreLink_on.png") no-repeat;
   background-position: right center;
 }
 
@@ -3526,13 +3526,13 @@ html .opening, body .opening {
 }
 .photoNumberArea .swiperArea .swiper .swiper-button-prev, .photoWidthArea .swiperArea .swiper .swiper-button-prev, .photoHeightArea .swiperArea .swiper .swiper-button-prev {
   left: 0;
-  background: url("../images/web/icon/icon_mainSwiperArrowLeft.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_mainSwiperArrowLeft.png") no-repeat;
   background-position: 20px center;
   background-size: 40px 70px;
 }
 .photoNumberArea .swiperArea .swiper .swiper-button-next, .photoWidthArea .swiperArea .swiper .swiper-button-next, .photoHeightArea .swiperArea .swiper .swiper-button-next {
   right: 0;
-  background: url("../images/web/icon/icon_mainSwiperArrowRight.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_mainSwiperArrowRight.png") no-repeat;
   background-position: right 20px center;
   background-size: 40px 70px;
 }
@@ -3752,7 +3752,7 @@ html .opening, body .opening {
     width: 84px;
     height: 22px;
     color: transparent;
-    background: url("../images/mobile/bg/bg_logoMobile.png") no-repeat;
+    background: url("../oh/images/mobile/bg/bg_logoMobile.png") no-repeat;
     background-size: 84px 22px;
   }
   #wrap.mainLayout #container .topVisual .topVisualSwiper {
@@ -3864,12 +3864,12 @@ html .opening, body .opening {
     margin-top: 1.2vw;
     padding-right: 3vw;
     font-size: 4.1025vw;
-    background: url("../images/web/icon/icon_moreLink.png") no-repeat;
+    background: url("../oh/images/web/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
     background-size: 2vw 3vw;
   }
   .mainTitleArea .moreLink:hover {
-    background: url("../images/web/icon/icon_moreLink.png") no-repeat;
+    background: url("../oh/images/web/icon/icon_moreLink.png") no-repeat;
     background-position: right center;
     background-size: 2vw 3vw;
   }
@@ -4078,14 +4078,14 @@ h2.title-margin {
   top: 12px;
   width: 54px;
   height: 50px;
-  background: url("../images/web/sub/like_37x_35_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_37x_35_off.png") no-repeat;
   background-position: center;
   background-size: 37px 35px;
   padding: 10px;
   z-index: 2;
 }
 .listWrap__list ul li .btnLike.on {
-  background: url("../images/web/sub/like_37x_35_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_37x_35_on.png") no-repeat;
   background-position: center;
   background-size: 37px 35px;
 }
@@ -4137,23 +4137,23 @@ h2.title-margin {
   height: 31px;
 }
 .listWrap__list ul li .sns-naver:after {
-  background: url("../images/web/icon/icon_naver.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_naver.png") no-repeat;
   background-size: contain;
 }
 .listWrap__list ul li .sns-facebook:after {
-  background: url("../images/web/icon/icon_facebook.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_facebook.png") no-repeat;
   background-size: contain;
 }
 .listWrap__list ul li .sns-instagram:after {
-  background: url("../images/web/icon/icon_instagram.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_instagram.png") no-repeat;
   background-size: contain;
 }
 .listWrap__list ul li .sns-ahn:after {
-  background: url("../images/web/icon/icon_ahn.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_ahn.png") no-repeat;
   background-size: contain;
 }
 .listWrap__list ul li .sns-media:after {
-  background: url("../images/web/icon/icon_media.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_media.png") no-repeat;
   background-size: contain;
 }
 .listWrap .btnMore {
@@ -4259,14 +4259,14 @@ h2.title-margin {
   top: 3px;
   width: 21px;
   height: 20px;
-  background: url("../images/web/sub/icon_sharing.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_sharing.png") no-repeat;
   background-size: contain;
 }
 .detailWrap .justifyWrap__right .btnSharing.on span {
   color: #fff;
 }
 .detailWrap .justifyWrap__right .btnSharing.on:after {
-  background: url("../images/web/sub/icon_sharing_on.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_sharing_on.png") no-repeat;
   background-size: contain;
 }
 .detailWrap .justifyWrap__right .btnLike {
@@ -4284,7 +4284,7 @@ h2.title-margin {
   width: 16px;
   height: 15px;
   margin-top: -7px;
-  background: url("../images/web/sub/like_16x15_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_16x15_off.png") no-repeat;
   background-size: contain;
 }
 .detailWrap .justifyWrap__right .btnLike .num {
@@ -4299,7 +4299,7 @@ h2.title-margin {
   color: #fff;
 }
 .detailWrap .justifyWrap__right .btnLike.on:after {
-  background: url("../images/web/sub/like_16x15_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_16x15_on.png") no-repeat;
   background-size: contain;
 }
 .detailWrap__content {
@@ -4381,10 +4381,10 @@ h2.title-margin {
   top: 18px;
   width: 27px;
   height: 26px;
-  background: url("../images/web/sub/like_27x26_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_27x26_off.png") no-repeat;
 }
 .paginationWrap ul li > .btnLike.on {
-  background: url("../images/web/sub/like_27x26_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_27x26_on.png") no-repeat;
 }
 .paginationWrap ul li a img {
   display: block;
@@ -4523,7 +4523,7 @@ h2.title-margin {
   height: 54px;
   border: 1px solid #fff;
   box-sizing: border-box;
-  background: url("../images/web/sub/btnWriting.png") no-repeat;
+  background: url("../oh/images/web/sub/btnWriting.png") no-repeat;
   background-position: center;
   background-size: 87px 29px;
 }
@@ -4532,7 +4532,7 @@ h2.title-margin {
   height: 54px;
   border: 1px solid #fff;
   box-sizing: border-box;
-  background: url("../images/web/sub/btnMyList.png") no-repeat;
+  background: url("../oh/images/web/sub/btnMyList.png") no-repeat;
   background-position: center;
   background-size: 106px 33px;
 }
@@ -4556,21 +4556,21 @@ h2.title-margin {
   overflow: hidden;
 }
 .community .rightArea .listType01 {
-  background: url("../images/web/icon/icon_listType01.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_listType01.png") no-repeat;
   background-position: center;
 }
 .community .rightArea .listType01.on {
   border-color: #EA5504;
-  background: url("../images/web/icon/icon_listType01_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_listType01_on.png") no-repeat;
   background-position: center;
 }
 .community .rightArea .listType02 {
-  background: url("../images/web/icon/icon_listType02.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_listType02.png") no-repeat;
   background-position: center;
 }
 .community .rightArea .listType02.on {
   border-color: #EA5504;
-  background: url("../images/web/icon/icon_listType02_on.png") no-repeat;
+  background: url("../oh/images/web/icon/icon_listType02_on.png") no-repeat;
   background-position: center;
 }
 .community__list ul {
@@ -4591,14 +4591,14 @@ h2.title-margin {
   top: 7px;
   width: 54px;
   height: 50px;
-  background: url("../images/web/sub/like_27x26_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_27x26_off.png") no-repeat;
   background-position: center;
   background-size: 27px 27px;
   padding: 10px;
   z-index: 2;
 }
 .community__list ul li > .btnLike.on {
-  background: url("../images/web/sub/like_27x26_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_27x26_on.png") no-repeat;
   background-position: center;
   background-size: 27px 27px;
 }
@@ -4655,7 +4655,7 @@ h2.title-margin {
   top: 6px;
   width: 16px;
   height: 15px;
-  background: url("../images/web/sub/like_16x15_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_16x15_off.png") no-repeat;
   background-size: contain;
 }
 .community__list ul li .justifyWrap__right .btnLike span {
@@ -4670,7 +4670,7 @@ h2.title-margin {
   color: #fff;
 }
 .community__list ul li .justifyWrap__right .btnLike.on:after {
-  background: url("../images/web/sub/like_16x15_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_16x15_on.png") no-repeat;
   background-size: contain;
 }
 .community__list ul li .txt {
@@ -4748,14 +4748,14 @@ h2.title-margin {
   top: 7px;
   width: 54px;
   height: 50px;
-  background: url("../images/web/sub/like_27x26_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_27x26_off.png") no-repeat;
   background-position: center;
   background-size: 27px 27px;
   padding: 10px;
   z-index: 2;
 }
 .communityDetail .paginationWrap__list ul > li > .btnLike.on, .videoDtail .paginationWrap__list ul > li > .btnLike.on {
-  background: url("../images/web/sub/like_27x26_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_27x26_on.png") no-repeat;
   background-position: center;
   background-size: 27px 27px;
 }
@@ -4836,7 +4836,7 @@ h2.title-margin {
   top: 0;
   width: 45px;
   height: 34px;
-  background: url("../images/web/sub/icon_comment.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_comment.png") no-repeat;
   background-size: contain;
   font-family: "NotoSansCJKkrRegular", sans-serif;
 }
@@ -4882,7 +4882,7 @@ h2.title-margin {
   width: 24px;
   height: 24px;
   margin-left: 15px;
-  background: url("../images/web/sub/bg_photo.png") no-repeat;
+  background: url("../oh/images/web/sub/bg_photo.png") no-repeat;
   background-size: contain;
   font-family: "NotoSansCJKkrRegular", sans-serif;
 }
@@ -4907,7 +4907,7 @@ h2.title-margin {
   position: absolute;
   left: 0;
   top: 3px;
-  background: url("../images/web/sub/icon_register.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_register.png") no-repeat;
   width: 23px;
   height: 23px;
 }
@@ -4949,7 +4949,7 @@ h2.title-margin {
   position: absolute;
   left: 34px;
   top: 25px;
-  background: url("../images/web/sub/bg_line.png") no-repeat;
+  background: url("../oh/images/web/sub/bg_line.png") no-repeat;
   width: 22px;
   height: 22px;
 }
@@ -4991,7 +4991,7 @@ h2.title-margin {
   top: 10px;
   width: 14px;
   height: 13px;
-  background: url("../images/web/sub/bg_del.png") no-repeat;
+  background: url("../oh/images/web/sub/bg_del.png") no-repeat;
 }
 .commentList .commentBox .layerButton {
   display: none;
@@ -5068,14 +5068,14 @@ h2.title-margin {
   top: 0;
   width: 22px;
   height: 21px;
-  background: url("../images/web/sub/like_22x21_off.png") no-repeat;
+  background: url("../oh/images/web/sub/like_22x21_off.png") no-repeat;
   background-size: contain;
 }
 .commentList .commentBox__info__right .btnLike span {
   color: #B3B3B3;
 }
 .commentList .commentBox__info__right .btnLike.on:after {
-  background: url("../images/web/sub/like_22x21_on.png") no-repeat;
+  background: url("../oh/images/web/sub/like_22x21_on.png") no-repeat;
   background-size: contain;
 }
 .commentList .commentBox__info__right .btnLike.on span {
@@ -5113,23 +5113,23 @@ h2.title-margin {
   margin-left: 17px;
 }
 .layerSharing .sharingSns a.kakao {
-  background: url("../images/mobile/sns/sns_kakao.png") no-repeat;
+  background: url("../oh/images/mobile/sns/sns_kakao.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.naver {
-  background: url("../images/mobile/sns/sns_naver.png") no-repeat;
+  background: url("../oh/images/mobile/sns/sns_naver.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.google {
-  background: url("../images/mobile/sns/sns_google.png") no-repeat;
+  background: url("../oh/images/mobile/sns/sns_google.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.facebook {
-  background: url("../images/mobile/sns/sns_facebook.png") no-repeat;
+  background: url("../oh/images/mobile/sns/sns_facebook.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .sharingSns a.twitch {
-  background: url("../images/mobile/sns/sns_twitch.png") no-repeat;
+  background: url("../oh/images/mobile/sns/sns_twitch.png") no-repeat;
   background-size: 100% 100%;
 }
 .layerSharing .urlCopy {
@@ -5161,7 +5161,7 @@ h2.title-margin {
   top: 50px;
   width: 30px;
   height: 28px;
-  background: url("../images/web/sub/bg_close.png") no-repeat;
+  background: url("../oh/images/web/sub/bg_close.png") no-repeat;
   background-size: contain;
 }
 
@@ -5189,19 +5189,19 @@ h2.title-margin {
   letter-spacing: -0.05em;
 }
 .btnWrap button.btnList span, .btnWrap a.btnList span {
-  background: url("../images/web/sub/icon_list.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_list.png") no-repeat;
   background-position: 12px top;
 }
 .btnWrap button.btnModify span, .btnWrap a.btnModify span {
-  background: url("../images/web/sub/icon_modify.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_modify.png") no-repeat;
   background-position: center top;
 }
 .btnWrap button.btnDel span, .btnWrap a.btnDel span {
-  background: url("../images/web/sub/icon_del.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_del.png") no-repeat;
   background-position: center 1px;
 }
 .btnWrap button.btnPublish span, .btnWrap a.btnPublish span {
-  background: url("../images/web/sub/icon_publish.png") no-repeat;
+  background: url("../oh/images/web/sub/icon_publish.png") no-repeat;
   background-position: center top;
 }
 
@@ -5625,7 +5625,7 @@ h2.title-margin {
   right: 0;
   top: 143px;
   height: 891px;
-  background: url("../images/web/sub/bg_live.png") no-repeat;
+  background: url("../oh/images/web/sub/bg_live.png") no-repeat;
   background-position: center top;
 }
 #wrap #container .liveDetail.content h2.title, #wrap #container .liveDetail.content .detailWrap {
@@ -5802,7 +5802,7 @@ h2.title-margin {
 	  width: 32px;
 	  height: 35px;
 	  margin-left: 10px;
-	  background: url("../images/mobile/icon/icon_gnbSearch.png") no-repeat;
+	  background: url("../oh/images/mobile/icon/icon_gnbSearch.png") no-repeat;
 	  background-position: bottom;
 	  background-size: 23px 24px;
 	}
@@ -5938,23 +5938,23 @@ h2.title-margin {
     height: 18px;
   }
   .listWrap__list ul li .sns-naver:after {
-    background: url("../images/mobile/icon/icon_naver.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_naver.png") no-repeat;
     background-size: contain;
   }
   .listWrap__list ul li .sns-facebook:after {
-    background: url("../images/mobile/icon/icon_facebook.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_facebook.png") no-repeat;
     background-size: contain;
   }
   .listWrap__list ul li .sns-instagram:after {
-    background: url("../images/mobile/icon/icon_instagram.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_instagram.png") no-repeat;
     background-size: contain;
   }
   .listWrap__list ul li .sns-ahn:after {
-    background: url("../images/mobile/icon/icon_ahn.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_ahn.png") no-repeat;
     background-size: contain;
   }
   .listWrap__list ul li .sns-media:after {
-    background: url("../images/mobile/icon/icon_media.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_media.png") no-repeat;
     background-size: contain;
   }
 
@@ -6028,11 +6028,11 @@ h2.title-margin {
     top: 1px;
     width: 17px;
     height: 17px;
-    background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_sharing.png") no-repeat;
     background-size: 17px 17px;
   }
   .detailWrap .justifyWrap__right .btnSharing.on::after {
-    background: url("../images/mobile/sub/icon_sharing.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_sharing.png") no-repeat;
     background-size: 17px 17px;
   }
   .detailWrap .justifyWrap__right .btnSharing span {
@@ -6110,7 +6110,7 @@ h2.title-margin {
     width: 5vw;
     height: 5vw;
     padding: 2vw;
-    background: url("../images/mobile/sub/bg_close.png") no-repeat;
+    background: url("../oh/images/mobile/sub/bg_close.png") no-repeat;
     background-size: 5vw 5vw;
     background-position: center;
   }
@@ -6239,7 +6239,7 @@ h2.title-margin {
     width: 71.5px;
     height: 26px;
     margin-left: -35.75px;
-    background: url("../images/mobile/sub/text_writing.png") no-repeat;
+    background: url("../oh/images/mobile/sub/text_writing.png") no-repeat;
     background-size: contain;
   }
   .community .rightArea .btnMyList {
@@ -6276,22 +6276,22 @@ h2.title-margin {
     overflow: hidden;
   }
   .community .rightArea .listType01 {
-    background: url("../images/mobile/icon/icon_listType01.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_listType01.png") no-repeat;
     background-position: center;
     background-size: 19px 19px;
   }
   .community .rightArea .listType01.on {
-    background: url("../images/mobile/icon/icon_listType01_on.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_listType01_on.png") no-repeat;
     background-position: center;
     background-size: 19px 19px;
   }
   .community .rightArea .listType02 {
-    background: url("../images/mobile/icon/icon_listType02.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_listType02.png") no-repeat;
     background-position: center;
     background-size: 21px 18px;
   }
   .community .rightArea .listType02.on {
-    background: url("../images/mobile/icon/icon_listType02_on.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_listType02_on.png") no-repeat;
     background-position: center;
     background-size: 21px 18px;
   }
@@ -6406,7 +6406,7 @@ h2.title-margin {
     right: -18px;
     width: 21px;
     height: 15.5px;
-    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
   .communityDetail .detailWrap .commentWriter__textarea, .videoDetail .detailWrap .commentWriter__textarea {
@@ -6518,7 +6518,7 @@ h2.title-margin {
   .communityDetail .detailWrap .commentList .commentItem-reply:after, .videoDetail .detailWrap .commentList .commentItem-reply:after {
     top: 30px;
     left: 25px;
-    background: url("../images/mobile/sub/bg_line.png") no-repeat;
+    background: url("../oh/images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 17px;
     height: 17px;
@@ -6562,7 +6562,7 @@ h2.title-margin {
     right: -18px;
     width: 21px;
     height: 15.5px;
-    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
   .communityDetail .detailWrap .commentList .commentItem .commentWriter__textarea, .videoDetail .detailWrap .commentList .commentItem .commentWriter__textarea {
@@ -6677,7 +6677,7 @@ h2.title-margin {
     width: 19px;
     height: 11px;
     margin-top: -5px;
-    background: url("../images/mobile/icon/icon_select.png") no-repeat;
+    background: url("../oh/images/mobile/icon/icon_select.png") no-repeat;
     background-size: 19px 11px;
   }
   .communityModify .tableArea02 .ahnSelect select {
@@ -6731,22 +6731,22 @@ h2.title-margin {
     padding: 30px 0 0;
   }
   .btnWrap a.btnList span, .btnWrap button.btnList span {
-    background: url("../images/mobile/sub/icon_list.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_list.png") no-repeat;
     background-size: 26px 22px;
     background-position: center top;
   }
   .btnWrap a.btnModify span, .btnWrap button.btnModify span {
-    background: url("../images/mobile/sub/icon_modify.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_modify.png") no-repeat;
     background-position: center top;
     background-size: 21px;
   }
   .btnWrap a.btnDel span, .btnWrap button.btnDel span {
-    background: url("../images/mobile/sub/icon_del.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_del.png") no-repeat;
     background-position: center top;
     background-size: 13.5px 20px;
   }
   .btnWrap a.btnPublish span, .btnWrap button.btnPublish span {
-    background: url("../images/mobile/sub/icon_publish.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_publish.png") no-repeat;
     background-position: center top;
     background-size: 17px 19.5px;
   }
@@ -6840,7 +6840,7 @@ h2.title-margin {
     right: -18px;
     width: 21px;
     height: 15.5px;
-    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
   #wrap #container .liveDetail .detailWrap .commentWriter__textarea {
@@ -6951,7 +6951,7 @@ h2.title-margin {
   #wrap #container .liveDetail .detailWrap .commentList .commentItem-reply:after {
     top: 30px;
     left: 25px;
-    background: url("../images/mobile/sub/bg_line.png") no-repeat;
+    background: url("../oh/images/mobile/sub/bg_line.png") no-repeat;
     background-size: contain;
     width: 17px;
     height: 17px;
@@ -6992,7 +6992,7 @@ h2.title-margin {
     right: -18px;
     width: 21px;
     height: 15.5px;
-    background: url("../images/mobile/sub/icon_comment.png") no-repeat;
+    background: url("../oh/images/mobile/sub/icon_comment.png") no-repeat;
     background-size: contain;
   }
   #wrap #container .liveDetail .detailWrap .commentList .commentItem .commentWriter__textarea {
