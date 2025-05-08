@@ -47,7 +47,7 @@ _PC 화면 예시 – 실제 사이트는 반응형입니다._
 
 | 이름  | 오윤식 (Yoonsik Oh)                                           |
 | --- | ---------------------------------------------------------- |
-| 역할  | 웹 퍼블리셔 & 디자이너                                              |
+| 역할  | 웹 퍼블리셔 & 웹 디자이너                                              |
 | 이메일 | [dbstlr414@naver.com](mailto:dbstlr414@naver.com)         |
 | 블로그 | https://dbstlrl.tistory.com/                              |
 | 깃허브 | [https://github.com/oyoonsik](https://github.com/oyoonsik) |
