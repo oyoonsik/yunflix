@@ -1052,47 +1052,7 @@
                         <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-b2cde010d49e5c8cc" aria-disabled="true"></div>
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 </div>
-                <script>
-                    $(function (){
-                        /* swiper */
-                        var swiperTop = undefined;
 
-                        function initSwiper() {
-                            if ($("#wrap").is(".web") && swiperTop == undefined) {
-                                swiperTop = new Swiper(".photoNumberArea .swiper", {
-                                    slidesPerView: 5,
-                                    spaceBetween: 26,
-                                    navigation: {
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    },
-                                });
-                            } else if ($("#wrap").is(".mobile") && swiperTop != undefined) {
-                                swiperTop.destroy();
-                                swiperTop = undefined;
-                            }
-                        }
-
-                        initSwiper();
-
-                        $(window).on('resize', function () {
-                            initSwiper();
-                        });
-
-                        /* 마우스 오버 레이어 */
-                        $(document).on("mouseenter", "#wrap.web .photoNumberArea .swiper-slide .top10Item", function(){
-                            let $this = $(this);
-
-                            $this.addClass("swiperOn01");
-                        });
-
-                        $(document).on("mouseleave", "#wrap.web .photoNumberArea .swiper-slide .top10Item", function(){
-                            let $this = $(this);
-
-                            $this.removeClass("swiperOn01");
-                        });
-                    });
-                </script>
             </div>
 			<div class="photoWidthArea">
                 <div class="mainTitleArea" id="site">
@@ -1196,37 +1156,7 @@
                         <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-43a4d3ebe0bead29" aria-disabled="true"></div>
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 </div>
-                <script>
-                    $(function (){
-                        var swiperWidth = undefined;
 
-                        function initSwiper() {
-                            if ($("#wrap").is(".web") && swiperWidth == undefined) {
-                                swiperWidth = new Swiper(".photoWidthArea .swiper", {
-                                    slidesPerView: 3.5,
-                                    spaceBetween: 30,
-                                    navigation: {
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    },
-                                });
-                            } else if ($("#wrap").is(".mobile") && swiperWidth != undefined) {
-                                var photoWidthAreaNumber = $(".photoWidthArea .swiper").length;
-
-                                for(var i=0; i<photoWidthAreaNumber; i++){
-                                    swiperWidth[i].destroy();
-                                }
-                                swiperWidth = undefined;
-                            }
-                        }
-
-                        initSwiper();
-
-                        $(window).on('resize', function () {
-                            initSwiper();
-                        });
-                    });
-                </script>
             </div>
         </div>
 
@@ -1270,6 +1200,99 @@
 
 <button type="button" class="pageTop"><span>TOP</span></button></div>
 
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true">
+<!-- 슬라이드 부분 기능 -->
+<script>
+    $(function () {
+        var swiperTop = undefined;
+        var swiperWidth = undefined;
+
+        function initSwipers() {
+            // 👉 웹 환경일 때만 초기화
+            if ($("#wrap").is(".web")) {
+                
+                // 🌀 photoNumberArea 초기화
+                if (swiperTop == undefined) {
+                    swiperTop = new Swiper(".photoNumberArea .swiper", {
+                        slidesPerView: 5,
+                        spaceBetween: 26,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        autoplay: {
+                            delay: 1500, // 3초마다 자동 슬라이드
+                            disableOnInteraction: false,
+                        },
+                    });
+
+                    // 마우스 오버 시 일시정지
+                    $(".photoNumberArea .swiper").on("mouseenter", function () {
+                        swiperTop.autoplay.stop();
+                    });
+
+                    $(".photoNumberArea .swiper").on("mouseleave", function () {
+                        swiperTop.autoplay.start();
+                    });
+                }
+
+                // 🌀 photoWidthArea 초기화
+                if (swiperWidth == undefined) {
+                    swiperWidth = new Swiper(".photoWidthArea .swiper", {
+                        slidesPerView: 3.5,
+                        spaceBetween: 30,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        autoplay: {
+                            delay: 2000, // 4초마다 자동 슬라이드
+                            disableOnInteraction: false,
+                        },
+                    });
+
+                    // 마우스 오버 시 일시정지
+                    $(".photoWidthArea .swiper").on("mouseenter", function () {
+                        swiperWidth.autoplay.stop();
+                    });
+
+                    $(".photoWidthArea .swiper").on("mouseleave", function () {
+                        swiperWidth.autoplay.start();
+                    });
+                }
+            } 
+            // 👉 모바일 환경일 때 Swiper 제거
+            else if ($("#wrap").is(".mobile")) {
+                if (swiperTop != undefined) {
+                    swiperTop.destroy(true, true);
+                    swiperTop = undefined;
+                }
+                if (swiperWidth != undefined) {
+                    swiperWidth.destroy(true, true);
+                    swiperWidth = undefined;
+                }
+            }
+        }
+
+        initSwipers();
+
+        // 👉 화면 크기 변경 시 초기화
+        $(window).on("resize", function () {
+            initSwipers();
+        });
+
+        // 👉 마우스 오버 효과
+        $(document).on("mouseenter", "#wrap.web .photoNumberArea .swiper-slide .top10Item", function () {
+            $(this).addClass("swiperOn01");
+        });
+
+        $(document).on("mouseleave", "#wrap.web .photoNumberArea .swiper-slide .top10Item", function () {
+            $(this).removeClass("swiperOn01");
+        });
+    });
+</script>
+
+
+</body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true">
 </grammarly-desktop-integration>
 </html>
