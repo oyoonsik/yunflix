@@ -1736,6 +1736,10 @@ html .opening, body .opening {
   transform-origin: 132% center;
 }
 
+.photoNumberArea{margin-top: 150px;}
+
+
+
 .photoWidthArea .swiperArea {
   position: relative;
   padding: 0 100px;
