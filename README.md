@@ -21,6 +21,7 @@ Netflix의 UI/UX를 참고해 제작하였으며, 프론트엔드 실무 역량�
 - 💻 HTML, CSS, SCSS, JavaScript 사용
 - 🧩 컴포넌트 기반 구조
 - 📱 반응형 웹(Responsive Web)
+- 카페24,아임웹,노션,네트리파이,고도몰 등 다수 홈페이지 제작
 
 
 ## 🔧 사용 기술
