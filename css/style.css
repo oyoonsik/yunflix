@@ -1936,7 +1936,7 @@ html .opening, body .opening {
 
 
 .photoNumberArea{
-  margin-top: -15vw;
+  margin-top: 0vw;
 }
 
   /* swiper title */
@@ -2080,7 +2080,6 @@ h2.title-margin {
   display: none;
 }
 
-/* 안철수는 */
 .ahnIs__visual img {
   display: block;
   width: 100%;
@@ -2142,7 +2141,6 @@ h2.title-margin {
   width: 100%;
 }
 
-/* 안철수의 약속 */
 .listWrap__list {
   padding: 50px 0 0;
 }
@@ -2269,7 +2267,6 @@ h2.title-margin {
   background: #fff;
 }
 
-/* 안철수의 약속-상세 */
 .promiseAhn-detail h2.title strong {
   font-size: 27px;
 }
@@ -2593,7 +2590,6 @@ h2.title-margin {
   background-color: #EA5517;
 }
 
-/* 안철수의 오늘 */
 /* 커뮤니티 */
 .community .rightArea {
   overflow: hidden;
@@ -3918,7 +3914,6 @@ h2.title-margin {
     margin-left: 8.5px;
   }
 
-  /* 안철수는 */
   .ahnIs__visual img {
     display: none;
   }
@@ -3965,7 +3960,6 @@ h2.title-margin {
     margin-top: 35px;
   }
 
-  /* 안철수의 약속 */
   .listWrap__list {
     padding-top: 0;
     padding-left: 24px;
@@ -4058,7 +4052,6 @@ h2.title-margin {
     height: 2px;
   }
 
-  /* 안철수의 약속-상세 */
   .promiseAhn-detail {
     padding: 70px 24px 0;
   }
@@ -4298,7 +4291,6 @@ h2.title-margin {
     font-size: 14px;
   }
 
-  /* 안철수의 오늘 */
   /* 커뮤니티 */
   .community .rightArea {
     position: static;
@@ -5272,3 +5264,4 @@ h2.title-margin {
 .ani-down:hover{transform:translateY(0.5em);position:relative}
 .ani-left:hover{transform:translateX(-0.5em);position:relative}
 .ani-right:hover{transform:translateX(0.5em);position:relative}
+
