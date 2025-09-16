@@ -40,7 +40,7 @@ Netflix의 UI/UX를 참고해 제작하였으며, 프론트엔드 실무 역량�
 
 ## 🔗 자기소개 사이트
 
-👉 [https://oyoonsik.github.io/yunflix/](https://oyoonsik.github.io/yunflix/)](https://www.notion.so/269583e758ab806e9f71e5bd9f59489e?source=copy_link)
+👉 (https://www.notion.so/269583e758ab806e9f71e5bd9f59489e?source=copy_link)
 
 ## 📷 미리보기
 
