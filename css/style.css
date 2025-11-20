@@ -251,7 +251,7 @@ html .opening, body .opening {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 80%;
+    width: 50%;
     height: 100%;
     background: #000;
     transition: 0.35s ease;
@@ -289,6 +289,7 @@ html .opening, body .opening {
     justify-content: space-between;
     padding: 0 22px;
     border-bottom: 1px solid rgba(255,255,255,0.15);
+    background-color: #1e1e1ee3;
 }
 
 .gnb.mobile .mHeader span {
@@ -310,6 +311,7 @@ html .opening, body .opening {
 /* 메뉴 영역 */
 .gnb.mobile ul {
     padding: 25px 20px;
+   background-color: #000000f0;
 }
 
 .gnb.mobile ul li {
