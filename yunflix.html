@@ -20,6 +20,11 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css">
 
+	<!-- GSAP -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
     <script type="text/javascript" src="js/jquery-ui.1.9.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.dotdotdot.js"></script>
     <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
@@ -55,121 +60,97 @@
 <div id="wrap" class="mainLayout web">
 
 <!-- 헤더 섹션 -->
-<header id="header" class="scroll">
+<header id="header">
     <div class="headerIn">
-        <!-- 이전 페이지 버튼 -->
-        <a href="javascript:history.back();" class="pageBack">
-            <span>이전 페이지</span>
-        </a>
-        
-        <!-- 로고 텍스트 -->
-        <h1 class="logoText">
-            <a href="#" style="text-decoration: none;"></a>
+
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="#">YUNFLIX</a>
         </h1>
-        
-        <!-- 메인 내비게이션 -->
-        <div class="gnb">
-            <!-- 모바일 메뉴 열기 버튼 -->
-            <button type="button" class="gnbOpenBtn">
-                <span>메뉴 열기</span>
-            </button>
-            
-            <nav>
-                <div class="navIn">
-                    <!-- 전체 카테고리 메뉴 -->
-                    <div class="gnbItem category">
-                        <button type="button">전체카테고리</button>
-                        <div class="gnbItemSub">
-                            <div class="gnbItemSubIn">
-                                <div class="gnbItemTitle">전체카테고리</div>
-                                <ul class="gnbItemSubBox">
-                                    <li><a href="#banner" style="text-decoration: none;"><span>랜딩&상세페이지</span></a></li>
-                                </ul>
-                                <ul class="gnbItemSubBox">
-                                    <li><a href="#detailsPage" style="text-decoration: none;"><span>사이트 개발</span></a></li>
-                                </ul>
-                                <ul class="gnbItemSubBox">
-                                    <li><a href="#artwork" style="text-decoration: none;"><span>아트워크</span></a></li>
-                                </ul>
+
+        <!-- PC GNB -->
+        <nav class="gnb pc">
+            <ul>
+                <li class="gnbItem category">
+                    <button type="button">전체카테고리</button>
+                    <div class="gnbSub">
+                        <div class="subIn">
+                            <div class="subTitle">전체카테고리</div>
+                            <a href="#detailsPage">사이트 개발</a>
+                            <a href="#banner">랜딩&상세페이지</a>
+                            <a href="#artwork">아트워크</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#detailsPage">사이트 개발</a></li>
+                <li><a href="#banner">랜딩·상세페이지</a></li>
+                <li><a href="#artwork">아트워크</a></li>
+
+                <li class="gnbItem login">
+                    <button type="button">로그인</button>
+                    <div class="gnbSub">
+                        <div class="subIn small">
+                            <div class="subTitle">로그인</div>
+                            <p>불법/악성 콘텐츠 방지를 위해 실명 확인이 필요합니다.</p>
+                            <p>SNS 로그인을 이용해주세요.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="gnbItem search">
+                    <button type="button">검색하기</button>
+                    <div class="gnbSub">
+                        <div class="subIn">
+                            <div class="subTitle">검색하기</div>
+                            <div class="searchBox">
+                                <input type="text" placeholder="검색어를 입력하세요">
+                                <button type="button">검색</button>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- 메인 메뉴 항목들 -->
-                    <div class="gnbItem">
-                        <a href="#banner" style="text-decoration: none;">랜딩.상세페이지</a>
-                    </div>
-                    <div class="gnbItem">
-                        <a href="#detailsPage" style="text-decoration: none;">사이트 개발</a>
-                    </div>
-                    <div class="gnbItem">
-                        <a href="#artwork" style="text-decoration: none;">아트워크</a>
-                    </div>
-                    
-                    <!-- 로그인 메뉴 -->
-                    <div class="gnbItem login">
-                        <button type="button">
-                            <span class="loginText">로그인</span>
-                        </button>
-                        <div class="gnbItemSub">
-                            <div class="gnbItemSubIn">
-                                <div class="gnbItemTitle">로그인</div>
-                                <div class="gnbItemContext">
-                                    불법/악성 콘텐츠를 방지하기 위해 실명을 확인합니다.<br>
-                                    SNS로 로그인하여 간편하게 이용하실 수 있습니다.<br>
-                                    원하시는 SNS를 선택하시고 로그인 해주세요.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 검색 메뉴 -->
-                    <div class="gnbItem search">
-                        <button type="button"><span>검색하기</span></button>
-                        <div class="gnbItemSub">
-                            <div class="gnbItemSubIn">
-                                <div class="searchTitleArea">검색하기</div>
-                                <div class="searchInputArea">
-                                    <span class="searchText">검색어를 입력하세요</span>
-                                    <span class="searchInput">
-                                        <input type="text" id="srchText">
-                                        <button type="button" onclick="fnSrchData();"><span>검색</span></button>
-                                    </span>
-                                </div>
-                                
-                                <!-- 검색 결과 영역 -->
-                                <div class="swiperDataArea" id="srchData" style="display: none;">
-                                    <div class="swiper">
-                                        <div class="swiper-wrapper" id="srchResult"></div>
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-                                
-                                <!-- 검색 결과 없음 메시지 -->
-                                <div class="searchNodataArea" id="srchNoData" style="display: none;">
-                                    <span>입력하신 검색어 "<strong id="srchNoText"></strong>" (와)과</span>
-                                    <span>일치하는 결과가 없습니다.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            
-            <!-- 모바일 메뉴 닫기 버튼 -->
-            <button type="button" class="gnbCloseBtn">
-                <span>메뉴 닫기</span>
-            </button>
-        </div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MOBILE 햄버거 -->
+        <button class="mBtn"><span></span></button>
+
+        <!-- MOBILE MENU -->
+        <nav class="gnb mobile">
+            <div class="mHeader">
+                <span>MENU</span>
+                <button class="mClose">×</button>
+            </div>
+            <ul>
+                <li><a href="#detailsPage">사이트 개발</a></li>
+                <li><a href="#banner">랜딩·상세페이지</a></li>
+                <li><a href="#artwork">아트워크</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">검색하기</a></li>
+            </ul>
+        </nav>
+
     </div>
 </header>
+
+	<!-- 윤플릭스 인트로 섹션 -->
+	<section class="intro-ott">
+		<div class="intro-inner">
+			<p class="intro-kicker">디자인과 퍼블리싱, 지금 바로 스트리밍하세요.</p>
+			<p class="intro-body">
+				윤플릭스는 제가 직접 기획하고 제작한 프로젝트들을 모아둔 오리지널 포트폴리오 채널입니다.<br>
+				랜딩페이지, 브랜드 사이트, UI/UX, 퍼블리싱까지 —<br>
+				콘텐츠를 감상하듯 한 작품씩 편하게 둘러보세요.
+			</p>
+		</div>
+	</section>
 
     <div id="container">
         <div class="content">
 			<div class="photoNumberArea">
 					<!-- 사이트 개발 -->
-					<div class="mainTitleArea" id="detailsPage">
+					<div class="mainTitleArea category-title" id="detailsPage">
 						<span class="title">사이트 개발</span>
 					</div>
 					<div class="top10Swiper swiperArea">
@@ -335,7 +316,7 @@
 			</div>
 			<section class="hd-jump">
 				<ul class="portfolio_list" id="banner">
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_01.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_01.gif" class="ani-zoom" alt="사군자프리미엄 이미지">
@@ -352,7 +333,7 @@
 						<div class="portfolio_spacing"></div>
 						</div>
 					</li>	
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_02.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_02.jpg" class="ani-zoom" alt="챔피온 이미지">
@@ -370,7 +351,7 @@
 						</div>
 					</li>	
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_03.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_03.jpg" class="ani-zoom" alt="세일쿨함 이미지">
@@ -388,7 +369,7 @@
 						</div>
 					</li>		
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_04.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_04.jpg" class="ani-zoom" alt="써마지 이미지">
@@ -406,7 +387,7 @@
 						</div>
 					</li>	
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_05.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_05.gif" class="ani-zoom" alt="속이 뻥 뚫리는">
@@ -424,7 +405,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/main_06.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_06.jpg" class="ani-zoom" alt="메뉴판 이미지">
@@ -442,7 +423,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_07.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_07.gif" class="ani-zoom" alt="고혼진 이미지">
@@ -460,7 +441,7 @@
 						</div>
 					</li>
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_08.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_08.gif" class="ani-zoom" alt="광동침향환 이미지">
@@ -478,7 +459,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_09.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_09.jpg" class="ani-zoom" alt="생크림필 이미지">
@@ -496,7 +477,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_10.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_10.jpg" class="ani-zoom" alt="할인주의보 이미지">
@@ -514,7 +495,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_11.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_11.jpg" class="ani-zoom" alt="아비쥬생활 이미지">
@@ -532,7 +513,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_12.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_12.gif" class="ani-zoom" alt="청관춘 이미지">
@@ -550,7 +531,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_13.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_13.jpg" class="ani-zoom" alt="청관춘 이미지">
@@ -568,7 +549,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_14.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_14.jpg" class="ani-zoom" alt="맑은 이미지">
@@ -586,7 +567,7 @@
 						</div>
 					</li>
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_15.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_15.jpg" class="ani-zoom" alt="리턴큐 이미지">
@@ -604,7 +585,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_46.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_16.jpg" class="ani-zoom" alt="녹황당황칠 이미지">
@@ -622,7 +603,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_47.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_17.jpg" class="ani-zoom" alt="더루트 이미지">
@@ -640,7 +621,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_23.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_18.jpg" class="ani-zoom" alt="관절만사성 이미지">
@@ -658,7 +639,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_18.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_19.jpg" class="ani-zoom" alt="피부의집 이미지">
@@ -676,7 +657,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_19.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_20.jpg" class="ani-zoom" alt="채용공고 이미지">
@@ -694,7 +675,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_30.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_21.gif" class="ani-zoom" alt="사군자 이미지">
@@ -712,7 +693,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_25.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_22.gif" class="ani-zoom" alt="그라클레스 이미지">
@@ -730,7 +711,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_0700.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_23.jpg" class="ani-zoom" alt="피부고민엔 이미지">
@@ -748,7 +729,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_00.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_24.jpg" class="ani-zoom" alt="제모 이미지">
@@ -766,7 +747,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/main_25.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_25.jpg" class="ani-zoom" alt="물광 이미지">
@@ -784,7 +765,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/main_26.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_26.jpg" class="ani-zoom" alt="봄 이미지">
@@ -802,7 +783,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/main_27.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_27.gif" class="ani-zoom" alt="마가보감 이미지">
@@ -820,7 +801,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_43.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_28.gif" class="ani-zoom" alt="혈당 이미지">
@@ -839,7 +820,7 @@
 					</li>
 
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_29.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_29.gif" class="ani-zoom" alt="브이맥스 이미지">
@@ -857,7 +838,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_42.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_30.gif" class="ani-zoom" alt="화려화 이미지">
@@ -875,7 +856,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_48.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_31.jpg" class="ani-zoom" alt="싹쓰리 이미지">
@@ -893,7 +874,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_31.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_32.jpg" class="ani-zoom" alt="종근당스템벨 이미지">
@@ -911,7 +892,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_39.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_33.gif" class="ani-zoom" alt="침향환 이미지">
@@ -930,7 +911,7 @@
 					</li>
 
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_35.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_34.jpg" class="ani-zoom" alt="임플란트 이미지">
@@ -948,7 +929,7 @@
 						</div>
 					</li>
 
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_32.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_35.gif" class="ani-zoom" alt="임플란트 이미지">
@@ -967,7 +948,7 @@
 					</li>
 
 					
-					<li>
+					<li class="pf-list-item">
 						<div>
 						<div class="portfolio_image" onclick="window.open('oh/images/web/sub/cont_44.jpg', '_blank', 'location=no,directories=no,resizable=no,status=no,toolbar=no,scrollbars=yes,width=900,height=800,top=10,left=150')">
 							<img src="oh/images/web/sub/main_36.gif" class="ani-zoom" alt="임플란트 이미지">
@@ -988,7 +969,7 @@
 			</section>  
 			<div class="photoWidthArea">
 
-                <div class="mainTitleArea" id="artwork">
+                <div class="mainTitleArea category-title" id="artwork">
                     <a name="artwork"><span class="title">아트워크</span></a>
                 </div>
                 <div class="communitySwiper swiperArea">
@@ -1169,6 +1150,136 @@
         });
     });
 </script>
+
+<script>
+  // 플러그인 등록
+  gsap.registerPlugin(ScrollTrigger);
+
+  // ✅ 상단 헤더/인트로 살짝 등장 (있으면)
+  gsap.from("header, .main-visual, .top-banner", {
+    opacity: 0,
+    y: -30,
+    duration: 0.8
+  });
+
+  // ✅ 카테고리 제목들: 스크롤되면 좌우에서 슥
+  gsap.utils.toArray(".category-title").forEach(function (title) {
+    gsap.from(title, {
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+      },
+      x: -40,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power2.out"
+    });
+  });
+
+  // ✅ 아래 랜딩 리스트들: 살짝 페이드 + 위에서 등장
+  gsap.from(".pf-list-item", {
+    scrollTrigger: {
+      trigger: ".pf-list-item",
+      start: "top 80%",
+      toggleActions: "play none none reverse"
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.08,
+    ease: "power2.out"
+  });
+
+	gsap.from(".intro-ott", {
+	opacity: 0,
+	y: 30,
+	duration: 0.9,
+	ease: "power2.out"
+	});
+	gsap.from(".intro-kicker", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    ease: "power3.out"
+});
+
+gsap.from(".intro-body", {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    delay: 0.2,
+    ease: "power3.out"
+});
+
+
+  // ✅ 카드 호버 시 살짝 띄우기 + 그림자
+  const cards = document.querySelectorAll(".pf-list-item");
+  cards.forEach(function (card) {
+    card.addEventListener("mouseenter", function () {
+      gsap.to(card, {
+        y: -6,
+        scale: 1.02,
+        boxShadow: "0 10px 25px rgba(0,0,0,0.18)",
+        duration: 0.2
+      });
+    });
+    card.addEventListener("mouseleave", function () {
+      gsap.to(card, {
+        y: 0,
+        scale: 1,
+        boxShadow: "none",
+        duration: 0.2
+      });
+    });
+  });
+</script>
+
+<script>
+$(function() {
+
+    // 전체카테고리 toggle
+    $('.gnbItem.category > button').on('click', function (e) {
+        e.preventDefault();
+
+        let item = $(this).closest('.gnbItem.category');
+
+        // 열려 있으면 닫기
+        if (item.hasClass('open')) {
+            item.removeClass('open');
+        } else {
+            $('.gnbItem.category').removeClass('open');
+            item.addClass('open');
+        }
+    });
+
+    // 바깥 클릭 시 닫기
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.gnbItem.category').length) {
+            $('.gnbItem.category').removeClass('open');
+        }
+    });
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    // 모바일 메뉴 열기
+    document.querySelector(".mBtn").addEventListener("click", ()=>{
+        document.querySelector(".gnb.mobile").classList.add("open");
+    });
+
+    // 모바일 메뉴 닫기
+    document.querySelector(".mClose").addEventListener("click", ()=>{
+        document.querySelector(".gnb.mobile").classList.remove("open");
+    });
+
+});
+</script>
+
+
 
 
 </body>
