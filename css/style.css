@@ -151,6 +151,195 @@ html .opening, body .opening {
   background-size: contain;
 }
 
+/* ------------ 공통 헤더 ------------ */
+#header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.78);
+    z-index: 9999;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+#header .headerIn {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.logo a {
+    font-size: 32px;
+    font-weight: 900;
+    color: #e50914;
+    letter-spacing: 1px;
+}
+
+/* ------------ PC GNB ------------ */
+.gnb.pc ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.gnb.pc li a,
+.gnb.pc li button {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 12px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* 드롭다운 공통 */
+.gnbSub {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.92);
+    padding: 30px 0;
+}
+.gnbSub .subIn {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.subTitle {
+    font-size: 20px;
+    color: #e50914;
+    margin-bottom: 15px;
+}
+.gnbSub a {
+    display: block;
+    color: #fff;
+    font-size: 17px;
+    padding: 5px 0;
+}
+
+/* hover로 열기 */
+.gnb.pc .gnbItem:hover .gnbSub {
+    display: block;
+}
+
+/* ------------ MOBILE ------------ */
+.mBtn {
+    width: 28px;
+    height: 28px;
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.mBtn span,
+.mBtn span::before,
+.mBtn span::after {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    display: block;
+    content: "";
+    margin: 5px 0;
+}
+
+/* 모바일 메뉴 */
+.gnb.mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background: #000;
+    transition: 0.35s ease;
+    padding: 20px;
+}
+.gnb.mobile.open {
+    right: 0;
+}
+
+/* 모바일 메뉴 전체 */
+.gnb.mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    background: #000;
+    transition: right .35s ease;
+    padding: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 열림 상태 */
+.gnb.mobile.open {
+    right: 0;
+}
+
+/* 상단 메뉴 헤더 */
+.gnb.mobile .mHeader {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.gnb.mobile .mHeader span {
+    color: #e50914;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* X 버튼 */
+.gnb.mobile .mClose {
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 메뉴 영역 */
+.gnb.mobile ul {
+    padding: 25px 20px;
+}
+
+.gnb.mobile ul li {
+    margin-bottom: 18px;
+}
+
+.gnb.mobile ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding: 10px 0;
+    display: block;
+}
+
+/* 메뉴 hover */
+.gnb.mobile ul li a:hover {
+    color: #e50914;
+}
+
+/* 하단 구분선 */
+.gnb.mobile ul li:not(:last-child) a {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 14px;
+}
+
+
+
+
 #wrap {
   display: flex;
   flex-direction: column;
@@ -199,399 +388,10 @@ html .opening, body .opening {
 #wrap .colorRed {
   color: #E62214;
 }
-#wrap #header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 1200px;
-  height: 100px;
-  z-index: 20;
-}
-#wrap #header > * {
-  letter-spacing: -0.075em;
-}
-#wrap #header.scroll {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#wrap #header .headerIn {
-  position: relative;
-  box-sizing: border-box;
-  width: 1290px;
-  height: 100%;
-  margin: 0 auto;
-}
-#wrap #header .headerIn .pageBack {
-  display: none;
-}
-#wrap #header .headerIn .logoText {
-  display: inline-block;
-  vertical-align: top;
-  padding-top: 25px;
-}
-#wrap #header .headerIn .logoText a {
-  overflow: hidden;
-  display: block;
-  width: 185px;
-  height: 47px;
-  color: transparent;
-  background: url("../oh/images/web/bg/bg_logoWeb.png") no-repeat;
-}
-#wrap #header .headerIn .gnb .gnbOpenBtn {
-  display: none;
-}
-#wrap #header .headerIn .gnb .gnbOpenBtn span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb .gnbCloseBtn {
-  position: absolute;
-  right: 0;
-  top: 51px;
-  display: none;
-  width: 35px;
-  height: 35px;
-  background: url("../oh/images/web/icon/icon_gnbClose.png") no-repeat;
-  background-position: center;
-  z-index: 22;
-}
-#wrap #header .headerIn .gnb .gnbCloseBtn span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav {
-  position: absolute;
-  left: auto;
-  right: 0;
-  top: 30px;
-}
-#wrap #header .headerIn .gnb nav .navIn {
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem {
-  float: left;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem + .gnbItem {
-  margin-left: 45px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem a, #wrap #header .headerIn .gnb nav .navIn .gnbItem button {
-  display: block;
-  height: 35px;
-  line-height: 35px;
-  font-size: 24px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-  color: #fff;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover {
-  color: #8C8D8D;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover span, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover span {
-  color: #8C8D8D;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button {
-  padding-left: 35px;
-  background: url("../oh/images/web/icon/icon_category.png") no-repeat;
-  background-position: left center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button:hover {
-  background: url("../oh/images/web/icon/icon_category_on.png") no-repeat;
-  background-position: left center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 21;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn {
-  overflow: hidden;
-  width: 1200px;
-  padding: 44px 0 70px;
-  margin: 0 auto;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemTitle {
-  line-height: 35px;
-  margin-bottom: 58px;
-  font-size: 24px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox {
-  float: left;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox + .gnbItemSubBox {
-  margin-left: 150px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li + li {
-  margin-top: 13px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a {
-  display: inline-block;
-  vertical-align: top;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span {
-  display: block;
-  line-height: 35px;
-  font-size: 24px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live {
-  position: relative;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live::after {
-  content: "";
-  position: absolute;
-  right: -18px;
-  top: -5px;
-  display: block;
-  width: 14px;
-  height: 14px;
-  border-radius: 7px;
-  background-color: #EA5504;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.peoplepartyHomepage {
-  color: #EA5504;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login {
-  position: relative;
-  margin-left: 57px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login::after {
-  content: "";
-  position: absolute;
-  left: -27px;
-  top: 50%;
-  display: block;
-  width: 1px;
-  height: 18px;
-  margin-top: -9px;
-  background-color: #fff;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button {
-  width: 35px;
-  background: url("../oh/images/web/icon/icon_login.png") no-repeat;
-  background-position: center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
-  background: url("../oh/images/web/icon/icon_login_on.png") no-repeat;
-  background-position: center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome {
-  width: 35px;
-  height: 35px;
-  background: url("../oh/images/web/icon/icon_login_on.png") no-repeat;
-  background-position: center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 21;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn {
-  width: 1200px;
-  padding: 44px 0 60px;
-  margin: 0 auto;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
-  line-height: 35px;
-  margin-bottom: 58px;
-  font-size: 24px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
-  overflow: hidden;
-  margin-top: 62px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
-  float: left;
-  display: block;
-  width: 62px;
-  height: 62px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
-  margin-left: 23px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
-  background: url("../oh/images/web/sns/sns_kakao.png") no-repeat;
-  background-size: 100% 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
-  background: url("../oh/images/web/sns/sns_naver.png") no-repeat;
-  background-size: 100% 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
-  background: url("../oh/images/web/sns/sns_google.png") no-repeat;
-  background-size: 100% 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
-  background: url("../oh/images/web/sns/sns_facebook.png") no-repeat;
-  background-size: 100% 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
-  background: url("../oh/images/web/sns/sns_twitch.png") no-repeat;
-  background-size: 100% 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
-  line-height: 20px;
-  margin-top: 39px;
-  font-size: 15px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search {
-  margin-left: 20px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
-  width: 35px;
-  background: url("../oh/images/web/icon/icon_search.png") no-repeat;
-  background-position: center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
-  background: url("../oh/images/web/icon/icon_search_on.png") no-repeat;
-  background-position: center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 21;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn {
-  width: 1200px;
-  padding: 120px 0 60px;
-  margin: 0 auto;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
-  display: none;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 54px;
-  margin-right: 20px;
-  font-size: 31px;
-  font-family: "NotoSansCJKkrBold", sans-serif;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: top;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
-  float: left;
-  box-sizing: border-box;
-  width: 338px;
-  height: 54px;
-  padding: 0 10px;
-  border: 0 none;
-  border-bottom: 3px solid #fff;
-  outline: none;
-  font-size: 30px;
-  font-family: "NotoSansCJKkrMedium", sans-serif;
-  color: #fff;
-  background-color: transparent;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
-  float: left;
-  width: 54px;
-  height: 54px;
-  margin-left: 5px;
-  background: url("../oh/images/web/icon/icon_gnbSearch.png") no-repeat;
-  background-position: center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 40px;
-  margin-top: 54px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
-  position: static;
-  width: 1022px;
-  height: 257px;
-  margin: 0;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-  width: 20px;
-  height: 40px;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
-  display: none;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
-  background: url("../oh/images/web/icon/icon_gnbSearchArrowLeft.png") no-repeat;
-  background-position: left center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-  background: url("../oh/images/web/icon/icon_gnbSearchArrowRight.png") no-repeat;
-  background-position: right center;
-}
-#wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
-  line-height: 45px;
-  margin-top: 30px;
-  font-size: 31px;
-  color: #EA5504;
-}
+
+
+
+
 #wrap #container .topVisual .topVisualSwiper {
   height: 600px;
 }
@@ -867,419 +667,11 @@ html .opening, body .opening {
   #wrap .imgWeb {
     display: none;
   }
+
   #wrap .imgMobile {
     display: block;
   }
-  #wrap #header {
-    min-width: auto;
-    height: 50px;
-  }
-  #wrap #header.scroll.gnbOpenWeb, #wrap #header.scroll.gnbOpenMobile {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  #wrap #header .headerIn {
-    width: auto;
-  }
-  #wrap #header .headerIn .pageBack {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 50px;
-    height: 50px;
-    background: url("../oh/images/mobile/icon/icon_pageBack.png") no-repeat;
-    background-position: center;
-    background-size: 12px 21px;
-  }
-  #wrap #header .headerIn .pageBack span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  #wrap #header .headerIn .logoText {
-    display: block;
-    text-align: center;
-    padding: 0;
-  }
-  #wrap #header .headerIn .logoText a {
-    display: inline-block;
-    vertical-align: top;
-    width: auto;
-    height: auto;
-    line-height: 50px;
-    font-size: 18px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-    color: #fff;
-    background: none;
-  }
-  #wrap #header .headerIn .gnb .gnbOpenBtn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: block;
-    width: 60px;
-    height: 50px;
-    background: url("../oh/images/mobile/icon/icon_gnbOpen.png") no-repeat;
-    background-position: center;
-    background-size: 27px 20px;
-  }
-  #wrap #header .headerIn .gnb .gnbCloseBtn {
-    position: fixed;
-    right: 35px;
-    top: 23px;
-    display: none;
-    width: 35px;
-    height: 32px;
-    background: url("../oh/images/mobile/icon/icon_gnbClose.png") no-repeat;
-    background-position: center;
-    background-size: 35px 32px;
-  }
-  #wrap #header .headerIn .gnb nav {
-    position: fixed;
-    left: 100%;
-    right: auto;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    padding-top: 66px;
-    background-color: #000;
-  }
-  #wrap #header .headerIn .gnb nav .navIn {
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    -webkit-overflow-scrolling: touch;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem {
-    float: none;
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem + .gnbItem {
-    margin-left: 0;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem:nth-child(5) {
-    order: -4;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem:nth-child(6) {
-    order: -4;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem a, #wrap #header .headerIn .gnb nav .navIn .gnbItem button {
-    display: block;
-    height: 35px;
-    line-height: 35px;
-    font-size: 24px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-    color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover {
-    color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem a:hover span, #wrap #header .headerIn .gnb nav .navIn .gnbItem button:hover span {
-    color: #fff;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category {
-    display: block;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category > button {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub {
-    position: static;
-    left: auto;
-    right: auto;
-    top: auto;
-    display: block;
-    padding: 0 66px 66px 30px;
-    background-color: transparent;
-    z-index: auto;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn {
-    overflow: visible;
-    width: auto;
-    padding: 0;
-    margin: 0;
-    border-top: 1px solid #707070;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemTitle {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox {
-    float: none;
-    padding: 20px 0 16px;
-    border-bottom: 1px solid #707070;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox + .gnbItemSubBox {
-    margin-left: 0;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li + li {
-    margin-top: 18px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a {
-    display: block;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 28px;
-    font-size: 19px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live {
-    position: relative;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.category .gnbItemSub .gnbItemSubIn .gnbItemSubBox li a span.live::after {
-    right: -12px;
-    top: -2px;
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login {
-    display: block;
-    padding: 0 66px 5px 30px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login::after {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button {
-    display: block;
-    text-align: left;
-    width: 100%;
-    height: auto;
-    padding-left: 25px;
-    background: url("../oh/images/mobile/icon/icon_login.png") no-repeat;
-    background-position: left center;
-    background-size: 18px 16px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button:hover {
-    background: url("../oh/images/mobile/icon/icon_login.png") no-repeat;
-    background-position: left center;
-    background-size: 18px 16px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login > button span {
-    position: static;
-    width: auto;
-    height: auto;
-    clip: none;
-    overflow: visible;
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    font-size: 15px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome {
-    display: block;
-    text-align: left;
-    width: 100%;
-    height: auto;
-    padding-left: 25px;
-    background: url("../oh/images/mobile/icon/icon_login_on.png") no-repeat;
-    background-position: left center;
-    background-size: 18px 16px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .welcome .welcomeText {
-    position: static;
-    width: auto;
-    height: auto;
-    clip: none;
-    overflow: visible;
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    font-size: 15px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub {
-    position: static;
-    left: auto;
-    right: auto;
-    top: auto;
-    box-sizing: border-box;
-    width: 100vw;
-    margin-left: -30px !important;
-    padding: 0 0 15px 30px;
-    background-color: transparent;
-    z-index: auto;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn {
-    width: auto;
-    padding: 0;
-    margin: 0;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemTitle {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns {
-    overflow: hidden;
-    margin-top: 15px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a {
-    width: 50px;
-    height: 50px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a + a {
-    margin-left: 12px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.kakao {
-    background: url("../oh/images/mobile/sns/sns_kakao.png") no-repeat;
-    background-size: 50px 50px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.naver {
-    background: url("../oh/images/mobile/sns/sns_naver.png") no-repeat;
-    background-size: 50px 50px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.google {
-    background: url("../oh/images/mobile/sns/sns_google.png") no-repeat;
-    background-size: 50px 50px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.facebook {
-    background: url("../oh/images/mobile/sns/sns_facebook.png") no-repeat;
-    background-size: 50px 50px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemSns a.twitch {
-    background: url("../oh/images/mobile/sns/sns_twitch.png") no-repeat;
-    background-size: 50px 50px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.login .gnbItemSub .gnbItemSubIn .gnbItemContext {
-    line-height: 20px;
-    margin-top: 25px;
-    font-size: 15px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search {
-    display: block;
-    padding: 0 30px 20px 30px;
-    margin-left: 0;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button {
-    display: block;
-    text-align: left;
-    width: 100%;
-    height: auto;
-    padding-left: 25px;
-    background: url("../oh/images/mobile/icon/icon_search.png") no-repeat;
-    background-position: left center;
-    background-size: 15px 16px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button:hover {
-    background: url("../oh/images/mobile/icon/icon_search.png") no-repeat;
-    background-position: left center;
-    background-size: 15px 16px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search > button span {
-    position: static;
-    width: auto;
-    height: auto;
-    clip: none;
-    overflow: visible;
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    font-size: 15px;
-    font-family: "NotoSansCJKkrBold", sans-serif;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub {
-    position: static;
-    left: auto;
-    right: auto;
-    top: auto;
-    background-color: transparent;
-    z-index: auto;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn {
-    width: auto;
-    padding: 10px 0 10px;
-    margin: 0;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchTitleArea {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchText {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput {
-    overflow: visible;
-    display: flex;
-    vertical-align: baseline;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput input {
-    flex: 1;
-    width: auto;
-    height: 30px;
-    padding: 0 5px;
-    border-bottom: 2px solid #fff;
-    font-size: 15px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button {
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
-    background: url("../oh/images/mobile/icon/icon_gnbSearch.png") no-repeat;
-    background-position: center;
-    background-size: 23px 24px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchInputArea .searchInput button span {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-    width: 100vw;
-    padding: 0 30px 0 30px;
-    margin: 28px 0 0 -30px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper {
-    position: static;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-wrapper .swiper-slide a img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-    width: 30px;
-    height: 40px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev::after, #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next::after {
-    display: none;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-prev {
-    left: 0;
-    background: url("../oh/images/mobile/icon/icon_gnbSearchArrowLeft.png") no-repeat;
-    background-position: center center;
-    background-size: 7px 12px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .swiperDataArea .swiper .swiper-button-next {
-    right: 0;
-    background: url("../oh/images/mobile/icon/icon_gnbSearchArrowRight.png") no-repeat;
-    background-position: center center;
-    background-size: 7px 12px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea {
-    line-height: 21px;
-    margin-top: 24px;
-    font-size: 15px;
-  }
-  #wrap #header .headerIn .gnb nav .navIn .gnbItem.search .gnbItemSub .gnbItemSubIn .searchNodataArea span {
-    display: block;
-  }
+
   #wrap #container .topVisual .topVisualSwiper {
     height: 95.4166vw;
   }
@@ -1831,20 +1223,7 @@ html .opening, body .opening {
     /* container */
     /* footer */
   }
-  #wrap.mainLayout #header .headerIn .pageBack {
-    display: none;
-  }
-  #wrap.mainLayout #header .headerIn .logoText {
-    text-align: left;
-    padding: 16px 0 0 20px;
-  }
-  #wrap.mainLayout #header .headerIn .logoText a {
-    width: 84px;
-    height: 22px;
-    color: transparent;
-    background: url("../oh/images/mobile/bg/bg_logoMobile.png") no-repeat;
-    background-size: 84px 22px;
-  }
+  
   #wrap.mainLayout #container .topVisual .topVisualSwiper {
     height: 108.9743vw;
   }
@@ -5216,6 +4595,68 @@ h2.title-margin {
   display: block; /* 호버 시 표시 */
 }
 
+.pf-list-item {
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+
+/* YUNFLIX 인트로 섹션 */
+.intro-ott {
+    padding: 190px 20px 40px;
+    margin-top: 0;
+    color: #fff;
+    text-align: center;
+
+    /* 배경 */
+    background: radial-gradient(circle at center top, #1a1a1a 0%, #000 70%);
+    position: relative;
+}
+
+.intro-ott::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%);
+}
+
+.intro-ott .intro-kicker {
+    font-size: 40px;
+    font-weight: 800;
+    color: #e50914;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255,0,0,0.25);
+}
+
+.intro-ott .intro-body {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 850px;
+    margin: 0 auto;
+    letter-spacing: 0.01em;
+}
+
+
+/* 모바일에서 살짝 줄이기 */
+@media (max-width: 768px) {
+    .intro-ott {
+        padding: 40px 16px 35px;
+    }
+    .intro-kicker {
+        font-size: 18px;
+    }
+    .intro-body {
+        font-size: 14px;
+    }
+}
+
+
+
 /* 반응형 처리 */
 @media screen and (max-width: 1650px) {
   .portfolio_list > li {
@@ -5250,6 +4691,46 @@ h2.title-margin {
     padding: 60px 20px !important;
   }
 }
+
+/* ============================
+   MOBILE STYLE
+   ============================ */
+@media (max-width: 768px) {
+
+    /* 전체 폭 강제 확대 제거 */
+    #container,
+    #wrap #header {
+        min-width: 100% !important;
+    }
+    .gnb .gnbItem > a {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+    /* intro 영역 모바일 패딩 */
+    .intro-ott {
+        padding: 150px 20px 60px;
+        text-align: center;
+    }
+
+    .intro-ott .intro-kicker {
+        font-size: 20px;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .intro-ott .intro-body {
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: .85;
+    }
+
+   .gnb.pc { display:none; }
+    .mBtn { display:block; }
+}
+
+
+
 
 
 /*-- ë§ˆìš°ìŠ¤ over --*/
