@@ -171,11 +171,10 @@ html .opening, body .opening {
     margin: 0 auto;
     padding: 0 30px;
 }
-.logo a {
-    font-size: 32px;
-    font-weight: 900;
-    color: #e50914;
-    letter-spacing: 1px;
+
+.logo img {
+  width: 70%;
+  margin-top: 10px;
 }
 
 /* ------------ PC GNB ------------ */
@@ -4729,6 +4728,11 @@ h2.title-margin {
 
    .gnb.pc { display:none; }
     .mBtn { display:block; }
+
+    .logo img {
+      width: 50%;
+      margin-top: 10px;
+    }
 }
 
 
