@@ -18,7 +18,7 @@ Netflix의 UI/UX를 참고해 제작하였으며, 프론트엔드 실무 역량�
 
 
 - 🎨 퍼블리싱 및 디자인 중심 프로젝트
-- 💻 HTML, CSS, SCSS, JavaScript 사용
+- 💻 HTML, CSS, SCSS, ,GSAP, JavaScript 사용
 - 🧩 컴포넌트 기반 구조
 - 📱 반응형 웹(Responsive Web)
 - 카페24,아임웹,노션,네트리파이,고도몰 등 다수 홈페이지 제작
@@ -33,6 +33,7 @@ Netflix의 UI/UX를 참고해 제작하였으며, 프론트엔드 실무 역량�
 | JavaScript   | 간단한 인터랙션           |
 | PHP (조금)     | include 등 공통 모듈 처리 |
 | GitHub Pages | 배포 및 호스팅           |
+| GSAP | 부드럽게 이동 및 카테고리 타이틀 및 호버 기능   |
 
 ## 🔗 데모 사이트
 
